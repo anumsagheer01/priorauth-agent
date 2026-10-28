@@ -1,144 +1,105 @@
-# Agentic RAG System for Healthcare Prior Authorization
+# PriorAuth Agent | Agentic RAG System for Healthcare Prior Authorization
 
-**An Agentic RAG system that checks clinical documentation against prior authorization requirements, highlights missing evidence, and prepares a citation-grounded draft for human review.**
+> On 30 mostly synthetic test cases, PriorAuth Agent marked **0 of 25 cases that should not be ready** as ready. A simpler RAG baseline marked **18 of 25** as ready.
 
-Built with **Python, Google ADK, Gemini, Vertex AI, BigQuery, FastAPI, and Streamlit**.
+[**Project presentation**](https://docs.google.com/presentation/d/1hSZwBwVptMJP8Zur1osZBa4NppOKYYfIrKm4_gLmY-A/edit?usp=sharing) · [Evaluation details](docs/EVAL_RESULTS_2026-10-27.md) · [Architecture](docs/architecture.md)
 
-## Overview
+## The problem
 
-**Prior authorization** is a process in which a health insurer reviews a request for certain medical services or medications before they are provided to determine whether they meet the insurer's coverage requirements. For example, a clinic may need to submit records explaining why a patient needs an MRI, a knee procedure, or a biologic medication.
+Before a clinic can schedule certain tests or treatments, a patient's health insurer may require prior authorization: documentation showing that the planned care meets the insurer's coverage rules. For example, a clinic might need to show why a lower-back MRI is needed or what previous treatments a patient has tried before starting a medication.
 
-Before submitting that request, healthcare staff must read the insurer's policy, check the medical requirements against a clinical note, and identify supporting evidence. Missing information can lead to rework or delays.
+Someone on the clinic team has to read the policy, look through the clinical note, and check that the evidence is actually there. If a required detail is missing, staff may have to gather more documentation, resubmit a request, or deal with delays that affect the patient.
 
-**PriorAuth Agent checks the documentation before submission.** In this project, it reviews three scenarios: **lumbar spine MRI, selected knee procedures, and infliximab treatment for Crohn's disease**. It helps staff see which policy requirements have supporting documentation and which need attention.
+## What PriorAuth Agent does
 
-I built **PriorAuth Agent** to make that process easier to review. It retrieves relevant policy sections, checks each requirement against the clinical note, identifies gaps or uncertain evidence, and prepares a draft supported by citations. The final readiness decision follows explicit rules rather than relying solely on the language model.
+It retrieves the relevant policy requirements, checks a clinical note against each one, and produces a checklist with supporting quotes, missing information, and a draft for staff to review. It uses AI to interpret the note but applies fixed rules to decide whether the documentation is ready for human review.
 
-**The system does not approve, deny, or submit requests.** It produces a documentation-readiness assessment for a person to review.
-
-## How it works
-
-```mermaid
-flowchart TD
-    A[Clinical note + procedure] --> B[Google ADK agent]
-    B --> C[Retrieve relevant policy evidence]
-    B --> D[Validate codes]
-    B --> E[Extract clinical evidence with Gemini]
-    C --> F[Check each policy criterion]
-    D --> F
-    E --> F
-    F --> G[Verify citations and apply readiness rules]
-    G --> H[Checklist + missing evidence + draft]
-    H --> I[Human review]
-```
-
-The workflow combines **LLM-based evidence interpretation** with **deterministic safeguards**:
-
-- **Policy retrieval:** Finds relevant policy sections using Vertex AI embeddings and BigQuery vector search.
-- **Evidence matching:** Uses Gemini to assess whether the clinical note supports each policy criterion, with exact note excerpts.
-- **Code and citation checks:** Validates codes and checks that quoted note text is actually present.
-- **Readiness scoring:** Applies explicit policy pathways and exclusions to produce `READY_FOR_HUMAN_REVIEW`, `NOT_READY`, or `NEEDS_MANUAL_REVIEW`.
-- **Draft and audit trail:** Prepares a draft using verified claims and records the review steps.
-
-A verbatim quote check does **not** prove that the quote logically supports a criterion. That is a known limitation discussed in the evaluation.
-
-## Results
-
-I evaluated the system on **30 annotated cases across three procedures**, using a real Gemini/Vertex AI pipeline. Most cases were structured test fixtures; three were adapted from published case reports. Results describe this small evaluation set, **not performance in real clinical practice**.
-
-| Metric | PriorAuth Agent | Simple RAG baseline |
-|---|---:|---:|
-| Criterion-level accuracy | 171/200 (**85.5%**) | 176/200 (**88.0%**) |
-| Case-readiness accuracy | 28/30 (**93.3%**) | 8/30 (**26.7%**) |
-| False-ready decisions | **0/25** | 18/25 |
-| Missing-evidence recall | 12/14 | 13/14 |
-| Median latency per case | 28.8 s | 10.9 s |
-| Estimated model cost, 30 cases | $0.0784 | $0.0463 |
-
-**What the comparison shows:** The simpler RAG baseline was slightly better at classifying individual criteria. The full system was much better at making the final *documentation-readiness* assessment on this dataset, largely because it applies explicit pathways, exclusions, and safeguard rules. This is the main result of the project—not a claim that more agents automatically improve language-model accuracy.
-
-A no-citation-verifier run achieved **173/200 criterion accuracy and 28/30 case-readiness accuracy**. Citation verification did **not** demonstrate an accuracy improvement in this experiment.
-
-The evaluation also exposed real errors. For example, the model inferred a knee imaging grade that was not documented and confused evidence of untreated latent TB with documentation of a screening step. Neither case was marked ready overall, but both showed why exact quotations alone are insufficient to verify clinical reasoning.
-
-See [`docs/EVAL_RESULTS_2026-10-27.md`](docs/EVAL_RESULTS_2026-10-27.md), [`docs/FAILURE_ANALYSIS_2026-10-27.md`](docs/FAILURE_ANALYSIS_2026-10-27.md), and [`evidence/cloud_eval_2026-10-27/raw/`](evidence/cloud_eval_2026-10-27/raw/) for the detailed results and original output files.
-
-## Technologies
-
-| Area | Tools |
-|---|---|
-| Agent workflow | Google ADK, `Runner.run_async`, function tools |
-| Language model | Gemini via Vertex AI |
-| Retrieval | Vertex AI `text-embedding-004`, BigQuery `VECTOR_SEARCH` |
-| Backend and UI | Python, FastAPI, Streamlit, Pydantic |
-| Data and cloud | BigQuery, Google Cloud Storage configuration |
-| Testing | pytest, evaluation scripts, baseline and ablation comparisons |
+It does not approve, deny, or submit insurance authorizations. A person remains responsible for reviewing the full policy and deciding what to submit.
 
 ## Data and scope
 
-The prototype checks whether documentation supports the policy requirements for these three types of prior authorization requests:
+The evaluation includes 30 clinical cases: 27 constructed test cases and 3 adapted from published case reports. No real patient records or protected health information were used. Real clinical notes are sensitive and usually require appropriate access, permissions, and privacy safeguards, so this project uses controlled examples to test the workflow.
 
-| Procedure | Policy reference |
-|---|---|
-| MRI of the lower back (lumbar spine) | Aetna CPB 0236 |
-| Selected knee procedures or treatments (including the modeled arthroscopy scenario) | Aetna CPB 0673 |
-| Infliximab, a biologic treatment for Crohn's disease | Cigna IP0660 |
+The prototype covers selected documentation requirements for:
 
-The implemented policies are **simplified subsets**, not complete reproductions or comprehensive interpretations of payer requirements. The Cigna policy was not fully reviewed. The 30-case evaluation includes **27 constructed test cases and three cases adapted from published reports**, with no real patient identifiers or PHI. See [`docs/DATA_PROVENANCE.md`](docs/DATA_PROVENANCE.md) for sources and restrictions.
+| Review scenario | Policy reference |
+| --- | --- |
+| Lumbar spine MRI (lower-back imaging) | [Aetna CPB 0236](https://www.aetna.com/cpb/medical/data/200_299/0236.html) |
+| Knee osteoarthritis treatment review using selected policy requirements | [Aetna CPB 0673](https://www.aetna.com/cpb/medical/data/600_699/0673.html) |
+| Intravenous infliximab treatment for Crohn's disease | [Cigna IP0660](docs/DATA_PROVENANCE.md) |
 
-## Run locally
+This project uses selected requirements from real insurance policies, not complete policies. I did not review all 22 pages of Cigna IP0660 in detail, so the Crohn's-related subset cannot be used for real coverage decisions. See [Data Provenance](docs/DATA_PROVENANCE.md) for sources and usage notes.
 
-Requires Python 3.12. The commands below use a bash-style terminal; on Windows PowerShell, activate the virtual environment with `.venv\Scripts\Activate.ps1` and set `PYTHONPATH` appropriately.
+## How it works
 
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-PYTHONPATH=src pytest tests/ -q
+1. **Find the policy.** Retrieve the relevant policy sections for the selected procedure.
+2. **Check the note.** Match each requirement to evidence in the clinical note, including exact supporting excerpts or gaps.
+3. **Check the quotes.** Verify that cited note excerpts actually appear in the note. This is a text check, not proof that an excerpt supports the medical conclusion.
+4. **Apply the rules.** Use explicit pathways, exclusions, and uncertainty rules to assign `READY_FOR_HUMAN_REVIEW`, `NOT_READY`, or `NEEDS_MANUAL_REVIEW`.
+
+The language model can misunderstand a note. In a healthcare workflow, the final readiness status should not depend on the model simply guessing that everything is complete.
+
+```mermaid
+flowchart TD
+    A[Clinical note + proposed procedure] --> B[Find policy requirements]
+    B --> C[Match requirements to note excerpts]
+    C --> D[Check cited quotes]
+    D --> E[Apply fixed readiness rules]
+    E --> F[Checklist, gaps + review draft]
+    F --> G[Human review]
 ```
 
-The reported local verification was **49 tests passed, 1 skipped**. The end-to-end review requires authenticated GCP access and will return an error without it; there are no mock model responses substituted for a live review.
+Built with Python, Google ADK (agent orchestration), RAG (retrieving supporting text before generating an answer), Gemini on Vertex AI, BigQuery vector search, FastAPI, and Streamlit. See the [architecture](docs/architecture.md) and [ADK integration](docs/ADK_INTEGRATION.md) for implementation details.
 
-Start the API:
+## Results
 
-```bash
-PYTHONPATH=src uvicorn priorauth.api:app --port 8000
-```
+*These results come from 30 mostly synthetic, annotated cases using simplified policy requirements, not clinical validation. The original baseline prompt omitted the policy criteria list and expected status labels, making its 7% criterion accuracy misleading. Adding those details raised its score to 88% on the same cases, making the comparison more demanding for PriorAuth Agent; the corrected results are used below.*
 
-The Streamlit UI is in [`app/`](app/). See [`docs/CONFIGURATION.md`](docs/CONFIGURATION.md) for required environment variables and [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md) for deployment instructions.
+| Metric | PriorAuth Agent | Corrected simple RAG baseline |
+| --- | ---: | ---: |
+| Case-readiness accuracy | **28/30 (93.3%)** | 8/30 (26.7%) |
+| False-ready decisions | **0/25** | 18/25 |
+| Individual criterion accuracy | 171/200 (85.5%) | 176/200 (88.0%) |
+| Missing-evidence recall | 12/14 (85.7%) | 13/14 (92.9%) |
+| Median time per case | 28.8 sec | 10.9 sec |
+| Estimated model cost, all 30 cases | $0.0784 | $0.0463 |
 
-The original evaluation used `gemini-3.5-flash` at `global` with data in `us-central1` and `text-embedding-004` (768 dimensions). **Model and location must be set explicitly** and re-verified before a new cloud run. Cloud services may incur charges.
+The 25 are the cases whose gold labels were *not* ready for submission review. A false-ready decision incorrectly marks one of them ready, potentially allowing a weak request to go forward and cause rework, delay, or denial.
 
-To recompute the stored evaluation results without calling the model:
+The simpler RAG baseline was slightly better on individual requirements (88.0% versus 85.5%): a difference of five judgments on a small dataset. The main advantage of PriorAuth Agent here was the final readiness decision, where explicit rules kept it from marking any of those 25 cases ready.
 
-```bash
-PYTHONPATH=src python scripts/recompute_metrics.py evidence/cloud_eval_2026-10-27/raw/
-```
+Of 14 genuinely missing pieces of evidence, the full system flagged 12 rather than incorrectly treating them as met. Two of its 30 final readiness decisions were wrong: both cases should have been sent for manual review but were marked `NOT_READY`. Neither was a false-ready decision; both were more cautious than the gold label.
 
-The script verifies the current full-system, ablation, and corrected-baseline metrics. It also flags a known token-accounting mismatch in the *superseded* original baseline, so the overall process exits with code 1 rather than hiding that historical discrepancy.
+PriorAuth Agent got more final readiness decisions right on this test set, but took longer per case (28.8 seconds compared with 10.9 seconds for simple RAG). 
 
-## Project structure
+Citation verification did not show a meaningful accuracy gain on this small test set (171/200 criteria with it versus 173/200 without it). Checking that a quote exists is not enough to confirm the AI interpreted it correctly.
 
-```text
-src/priorauth/    Agent, tools, retrieval, scoring, API
-app/              Streamlit interface
-data/             Simplified policies and evaluation cases
-scripts/          Evaluation and metric verification
-tests/            Automated tests
-evidence/         Original cloud evaluation outputs
-gcp/              Schemas, deployment and setup scripts
-docs/             Architecture, data sources, evaluation and limitations
-```
+The next step is testing on new cases written and labeled independently.
+
+Detailed results and raw predictions: [Evaluation report](docs/EVAL_RESULTS_2026-10-27.md) · [Failure analysis](docs/FAILURE_ANALYSIS_2026-10-27.md) · [Raw evidence](evidence/cloud_eval_2026-10-27/raw/).
+
+## What I learned
+
+The evaluation highlighted two mistakes:
+
+- **Knee imaging:** The AI assumed an imaging grade that was not documented in the clinical note.
+- **Infliximab screening:** The AI confused untreated latent tuberculosis (TB) with evidence that TB screening had been completed.
+
+The AI found relevant excerpts but interpreted them incorrectly. Both cases still ended up marked not ready because of other requirements or exclusions—not because the system detected those reasoning mistakes. **Finding a quote does not mean the quote proves the claim.**
 
 ## Limitations and next steps
 
-- **Not deployed live:** Cloud Run deployment was blocked by Cloud Build service-account permissions. Deployment files are included, but there is no live URL or hosted demo.
-- **Not for clinical use:** Policies are simplified and the case set is small; the system has not been clinically validated. Human review is always required.
-- **Citation verification is limited:** It checks verbatim evidence presence, not whether the quoted text semantically proves a criterion.
-- **Cloud costs are not fully attributable:** Script-estimated model costs and delayed console billing deltas differed; see the evaluation and cost documentation.
+- The test set is small: 30 mostly synthetic cases. 
+- The policies cover only selected requirements, not full, current insurer policies.
+- The quote checker cannot reliably tell whether an excerpt actually supports the AI's interpretation.
+- The AI workflow ran on GCP, but public Cloud Run deployment was blocked by service-account permissions. 
 
-Future improvements would include complete policy coverage, a semantic evidence verifier, evaluation on a larger independently annotated set, and a properly authorized live deployment.
+Next steps: test independently written and labeled cases, add a semantic evidence verifier that checks whether quotes really support each conclusion and measure it on those cases, and complete a secure live deployment.
 
-## License
+## Run the project
 
-MIT. See [`LICENSE`](LICENSE). Source-policy and published-case materials may have their own usage restrictions, as described in the data provenance documentation.
+For cloud configuration and deployment requirements, see [Configuration](docs/CONFIGURATION.md) and [Deployment](docs/DEPLOYMENT.md). To recompute reported metrics from the included evaluation files, use `scripts/recompute_metrics.py` (see [raw verification notes](docs/RAW_VERIFICATION_AND_RECOMPUTATION_2026-10-27.md)).
+
+---
+
+*This project produces documentation-readiness assessments for research and demonstration only. A qualified human must review the full current policy and clinical record before any real submission.*
