@@ -1,0 +1,3239 @@
+{
+ "model": "gemini-3.5-flash",
+ "model_location": "global",
+ "data_location": "us-central1",
+ "method": "single_call_rag_baseline_no_verifier_no_scorer",
+ "budget_spent_usd_estimated": 0.0463,
+ "cases_attempted": 30,
+ "cases_completed": 30,
+ "cases_not_completed": 0,
+ "not_completed_cases": [],
+ "metrics_denominator_note": "Metrics are computed over completed cases only. cases_completed is the denominator for case-level metrics; see metrics for criterion-level denominators. A partial report is not a full-run result.",
+ "metrics": {
+  "n_cases": 30,
+  "criterion_accuracy": 0.88,
+  "criterion_correct": 176,
+  "criterion_total": 200,
+  "case_readiness_accuracy": 0.2667,
+  "case_correct": 8,
+  "false_ready_rate": 0.72,
+  "false_ready": 18,
+  "non_ready_total": 25,
+  "missing_evidence_recall": 0.9286,
+  "missing_caught": 13,
+  "missing_total": 14,
+  "citation_precision": 0.9091,
+  "citation_good": 90,
+  "citation_total": 99,
+  "retrieval_recall_proxy": 1.0,
+  "retrieval_hits": 30,
+  "latency_ms_p50": 10895.2,
+  "latency_ms_p95": 14518.9,
+  "latency_ms_mean": 11290.1,
+  "cost_usd_total_estimated": 0.0463,
+  "cost_usd_mean_per_case": 0.0015,
+  "token_usage_total": {
+   "prompt": 24488,
+   "output": 7457
+  },
+  "by_procedure": {
+   "lumbar_mri": {
+    "cases": 10,
+    "case_correct": 4,
+    "crit_correct": 28,
+    "crit_total": 40,
+    "case_accuracy": 0.4,
+    "criterion_accuracy": 0.7
+   },
+   "knee_arthroscopy": {
+    "cases": 10,
+    "case_correct": 3,
+    "crit_correct": 61,
+    "crit_total": 70,
+    "case_accuracy": 0.3,
+    "criterion_accuracy": 0.8714
+   },
+   "biologic_infusion": {
+    "cases": 10,
+    "case_correct": 1,
+    "crit_correct": 87,
+    "crit_total": 90,
+    "case_accuracy": 0.1,
+    "criterion_accuracy": 0.9667
+   }
+  },
+  "failures": [
+   {
+    "case_id": "EVAL-PMC-LUM-01",
+    "gold": "NEEDS_MANUAL_REVIEW",
+    "predicted": "READY_FOR_HUMAN_REVIEW",
+    "kind": "false_ready"
+   },
+   {
+    "case_id": "EVAL-PMC-KNE-01",
+    "criterion_id": "KNE-02",
+    "gold": "missing",
+    "predicted": "met",
+    "kind": "missing_called_met"
+   },
+   {
+    "case_id": "EVAL-PMC-KNE-01",
+    "gold": "NOT_READY",
+    "predicted": "READY_FOR_HUMAN_REVIEW",
+    "kind": "false_ready"
+   },
+   {
+    "case_id": "EVAL-PMC-BIO-01",
+    "gold": "NOT_READY",
+    "predicted": "NEEDS_MANUAL_REVIEW",
+    "kind": "readiness_mismatch"
+   },
+   {
+    "case_id": "EVAL-LUM-04",
+    "gold": "NOT_READY",
+    "predicted": "READY_FOR_HUMAN_REVIEW",
+    "kind": "false_ready"
+   },
+   {
+    "case_id": "EVAL-LUM-06",
+    "gold": "NEEDS_MANUAL_REVIEW",
+    "predicted": "READY_FOR_HUMAN_REVIEW",
+    "kind": "false_ready"
+   },
+   {
+    "case_id": "EVAL-LUM-07",
+    "gold": "NEEDS_MANUAL_REVIEW",
+    "predicted": "READY_FOR_HUMAN_REVIEW",
+    "kind": "false_ready"
+   },
+   {
+    "case_id": "EVAL-LUM-08",
+    "gold": "NOT_READY",
+    "predicted": "READY_FOR_HUMAN_REVIEW",
+    "kind": "false_ready"
+   },
+   {
+    "case_id": "EVAL-LUM-09",
+    "gold": "NEEDS_MANUAL_REVIEW",
+    "predicted": "READY_FOR_HUMAN_REVIEW",
+    "kind": "false_ready"
+   },
+   {
+    "case_id": "EVAL-KNE-02",
+    "gold": "NOT_READY",
+    "predicted": "READY_FOR_HUMAN_REVIEW",
+    "kind": "false_ready"
+   },
+   {
+    "case_id": "EVAL-KNE-03",
+    "gold": "NOT_READY",
+    "predicted": "READY_FOR_HUMAN_REVIEW",
+    "kind": "false_ready"
+   },
+   {
+    "case_id": "EVAL-KNE-05",
+    "gold": "READY_FOR_HUMAN_REVIEW",
+    "predicted": "NEEDS_MANUAL_REVIEW",
+    "kind": "readiness_mismatch"
+   },
+   {
+    "case_id": "EVAL-KNE-06",
+    "gold": "NOT_READY",
+    "predicted": "NEEDS_MANUAL_REVIEW",
+    "kind": "readiness_mismatch"
+   },
+   {
+    "case_id": "EVAL-KNE-07",
+    "gold": "NEEDS_MANUAL_REVIEW",
+    "predicted": "READY_FOR_HUMAN_REVIEW",
+    "kind": "false_ready"
+   },
+   {
+    "case_id": "EVAL-KNE-09",
+    "gold": "NOT_READY",
+    "predicted": "NEEDS_MANUAL_REVIEW",
+    "kind": "readiness_mismatch"
+   },
+   {
+    "case_id": "EVAL-BIO-02",
+    "gold": "NOT_READY",
+    "predicted": "READY_FOR_HUMAN_REVIEW",
+    "kind": "false_ready"
+   },
+   {
+    "case_id": "EVAL-BIO-03",
+    "gold": "NOT_READY",
+    "predicted": "READY_FOR_HUMAN_REVIEW",
+    "kind": "false_ready"
+   },
+   {
+    "case_id": "EVAL-BIO-04",
+    "gold": "NOT_READY",
+    "predicted": "READY_FOR_HUMAN_REVIEW",
+    "kind": "false_ready"
+   },
+   {
+    "case_id": "EVAL-BIO-05",
+    "gold": "NEEDS_MANUAL_REVIEW",
+    "predicted": "READY_FOR_HUMAN_REVIEW",
+    "kind": "false_ready"
+   },
+   {
+    "case_id": "EVAL-BIO-06",
+    "gold": "NOT_READY",
+    "predicted": "READY_FOR_HUMAN_REVIEW",
+    "kind": "false_ready"
+   },
+   {
+    "case_id": "EVAL-BIO-07",
+    "gold": "NEEDS_MANUAL_REVIEW",
+    "predicted": "READY_FOR_HUMAN_REVIEW",
+    "kind": "false_ready"
+   },
+   {
+    "case_id": "EVAL-BIO-08",
+    "gold": "NOT_READY",
+    "predicted": "READY_FOR_HUMAN_REVIEW",
+    "kind": "false_ready"
+   },
+   {
+    "case_id": "EVAL-BIO-09",
+    "gold": "NEEDS_MANUAL_REVIEW",
+    "predicted": "READY_FOR_HUMAN_REVIEW",
+    "kind": "false_ready"
+   }
+  ]
+ },
+ "rows": [
+  {
+   "case_id": "EVAL-PMC-LUM-01",
+   "procedure": "lumbar_mri",
+   "readiness": "READY_FOR_HUMAN_REVIEW",
+   "gold_readiness": "NEEDS_MANUAL_REVIEW",
+   "gold_criterion_outcomes": {
+    "LUM-01": "uncertain",
+    "LUM-02": "uncertain",
+    "LUM-03": "not_applicable",
+    "LUM-EX-01": "not_fired"
+   },
+   "criterion_results": [
+    {
+     "criterion_id": "LUM-01",
+     "status": "not_met",
+     "evidence_excerpts": [
+      "tingling over the posterior bilateral lower limbs, straight leg raise positive at 50 degrees on the left and 60 degrees on the right, no neuro deficit"
+     ]
+    },
+    {
+     "criterion_id": "LUM-02",
+     "status": "met",
+     "evidence_excerpts": [
+      "low back pain after a fall during sports three months earlier",
+      "no significant improvement with conservative treatment"
+     ]
+    },
+    {
+     "criterion_id": "LUM-03",
+     "status": "missing",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "LUM-EX-01",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    }
+   ],
+   "clinical_note": "13-year-old girl with low back pain after a fall during sports three months earlier, tingling over the posterior bilateral lower limbs, straight leg raise positive at 50 degrees on the left and 60 degrees on the right, no neuro deficit, no bowel or bladder involvement, and no significant improvement with conservative treatment. MRI showed disc desiccation with diffuse disc bulge at L4-L5 causing severe compromise of bilateral lateral recesses.",
+   "retrieval_keywords": [
+    "conservative therapy"
+   ],
+   "retrieval_chunks": [
+    {
+     "chunk_id": "CH-0236-01",
+     "policy_id": "AETNA_CPB_0236",
+     "policy_version": "2026",
+     "procedure": "lumbar_mri",
+     "retrieval_instructions": "Open the source URL, find the lumbar spine MRI section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Lumbar spine MRI criteria",
+     "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html",
+     "text": "Paraphrase: lumbar spine MRI criteria include persistent back pain with radiculopathy shown by pain plus objective motor or reflex changes in a specific nerve root distribution, and no improvement after 6 weeks of conservative therapy.",
+     "retrieval_score": 0.6411127098428826
+    },
+    {
+     "chunk_id": "CH-0236-03",
+     "policy_id": "AETNA_CPB_0236",
+     "policy_version": "2024",
+     "procedure": "lumbar_mri",
+     "retrieval_instructions": "This is an outdated fixture chunk. Do not use it for a current review; check the current policy version at the source URL.",
+     "section": "Lumbar spine MRI criteria",
+     "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html",
+     "text": "Paraphrase, OUTDATED 2024 fixture: an earlier version of the lumbar spine MRI criteria, superseded by the current version.",
+     "retrieval_score": 0.5431201606505296
+    },
+    {
+     "chunk_id": "CH-0236-02",
+     "policy_id": "AETNA_CPB_0236",
+     "policy_version": "2026",
+     "procedure": "lumbar_mri",
+     "retrieval_instructions": "Open the source URL, find the red flag section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Red flag pathways",
+     "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html",
+     "text": "Paraphrase: red flag pathways include rapidly progressing neurological deficit, major motor weakness, suspected infection, tumor, fracture, or cauda equina compression.",
+     "retrieval_score": 0.4785348255179881
+    }
+   ],
+   "latency_ms": 16094.144099000005,
+   "cost_usd_estimated": 0.0012127499999999999,
+   "token_usage": {
+    "prompt_token_count": 812,
+    "candidates_token_count": 161,
+    "total_token_count": 3087,
+    "evidence_prompt_token_count": 812,
+    "evidence_candidates_token_count": 161
+   },
+   "retrieval_method": "vertex_embedding_cosine"
+  },
+  {
+   "case_id": "EVAL-PMC-KNE-01",
+   "procedure": "knee_arthroscopy",
+   "readiness": "READY_FOR_HUMAN_REVIEW",
+   "gold_readiness": "NOT_READY",
+   "gold_criterion_outcomes": {
+    "KNE-01": "met",
+    "KNE-02": "missing",
+    "KNE-03": "met",
+    "KNE-04": "missing",
+    "KNE-05": "not_applicable",
+    "KNE-EX-01": "not_fired",
+    "KNE-EX-02": "not_fired"
+   },
+   "criterion_results": [
+    {
+     "criterion_id": "KNE-01",
+     "status": "met",
+     "evidence_excerpts": [
+      "18-year-old male with left knee pain and mechanical symptoms, locking and catching, for 2 years"
+     ]
+    },
+    {
+     "criterion_id": "KNE-02",
+     "status": "met",
+     "evidence_excerpts": [
+      "left knee radiographs unremarkable"
+     ]
+    },
+    {
+     "criterion_id": "KNE-03",
+     "status": "met",
+     "evidence_excerpts": [
+      "MRI confirmed a discoid medial meniscus with a horizontal oblique tear of the posterior horn of the medial meniscus"
+     ]
+    },
+    {
+     "criterion_id": "KNE-04",
+     "status": "missing",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "KNE-05",
+     "status": "not_met",
+     "evidence_excerpts": [
+      "locking and catching, for 2 years",
+      "MRI confirmed a discoid medial meniscus with a horizontal oblique tear of the posterior horn of the medial meniscus"
+     ]
+    },
+    {
+     "criterion_id": "KNE-EX-01",
+     "status": "not_fired",
+     "evidence_excerpts": [
+      "left knee radiographs unremarkable"
+     ]
+    },
+    {
+     "criterion_id": "KNE-EX-02",
+     "status": "not_fired",
+     "evidence_excerpts": [
+      "MRI confirmed a discoid medial meniscus with a horizontal oblique tear of the posterior horn of the medial meniscus",
+      "Arthroscopic saucerization with a 5-mm rim remaining and meniscal repair were performed"
+     ]
+    }
+   ],
+   "clinical_note": "18-year-old male with left knee pain and mechanical symptoms, locking and catching, for 2 years, medial joint line tenderness, range of motion 0 to 130 degrees, left knee radiographs unremarkable. MRI confirmed a discoid medial meniscus with a horizontal oblique tear of the posterior horn of the medial meniscus. Arthroscopic saucerization with a 5-mm rim remaining and meniscal repair were performed.",
+   "retrieval_keywords": [
+    "physical therapy"
+   ],
+   "retrieval_chunks": [
+    {
+     "chunk_id": "CH-0673-02",
+     "policy_id": "AETNA_CPB_0673",
+     "policy_version": "2024-09-11",
+     "procedure": "knee_arthroscopy",
+     "retrieval_instructions": "Open the source URL, find the exclusions section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Exclusions",
+     "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html",
+     "text": "Paraphrase: exclusions include moderate to severe osteoarthritis for debridement and diagnostic arthroscopy alone without radiologically proven pathology. A locked knee from a displaced bucket handle tear can waive conservative therapy.",
+     "retrieval_score": 0.6430114429354699
+    },
+    {
+     "chunk_id": "CH-0673-01",
+     "policy_id": "AETNA_CPB_0673",
+     "policy_version": "2024-09-11",
+     "procedure": "knee_arthroscopy",
+     "retrieval_instructions": "Open the source URL, find the knee arthroscopy section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Knee arthroscopy criteria",
+     "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html",
+     "text": "Paraphrase: knee arthroscopy criteria include significant knee pain plus mechanical symptoms, no more than mild osteoarthritis, radiologic confirmation, and failure of conservative therapy with at least 6 weeks of formal physical therapy in the past year.",
+     "retrieval_score": 0.6088780971496972
+    }
+   ],
+   "latency_ms": 11997.008655999707,
+   "cost_usd_estimated": 0.0024375,
+   "token_usage": {
+    "prompt_token_count": 880,
+    "candidates_token_count": 474,
+    "total_token_count": 3116,
+    "evidence_prompt_token_count": 880,
+    "evidence_candidates_token_count": 474
+   },
+   "retrieval_method": "vertex_embedding_cosine"
+  },
+  {
+   "case_id": "EVAL-PMC-BIO-01",
+   "procedure": "biologic_infusion",
+   "readiness": "NEEDS_MANUAL_REVIEW",
+   "gold_readiness": "NOT_READY",
+   "gold_criterion_outcomes": {
+    "BIO-01": "met",
+    "BIO-02": "missing",
+    "BIO-03": "met",
+    "BIO-04": "not_met",
+    "BIO-05": "missing",
+    "BIO-06": "met",
+    "BIO-EX-01": "not_fired",
+    "BIO-EX-02": "not_fired",
+    "BIO-EX-03": "not_fired"
+   },
+   "criterion_results": [
+    {
+     "criterion_id": "BIO-01",
+     "status": "met",
+     "evidence_excerpts": [
+      "33-year-old woman"
+     ]
+    },
+    {
+     "criterion_id": "BIO-02",
+     "status": "missing",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "BIO-03",
+     "status": "met",
+     "evidence_excerpts": [
+      "Crohn disease confirmed on ileocolonoscopy with severe active ileocolitis"
+     ]
+    },
+    {
+     "criterion_id": "BIO-04",
+     "status": "not_met",
+     "evidence_excerpts": [
+      "Infliximab 5 mg/kg was given at week 0, week 1, and week 4, then 5 mg/kg every 8 weeks."
+     ]
+    },
+    {
+     "criterion_id": "BIO-05",
+     "status": "missing",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "BIO-06",
+     "status": "met",
+     "evidence_excerpts": [
+      "Systemic corticosteroids gave rapid improvement, with relapse during tapering",
+      "Both ileocolitis and myositis were quiescent at 20 months."
+     ]
+    },
+    {
+     "criterion_id": "BIO-EX-01",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "BIO-EX-02",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "BIO-EX-03",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    }
+   ],
+   "clinical_note": "33-year-old woman with Crohn disease confirmed on ileocolonoscopy with severe active ileocolitis. Systemic corticosteroids gave rapid improvement, with relapse during tapering. Infliximab 5 mg/kg was given at week 0, week 1, and week 4, then 5 mg/kg every 8 weeks. Both ileocolitis and myositis were quiescent at 20 months.",
+   "retrieval_keywords": [
+    "Crohn"
+   ],
+   "retrieval_chunks": [
+    {
+     "chunk_id": "CH-IP0660-01",
+     "policy_id": "CIGNA_IP0660",
+     "policy_version": "2026",
+     "procedure": "biologic_infusion",
+     "retrieval_instructions": "Open the source URL, find the Crohn disease initial therapy section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Initial therapy criteria, Crohn disease",
+     "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf",
+     "text": "Paraphrase: Crohn disease initial infliximab criteria include age at least 6 years, gastroenterologist prescribing or consultation, moderate to severe Crohn disease, dosing up to 5 mg per kg at weeks 0, 2, and 6 then no more frequently than every 6 weeks, TB screening before initiation, and prior conventional therapy failure, intolerance, or contraindication.",
+     "retrieval_score": 0.7056781097440396
+    },
+    {
+     "chunk_id": "CH-IP0660-02",
+     "policy_id": "CIGNA_IP0660",
+     "policy_version": "2026",
+     "procedure": "biologic_infusion",
+     "retrieval_instructions": "Open the source URL, find the exclusions section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Exclusions",
+     "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf",
+     "text": "Paraphrase: exclusions include active serious infection, untreated latent TB, and known hypersensitivity to infliximab.",
+     "retrieval_score": 0.6113988477671299
+    }
+   ],
+   "latency_ms": 14388.570154999798,
+   "cost_usd_estimated": 0.00165675,
+   "token_usage": {
+    "prompt_token_count": 889,
+    "candidates_token_count": 264,
+    "total_token_count": 3084,
+    "evidence_prompt_token_count": 889,
+    "evidence_candidates_token_count": 264
+   },
+   "retrieval_method": "vertex_embedding_cosine"
+  },
+  {
+   "case_id": "EVAL-LUM-01",
+   "procedure": "lumbar_mri",
+   "readiness": "READY_FOR_HUMAN_REVIEW",
+   "gold_readiness": "READY_FOR_HUMAN_REVIEW",
+   "gold_criterion_outcomes": {
+    "LUM-01": "met",
+    "LUM-02": "met",
+    "LUM-03": "not_applicable",
+    "LUM-EX-01": "not_fired"
+   },
+   "criterion_results": [
+    {
+     "criterion_id": "LUM-01",
+     "status": "met",
+     "evidence_excerpts": [
+      "Persistent low back pain with radicular pain with motor weakness in the L5 distribution and diminished Achilles reflex."
+     ]
+    },
+    {
+     "criterion_id": "LUM-02",
+     "status": "met",
+     "evidence_excerpts": [
+      "No improvement after 8 weeks of conservative therapy with moderate activity, analgesics, NSAIDs, and muscle relaxants."
+     ]
+    },
+    {
+     "criterion_id": "LUM-03",
+     "status": "missing",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "LUM-EX-01",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    }
+   ],
+   "clinical_note": "Persistent low back pain with radicular pain with motor weakness in the L5 distribution and diminished Achilles reflex. No improvement after 8 weeks of conservative therapy with moderate activity, analgesics, NSAIDs, and muscle relaxants.",
+   "retrieval_keywords": [
+    "conservative therapy"
+   ],
+   "retrieval_chunks": [
+    {
+     "chunk_id": "CH-0236-01",
+     "policy_id": "AETNA_CPB_0236",
+     "policy_version": "2026",
+     "procedure": "lumbar_mri",
+     "retrieval_instructions": "Open the source URL, find the lumbar spine MRI section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Lumbar spine MRI criteria",
+     "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html",
+     "text": "Paraphrase: lumbar spine MRI criteria include persistent back pain with radiculopathy shown by pain plus objective motor or reflex changes in a specific nerve root distribution, and no improvement after 6 weeks of conservative therapy.",
+     "retrieval_score": 0.7299759044063946
+    },
+    {
+     "chunk_id": "CH-0236-03",
+     "policy_id": "AETNA_CPB_0236",
+     "policy_version": "2024",
+     "procedure": "lumbar_mri",
+     "retrieval_instructions": "This is an outdated fixture chunk. Do not use it for a current review; check the current policy version at the source URL.",
+     "section": "Lumbar spine MRI criteria",
+     "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html",
+     "text": "Paraphrase, OUTDATED 2024 fixture: an earlier version of the lumbar spine MRI criteria, superseded by the current version.",
+     "retrieval_score": 0.5482346178295673
+    },
+    {
+     "chunk_id": "CH-0236-02",
+     "policy_id": "AETNA_CPB_0236",
+     "policy_version": "2026",
+     "procedure": "lumbar_mri",
+     "retrieval_instructions": "Open the source URL, find the red flag section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Red flag pathways",
+     "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html",
+     "text": "Paraphrase: red flag pathways include rapidly progressing neurological deficit, major motor weakness, suspected infection, tumor, fracture, or cauda equina compression.",
+     "retrieval_score": 0.4820394950090359
+    }
+   ],
+   "latency_ms": 12715.153434999593,
+   "cost_usd_estimated": 0.001239,
+   "token_usage": {
+    "prompt_token_count": 767,
+    "candidates_token_count": 177,
+    "total_token_count": 2543,
+    "evidence_prompt_token_count": 767,
+    "evidence_candidates_token_count": 177
+   },
+   "retrieval_method": "vertex_embedding_cosine"
+  },
+  {
+   "case_id": "EVAL-LUM-02",
+   "procedure": "lumbar_mri",
+   "readiness": "NEEDS_MANUAL_REVIEW",
+   "gold_readiness": "NEEDS_MANUAL_REVIEW",
+   "gold_criterion_outcomes": {
+    "LUM-01": "met",
+    "LUM-02": "uncertain",
+    "LUM-03": "not_applicable",
+    "LUM-EX-01": "not_fired"
+   },
+   "criterion_results": [
+    {
+     "criterion_id": "LUM-01",
+     "status": "met",
+     "evidence_excerpts": [
+      "Persistent low back pain with radicular pain with motor weakness in the L5 distribution."
+     ]
+    },
+    {
+     "criterion_id": "LUM-02",
+     "status": "uncertain",
+     "evidence_excerpts": [
+      "The patient had some conservative therapy with NSAIDs, but the duration and response are unclear."
+     ]
+    },
+    {
+     "criterion_id": "LUM-03",
+     "status": "uncertain",
+     "evidence_excerpts": [
+      "motor weakness in the L5 distribution"
+     ]
+    },
+    {
+     "criterion_id": "LUM-EX-01",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    }
+   ],
+   "clinical_note": "Persistent low back pain with radicular pain with motor weakness in the L5 distribution. The patient had some conservative therapy with NSAIDs, but the duration and response are unclear.",
+   "retrieval_keywords": [
+    "conservative therapy"
+   ],
+   "retrieval_chunks": [
+    {
+     "chunk_id": "CH-0236-01",
+     "policy_id": "AETNA_CPB_0236",
+     "policy_version": "2026",
+     "procedure": "lumbar_mri",
+     "retrieval_instructions": "Open the source URL, find the lumbar spine MRI section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Lumbar spine MRI criteria",
+     "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html",
+     "text": "Paraphrase: lumbar spine MRI criteria include persistent back pain with radiculopathy shown by pain plus objective motor or reflex changes in a specific nerve root distribution, and no improvement after 6 weeks of conservative therapy.",
+     "retrieval_score": 0.7251592659904902
+    },
+    {
+     "chunk_id": "CH-0236-03",
+     "policy_id": "AETNA_CPB_0236",
+     "policy_version": "2024",
+     "procedure": "lumbar_mri",
+     "retrieval_instructions": "This is an outdated fixture chunk. Do not use it for a current review; check the current policy version at the source URL.",
+     "section": "Lumbar spine MRI criteria",
+     "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html",
+     "text": "Paraphrase, OUTDATED 2024 fixture: an earlier version of the lumbar spine MRI criteria, superseded by the current version.",
+     "retrieval_score": 0.5375172098812863
+    },
+    {
+     "chunk_id": "CH-0236-02",
+     "policy_id": "AETNA_CPB_0236",
+     "policy_version": "2026",
+     "procedure": "lumbar_mri",
+     "retrieval_instructions": "Open the source URL, find the red flag section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Red flag pathways",
+     "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html",
+     "text": "Paraphrase: red flag pathways include rapidly progressing neurological deficit, major motor weakness, suspected infection, tumor, fracture, or cauda equina compression.",
+     "retrieval_score": 0.45515019437979704
+    }
+   ],
+   "latency_ms": 10034.780941000463,
+   "cost_usd_estimated": 0.00113025,
+   "token_usage": {
+    "prompt_token_count": 757,
+    "candidates_token_count": 150,
+    "total_token_count": 2760,
+    "evidence_prompt_token_count": 757,
+    "evidence_candidates_token_count": 150
+   },
+   "retrieval_method": "vertex_embedding_cosine"
+  },
+  {
+   "case_id": "EVAL-LUM-03",
+   "procedure": "lumbar_mri",
+   "readiness": "NEEDS_MANUAL_REVIEW",
+   "gold_readiness": "NEEDS_MANUAL_REVIEW",
+   "gold_criterion_outcomes": {
+    "LUM-01": "contradictory",
+    "LUM-02": "met",
+    "LUM-03": "not_applicable",
+    "LUM-EX-01": "not_fired"
+   },
+   "criterion_results": [
+    {
+     "criterion_id": "LUM-01",
+     "status": "contradictory",
+     "evidence_excerpts": [
+      "Persistent low back pain with motor weakness in the L5 distribution and diminished Achilles reflex",
+      "no motor weakness, reflexes normal, no radiculopathy"
+     ]
+    },
+    {
+     "criterion_id": "LUM-02",
+     "status": "met",
+     "evidence_excerpts": [
+      "no improvement after 6 weeks of conservative therapy"
+     ]
+    },
+    {
+     "criterion_id": "LUM-03",
+     "status": "contradictory",
+     "evidence_excerpts": [
+      "motor weakness in the L5 distribution",
+      "no motor weakness"
+     ]
+    },
+    {
+     "criterion_id": "LUM-EX-01",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    }
+   ],
+   "clinical_note": "Persistent low back pain with motor weakness in the L5 distribution and diminished Achilles reflex, and no improvement after 6 weeks of conservative therapy. Later in the same note: no motor weakness, reflexes normal, no radiculopathy.",
+   "retrieval_keywords": [
+    "conservative therapy"
+   ],
+   "retrieval_chunks": [
+    {
+     "chunk_id": "CH-0236-01",
+     "policy_id": "AETNA_CPB_0236",
+     "policy_version": "2026",
+     "procedure": "lumbar_mri",
+     "retrieval_instructions": "Open the source URL, find the lumbar spine MRI section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Lumbar spine MRI criteria",
+     "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html",
+     "text": "Paraphrase: lumbar spine MRI criteria include persistent back pain with radiculopathy shown by pain plus objective motor or reflex changes in a specific nerve root distribution, and no improvement after 6 weeks of conservative therapy.",
+     "retrieval_score": 0.7341680760477017
+    },
+    {
+     "chunk_id": "CH-0236-03",
+     "policy_id": "AETNA_CPB_0236",
+     "policy_version": "2024",
+     "procedure": "lumbar_mri",
+     "retrieval_instructions": "This is an outdated fixture chunk. Do not use it for a current review; check the current policy version at the source URL.",
+     "section": "Lumbar spine MRI criteria",
+     "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html",
+     "text": "Paraphrase, OUTDATED 2024 fixture: an earlier version of the lumbar spine MRI criteria, superseded by the current version.",
+     "retrieval_score": 0.566466486004035
+    },
+    {
+     "chunk_id": "CH-0236-02",
+     "policy_id": "AETNA_CPB_0236",
+     "policy_version": "2026",
+     "procedure": "lumbar_mri",
+     "retrieval_instructions": "Open the source URL, find the red flag section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Red flag pathways",
+     "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html",
+     "text": "Paraphrase: red flag pathways include rapidly progressing neurological deficit, major motor weakness, suspected infection, tumor, fracture, or cauda equina compression.",
+     "retrieval_score": 0.5073087243629992
+    }
+   ],
+   "latency_ms": 13345.49450600025,
+   "cost_usd_estimated": 0.0011684999999999998,
+   "token_usage": {
+    "prompt_token_count": 768,
+    "candidates_token_count": 158,
+    "total_token_count": 3411,
+    "evidence_prompt_token_count": 768,
+    "evidence_candidates_token_count": 158
+   },
+   "retrieval_method": "vertex_embedding_cosine"
+  },
+  {
+   "case_id": "EVAL-LUM-04",
+   "procedure": "lumbar_mri",
+   "readiness": "READY_FOR_HUMAN_REVIEW",
+   "gold_readiness": "NOT_READY",
+   "gold_criterion_outcomes": {
+    "LUM-01": "not_met",
+    "LUM-02": "met",
+    "LUM-03": "not_applicable",
+    "LUM-EX-01": "not_fired"
+   },
+   "criterion_results": [
+    {
+     "criterion_id": "LUM-01",
+     "status": "not_met",
+     "evidence_excerpts": [
+      "Low back pain without radiculopathy. No motor weakness, no reflex changes."
+     ]
+    },
+    {
+     "criterion_id": "LUM-02",
+     "status": "met",
+     "evidence_excerpts": [
+      "No improvement after 6 weeks of conservative therapy with NSAIDs and muscle relaxants."
+     ]
+    },
+    {
+     "criterion_id": "LUM-03",
+     "status": "missing",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "LUM-EX-01",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    }
+   ],
+   "clinical_note": "Low back pain without radiculopathy. No motor weakness, no reflex changes. No improvement after 6 weeks of conservative therapy with NSAIDs and muscle relaxants.",
+   "retrieval_keywords": [
+    "conservative therapy"
+   ],
+   "retrieval_chunks": [
+    {
+     "chunk_id": "CH-0236-01",
+     "policy_id": "AETNA_CPB_0236",
+     "policy_version": "2026",
+     "procedure": "lumbar_mri",
+     "retrieval_instructions": "Open the source URL, find the lumbar spine MRI section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Lumbar spine MRI criteria",
+     "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html",
+     "text": "Paraphrase: lumbar spine MRI criteria include persistent back pain with radiculopathy shown by pain plus objective motor or reflex changes in a specific nerve root distribution, and no improvement after 6 weeks of conservative therapy.",
+     "retrieval_score": 0.7128258061399547
+    },
+    {
+     "chunk_id": "CH-0236-03",
+     "policy_id": "AETNA_CPB_0236",
+     "policy_version": "2024",
+     "procedure": "lumbar_mri",
+     "retrieval_instructions": "This is an outdated fixture chunk. Do not use it for a current review; check the current policy version at the source URL.",
+     "section": "Lumbar spine MRI criteria",
+     "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html",
+     "text": "Paraphrase, OUTDATED 2024 fixture: an earlier version of the lumbar spine MRI criteria, superseded by the current version.",
+     "retrieval_score": 0.5312363014801975
+    },
+    {
+     "chunk_id": "CH-0236-02",
+     "policy_id": "AETNA_CPB_0236",
+     "policy_version": "2026",
+     "procedure": "lumbar_mri",
+     "retrieval_instructions": "Open the source URL, find the red flag section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Red flag pathways",
+     "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html",
+     "text": "Paraphrase: red flag pathways include rapidly progressing neurological deficit, major motor weakness, suspected infection, tumor, fracture, or cauda equina compression.",
+     "retrieval_score": 0.4433586839192928
+    }
+   ],
+   "latency_ms": 10553.417695999997,
+   "cost_usd_estimated": 0.0011925,
+   "token_usage": {
+    "prompt_token_count": 755,
+    "candidates_token_count": 167,
+    "total_token_count": 2704,
+    "evidence_prompt_token_count": 755,
+    "evidence_candidates_token_count": 167
+   },
+   "retrieval_method": "vertex_embedding_cosine"
+  },
+  {
+   "case_id": "EVAL-LUM-05",
+   "procedure": "lumbar_mri",
+   "readiness": "READY_FOR_HUMAN_REVIEW",
+   "gold_readiness": "READY_FOR_HUMAN_REVIEW",
+   "gold_criterion_outcomes": {
+    "LUM-01": "missing",
+    "LUM-02": "missing",
+    "LUM-03": "met",
+    "LUM-EX-01": "not_fired"
+   },
+   "criterion_results": [
+    {
+     "criterion_id": "LUM-01",
+     "status": "missing",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "LUM-02",
+     "status": "missing",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "LUM-03",
+     "status": "met",
+     "evidence_excerpts": [
+      "Rapidly progressing neurological deficit with major motor weakness and suspected cauda equina compression."
+     ]
+    },
+    {
+     "criterion_id": "LUM-EX-01",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    }
+   ],
+   "clinical_note": "Rapidly progressing neurological deficit with major motor weakness and suspected cauda equina compression. Urgent lumbar MRI requested.",
+   "retrieval_keywords": [
+    "conservative therapy"
+   ],
+   "retrieval_chunks": [
+    {
+     "chunk_id": "CH-0236-02",
+     "policy_id": "AETNA_CPB_0236",
+     "policy_version": "2026",
+     "procedure": "lumbar_mri",
+     "retrieval_instructions": "Open the source URL, find the red flag section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Red flag pathways",
+     "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html",
+     "text": "Paraphrase: red flag pathways include rapidly progressing neurological deficit, major motor weakness, suspected infection, tumor, fracture, or cauda equina compression.",
+     "retrieval_score": 0.6498493117079168
+    },
+    {
+     "chunk_id": "CH-0236-01",
+     "policy_id": "AETNA_CPB_0236",
+     "policy_version": "2026",
+     "procedure": "lumbar_mri",
+     "retrieval_instructions": "Open the source URL, find the lumbar spine MRI section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Lumbar spine MRI criteria",
+     "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html",
+     "text": "Paraphrase: lumbar spine MRI criteria include persistent back pain with radiculopathy shown by pain plus objective motor or reflex changes in a specific nerve root distribution, and no improvement after 6 weeks of conservative therapy.",
+     "retrieval_score": 0.6320790395226649
+    },
+    {
+     "chunk_id": "CH-0236-03",
+     "policy_id": "AETNA_CPB_0236",
+     "policy_version": "2024",
+     "procedure": "lumbar_mri",
+     "retrieval_instructions": "This is an outdated fixture chunk. Do not use it for a current review; check the current policy version at the source URL.",
+     "section": "Lumbar spine MRI criteria",
+     "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html",
+     "text": "Paraphrase, OUTDATED 2024 fixture: an earlier version of the lumbar spine MRI criteria, superseded by the current version.",
+     "retrieval_score": 0.5290098823660384
+    }
+   ],
+   "latency_ms": 9790.531867999562,
+   "cost_usd_estimated": 0.0009480000000000001,
+   "token_usage": {
+    "prompt_token_count": 744,
+    "candidates_token_count": 104,
+    "total_token_count": 2340,
+    "evidence_prompt_token_count": 744,
+    "evidence_candidates_token_count": 104
+   },
+   "retrieval_method": "vertex_embedding_cosine"
+  },
+  {
+   "case_id": "EVAL-LUM-06",
+   "procedure": "lumbar_mri",
+   "readiness": "READY_FOR_HUMAN_REVIEW",
+   "gold_readiness": "NEEDS_MANUAL_REVIEW",
+   "gold_criterion_outcomes": {
+    "LUM-01": "met",
+    "LUM-02": "met",
+    "LUM-03": "not_applicable",
+    "LUM-EX-01": "not_fired"
+   },
+   "criterion_results": [
+    {
+     "criterion_id": "LUM-01",
+     "status": "met",
+     "evidence_excerpts": [
+      "Persistent low back pain with radicular pain with motor weakness in the L5 distribution and diminished Achilles reflex."
+     ]
+    },
+    {
+     "criterion_id": "LUM-02",
+     "status": "met",
+     "evidence_excerpts": [
+      "No improvement after 8 weeks of conservative therapy."
+     ]
+    },
+    {
+     "criterion_id": "LUM-03",
+     "status": "missing",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "LUM-EX-01",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    }
+   ],
+   "clinical_note": "Persistent low back pain with radicular pain with motor weakness in the L5 distribution and diminished Achilles reflex. No improvement after 8 weeks of conservative therapy.",
+   "retrieval_keywords": [
+    "conservative therapy"
+   ],
+   "retrieval_chunks": [
+    {
+     "chunk_id": "CH-0236-01",
+     "policy_id": "AETNA_CPB_0236",
+     "policy_version": "2026",
+     "procedure": "lumbar_mri",
+     "retrieval_instructions": "Open the source URL, find the lumbar spine MRI section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Lumbar spine MRI criteria",
+     "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html",
+     "text": "Paraphrase: lumbar spine MRI criteria include persistent back pain with radiculopathy shown by pain plus objective motor or reflex changes in a specific nerve root distribution, and no improvement after 6 weeks of conservative therapy.",
+     "retrieval_score": 0.7254582810676227
+    },
+    {
+     "chunk_id": "CH-0236-03",
+     "policy_id": "AETNA_CPB_0236",
+     "policy_version": "2024",
+     "procedure": "lumbar_mri",
+     "retrieval_instructions": "This is an outdated fixture chunk. Do not use it for a current review; check the current policy version at the source URL.",
+     "section": "Lumbar spine MRI criteria",
+     "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html",
+     "text": "Paraphrase, OUTDATED 2024 fixture: an earlier version of the lumbar spine MRI criteria, superseded by the current version.",
+     "retrieval_score": 0.5551920416177217
+    },
+    {
+     "chunk_id": "CH-0236-02",
+     "policy_id": "AETNA_CPB_0236",
+     "policy_version": "2026",
+     "procedure": "lumbar_mri",
+     "retrieval_instructions": "Open the source URL, find the red flag section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Red flag pathways",
+     "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html",
+     "text": "Paraphrase: red flag pathways include rapidly progressing neurological deficit, major motor weakness, suspected infection, tumor, fracture, or cauda equina compression.",
+     "retrieval_score": 0.485568137265847
+    }
+   ],
+   "latency_ms": 9895.302076999542,
+   "cost_usd_estimated": 0.0010934999999999999,
+   "token_usage": {
+    "prompt_token_count": 753,
+    "candidates_token_count": 141,
+    "total_token_count": 2494,
+    "evidence_prompt_token_count": 753,
+    "evidence_candidates_token_count": 141
+   },
+   "retrieval_method": "vertex_embedding_cosine"
+  },
+  {
+   "case_id": "EVAL-LUM-07",
+   "procedure": "lumbar_mri",
+   "readiness": "READY_FOR_HUMAN_REVIEW",
+   "gold_readiness": "NEEDS_MANUAL_REVIEW",
+   "gold_criterion_outcomes": {
+    "LUM-01": "met",
+    "LUM-02": "met",
+    "LUM-03": "not_applicable",
+    "LUM-EX-01": "not_fired"
+   },
+   "criterion_results": [
+    {
+     "criterion_id": "LUM-01",
+     "status": "met",
+     "evidence_excerpts": [
+      "Persistent low back pain with radicular pain with motor weakness in the L5 distribution and diminished Achilles reflex."
+     ]
+    },
+    {
+     "criterion_id": "LUM-02",
+     "status": "met",
+     "evidence_excerpts": [
+      "No improvement after 8 weeks of conservative therapy."
+     ]
+    },
+    {
+     "criterion_id": "LUM-03",
+     "status": "missing",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "LUM-EX-01",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    }
+   ],
+   "clinical_note": "Persistent low back pain with radicular pain with motor weakness in the L5 distribution and diminished Achilles reflex. No improvement after 8 weeks of conservative therapy.",
+   "retrieval_keywords": [
+    "conservative therapy"
+   ],
+   "retrieval_chunks": [
+    {
+     "chunk_id": "CH-0236-01",
+     "policy_id": "AETNA_CPB_0236",
+     "policy_version": "2026",
+     "procedure": "lumbar_mri",
+     "retrieval_instructions": "Open the source URL, find the lumbar spine MRI section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Lumbar spine MRI criteria",
+     "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html",
+     "text": "Paraphrase: lumbar spine MRI criteria include persistent back pain with radiculopathy shown by pain plus objective motor or reflex changes in a specific nerve root distribution, and no improvement after 6 weeks of conservative therapy.",
+     "retrieval_score": 0.7254582810676227
+    },
+    {
+     "chunk_id": "CH-0236-03",
+     "policy_id": "AETNA_CPB_0236",
+     "policy_version": "2024",
+     "procedure": "lumbar_mri",
+     "retrieval_instructions": "This is an outdated fixture chunk. Do not use it for a current review; check the current policy version at the source URL.",
+     "section": "Lumbar spine MRI criteria",
+     "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html",
+     "text": "Paraphrase, OUTDATED 2024 fixture: an earlier version of the lumbar spine MRI criteria, superseded by the current version.",
+     "retrieval_score": 0.5551920416177217
+    },
+    {
+     "chunk_id": "CH-0236-02",
+     "policy_id": "AETNA_CPB_0236",
+     "policy_version": "2026",
+     "procedure": "lumbar_mri",
+     "retrieval_instructions": "Open the source URL, find the red flag section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Red flag pathways",
+     "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html",
+     "text": "Paraphrase: red flag pathways include rapidly progressing neurological deficit, major motor weakness, suspected infection, tumor, fracture, or cauda equina compression.",
+     "retrieval_score": 0.485568137265847
+    }
+   ],
+   "latency_ms": 9938.719768999363,
+   "cost_usd_estimated": 0.0010934999999999999,
+   "token_usage": {
+    "prompt_token_count": 753,
+    "candidates_token_count": 141,
+    "total_token_count": 2725,
+    "evidence_prompt_token_count": 753,
+    "evidence_candidates_token_count": 141
+   },
+   "retrieval_method": "vertex_embedding_cosine"
+  },
+  {
+   "case_id": "EVAL-LUM-08",
+   "procedure": "lumbar_mri",
+   "readiness": "READY_FOR_HUMAN_REVIEW",
+   "gold_readiness": "NOT_READY",
+   "gold_criterion_outcomes": {
+    "LUM-01": "met",
+    "LUM-02": "met",
+    "LUM-03": "not_applicable",
+    "LUM-EX-01": "fired"
+   },
+   "criterion_results": [
+    {
+     "criterion_id": "LUM-01",
+     "status": "met",
+     "evidence_excerpts": [
+      "Persistent low back pain with motor weakness in the L5 distribution."
+     ]
+    },
+    {
+     "criterion_id": "LUM-02",
+     "status": "met",
+     "evidence_excerpts": [
+      "No improvement after 6 weeks of conservative therapy."
+     ]
+    },
+    {
+     "criterion_id": "LUM-03",
+     "status": "missing",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "LUM-EX-01",
+     "status": "fired",
+     "evidence_excerpts": [
+      "Lumbar MRI already completed for the same indication with no new symptoms."
+     ]
+    }
+   ],
+   "clinical_note": "Persistent low back pain with motor weakness in the L5 distribution. No improvement after 6 weeks of conservative therapy. Lumbar MRI already completed for the same indication with no new symptoms.",
+   "retrieval_keywords": [
+    "conservative therapy"
+   ],
+   "retrieval_chunks": [
+    {
+     "chunk_id": "CH-0236-01",
+     "policy_id": "AETNA_CPB_0236",
+     "policy_version": "2026",
+     "procedure": "lumbar_mri",
+     "retrieval_instructions": "Open the source URL, find the lumbar spine MRI section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Lumbar spine MRI criteria",
+     "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html",
+     "text": "Paraphrase: lumbar spine MRI criteria include persistent back pain with radiculopathy shown by pain plus objective motor or reflex changes in a specific nerve root distribution, and no improvement after 6 weeks of conservative therapy.",
+     "retrieval_score": 0.725980895610082
+    },
+    {
+     "chunk_id": "CH-0236-03",
+     "policy_id": "AETNA_CPB_0236",
+     "policy_version": "2024",
+     "procedure": "lumbar_mri",
+     "retrieval_instructions": "This is an outdated fixture chunk. Do not use it for a current review; check the current policy version at the source URL.",
+     "section": "Lumbar spine MRI criteria",
+     "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html",
+     "text": "Paraphrase, OUTDATED 2024 fixture: an earlier version of the lumbar spine MRI criteria, superseded by the current version.",
+     "retrieval_score": 0.5771711452854762
+    },
+    {
+     "chunk_id": "CH-0236-02",
+     "policy_id": "AETNA_CPB_0236",
+     "policy_version": "2026",
+     "procedure": "lumbar_mri",
+     "retrieval_instructions": "Open the source URL, find the red flag section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Red flag pathways",
+     "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html",
+     "text": "Paraphrase: red flag pathways include rapidly progressing neurological deficit, major motor weakness, suspected infection, tumor, fracture, or cauda equina compression.",
+     "retrieval_score": 0.4879985885881945
+    }
+   ],
+   "latency_ms": 9766.311630000018,
+   "cost_usd_estimated": 0.00110925,
+   "token_usage": {
+    "prompt_token_count": 759,
+    "candidates_token_count": 144,
+    "total_token_count": 2209,
+    "evidence_prompt_token_count": 759,
+    "evidence_candidates_token_count": 144
+   },
+   "retrieval_method": "vertex_embedding_cosine"
+  },
+  {
+   "case_id": "EVAL-LUM-09",
+   "procedure": "lumbar_mri",
+   "readiness": "READY_FOR_HUMAN_REVIEW",
+   "gold_readiness": "NEEDS_MANUAL_REVIEW",
+   "gold_criterion_outcomes": {
+    "LUM-01": "met",
+    "LUM-02": "uncertain",
+    "LUM-03": "not_applicable",
+    "LUM-EX-01": "not_fired"
+   },
+   "criterion_results": [
+    {
+     "criterion_id": "LUM-01",
+     "status": "met",
+     "evidence_excerpts": [
+      "Persistent low back pain with motor weakness in the L5 distribution."
+     ]
+    },
+    {
+     "criterion_id": "LUM-02",
+     "status": "contradictory",
+     "evidence_excerpts": [
+      "Patient reports 6 weeks of conservative therapy, but the record shows only 3 weeks of NSAIDs, with no moderate activity plan and no muscle relaxant documented."
+     ]
+    },
+    {
+     "criterion_id": "LUM-03",
+     "status": "missing",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "LUM-EX-01",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    }
+   ],
+   "clinical_note": "Patient reports 6 weeks of conservative therapy, but the record shows only 3 weeks of NSAIDs, with no moderate activity plan and no muscle relaxant documented. Persistent low back pain with motor weakness in the L5 distribution.",
+   "retrieval_keywords": [
+    "conservative therapy"
+   ],
+   "retrieval_chunks": [
+    {
+     "chunk_id": "CH-0236-01",
+     "policy_id": "AETNA_CPB_0236",
+     "policy_version": "2026",
+     "procedure": "lumbar_mri",
+     "retrieval_instructions": "Open the source URL, find the lumbar spine MRI section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Lumbar spine MRI criteria",
+     "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html",
+     "text": "Paraphrase: lumbar spine MRI criteria include persistent back pain with radiculopathy shown by pain plus objective motor or reflex changes in a specific nerve root distribution, and no improvement after 6 weeks of conservative therapy.",
+     "retrieval_score": 0.7278228857792309
+    },
+    {
+     "chunk_id": "CH-0236-03",
+     "policy_id": "AETNA_CPB_0236",
+     "policy_version": "2024",
+     "procedure": "lumbar_mri",
+     "retrieval_instructions": "This is an outdated fixture chunk. Do not use it for a current review; check the current policy version at the source URL.",
+     "section": "Lumbar spine MRI criteria",
+     "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html",
+     "text": "Paraphrase, OUTDATED 2024 fixture: an earlier version of the lumbar spine MRI criteria, superseded by the current version.",
+     "retrieval_score": 0.5468053374045823
+    },
+    {
+     "chunk_id": "CH-0236-02",
+     "policy_id": "AETNA_CPB_0236",
+     "policy_version": "2026",
+     "procedure": "lumbar_mri",
+     "retrieval_instructions": "Open the source URL, find the red flag section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Red flag pathways",
+     "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html",
+     "text": "Paraphrase: red flag pathways include rapidly progressing neurological deficit, major motor weakness, suspected infection, tumor, fracture, or cauda equina compression.",
+     "retrieval_score": 0.49610350768718064
+    }
+   ],
+   "latency_ms": 12562.838663000548,
+   "cost_usd_estimated": 0.0011684999999999998,
+   "token_usage": {
+    "prompt_token_count": 768,
+    "candidates_token_count": 158,
+    "total_token_count": 2635,
+    "evidence_prompt_token_count": 768,
+    "evidence_candidates_token_count": 158
+   },
+   "retrieval_method": "vertex_embedding_cosine"
+  },
+  {
+   "case_id": "EVAL-KNE-01",
+   "procedure": "knee_arthroscopy",
+   "readiness": "READY_FOR_HUMAN_REVIEW",
+   "gold_readiness": "READY_FOR_HUMAN_REVIEW",
+   "gold_criterion_outcomes": {
+    "KNE-01": "met",
+    "KNE-02": "met",
+    "KNE-03": "met",
+    "KNE-04": "met",
+    "KNE-05": "not_applicable",
+    "KNE-EX-01": "not_fired",
+    "KNE-EX-02": "not_fired"
+   },
+   "criterion_results": [
+    {
+     "criterion_id": "KNE-01",
+     "status": "met",
+     "evidence_excerpts": [
+      "Significant knee pain with mechanical symptoms with knee locking and catching."
+     ]
+    },
+    {
+     "criterion_id": "KNE-02",
+     "status": "met",
+     "evidence_excerpts": [
+      "Kellgren-Lawrence grade 2."
+     ]
+    },
+    {
+     "criterion_id": "KNE-03",
+     "status": "met",
+     "evidence_excerpts": [
+      "MRI confirms meniscal tear."
+     ]
+    },
+    {
+     "criterion_id": "KNE-04",
+     "status": "met",
+     "evidence_excerpts": [
+      "Completed 8 weeks of formal physical therapy with no improvement."
+     ]
+    },
+    {
+     "criterion_id": "KNE-05",
+     "status": "missing",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "KNE-EX-01",
+     "status": "not_fired",
+     "evidence_excerpts": [
+      "Kellgren-Lawrence grade 2."
+     ]
+    },
+    {
+     "criterion_id": "KNE-EX-02",
+     "status": "not_fired",
+     "evidence_excerpts": [
+      "MRI confirms meniscal tear."
+     ]
+    }
+   ],
+   "clinical_note": "Significant knee pain with mechanical symptoms with knee locking and catching. Kellgren-Lawrence grade 2. MRI confirms meniscal tear. Completed 8 weeks of formal physical therapy with no improvement.",
+   "retrieval_keywords": [
+    "physical therapy"
+   ],
+   "retrieval_chunks": [
+    {
+     "chunk_id": "CH-0673-02",
+     "policy_id": "AETNA_CPB_0673",
+     "policy_version": "2024-09-11",
+     "procedure": "knee_arthroscopy",
+     "retrieval_instructions": "Open the source URL, find the exclusions section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Exclusions",
+     "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html",
+     "text": "Paraphrase: exclusions include moderate to severe osteoarthritis for debridement and diagnostic arthroscopy alone without radiologically proven pathology. A locked knee from a displaced bucket handle tear can waive conservative therapy.",
+     "retrieval_score": 0.6558302238586537
+    },
+    {
+     "chunk_id": "CH-0673-01",
+     "policy_id": "AETNA_CPB_0673",
+     "policy_version": "2024-09-11",
+     "procedure": "knee_arthroscopy",
+     "retrieval_instructions": "Open the source URL, find the knee arthroscopy section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Knee arthroscopy criteria",
+     "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html",
+     "text": "Paraphrase: knee arthroscopy criteria include significant knee pain plus mechanical symptoms, no more than mild osteoarthritis, radiologic confirmation, and failure of conservative therapy with at least 6 weeks of formal physical therapy in the past year.",
+     "retrieval_score": 0.637691786770079
+    }
+   ],
+   "latency_ms": 9465.344489000017,
+   "cost_usd_estimated": 0.00149025,
+   "token_usage": {
+    "prompt_token_count": 832,
+    "candidates_token_count": 231,
+    "total_token_count": 2714,
+    "evidence_prompt_token_count": 832,
+    "evidence_candidates_token_count": 231
+   },
+   "retrieval_method": "vertex_embedding_cosine"
+  },
+  {
+   "case_id": "EVAL-KNE-02",
+   "procedure": "knee_arthroscopy",
+   "readiness": "READY_FOR_HUMAN_REVIEW",
+   "gold_readiness": "NOT_READY",
+   "gold_criterion_outcomes": {
+    "KNE-01": "met",
+    "KNE-02": "met",
+    "KNE-03": "met",
+    "KNE-04": "not_met",
+    "KNE-05": "not_applicable",
+    "KNE-EX-01": "not_fired",
+    "KNE-EX-02": "not_fired"
+   },
+   "criterion_results": [
+    {
+     "criterion_id": "KNE-01",
+     "status": "met",
+     "evidence_excerpts": [
+      "Significant knee pain with mechanical symptoms with knee locking."
+     ]
+    },
+    {
+     "criterion_id": "KNE-02",
+     "status": "met",
+     "evidence_excerpts": [
+      "Kellgren-Lawrence grade 2."
+     ]
+    },
+    {
+     "criterion_id": "KNE-03",
+     "status": "met",
+     "evidence_excerpts": [
+      "MRI confirms meniscal tear."
+     ]
+    },
+    {
+     "criterion_id": "KNE-04",
+     "status": "not_met",
+     "evidence_excerpts": [
+      "Only 3 weeks of formal physical therapy completed."
+     ]
+    },
+    {
+     "criterion_id": "KNE-05",
+     "status": "missing",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "KNE-EX-01",
+     "status": "not_fired",
+     "evidence_excerpts": [
+      "Kellgren-Lawrence grade 2."
+     ]
+    },
+    {
+     "criterion_id": "KNE-EX-02",
+     "status": "not_fired",
+     "evidence_excerpts": [
+      "MRI confirms meniscal tear."
+     ]
+    }
+   ],
+   "clinical_note": "Significant knee pain with mechanical symptoms with knee locking. Kellgren-Lawrence grade 2. MRI confirms meniscal tear. Only 3 weeks of formal physical therapy completed.",
+   "retrieval_keywords": [
+    "physical therapy"
+   ],
+   "retrieval_chunks": [
+    {
+     "chunk_id": "CH-0673-02",
+     "policy_id": "AETNA_CPB_0673",
+     "policy_version": "2024-09-11",
+     "procedure": "knee_arthroscopy",
+     "retrieval_instructions": "Open the source URL, find the exclusions section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Exclusions",
+     "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html",
+     "text": "Paraphrase: exclusions include moderate to severe osteoarthritis for debridement and diagnostic arthroscopy alone without radiologically proven pathology. A locked knee from a displaced bucket handle tear can waive conservative therapy.",
+     "retrieval_score": 0.6549995888957213
+    },
+    {
+     "chunk_id": "CH-0673-01",
+     "policy_id": "AETNA_CPB_0673",
+     "policy_version": "2024-09-11",
+     "procedure": "knee_arthroscopy",
+     "retrieval_instructions": "Open the source URL, find the knee arthroscopy section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Knee arthroscopy criteria",
+     "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html",
+     "text": "Paraphrase: knee arthroscopy criteria include significant knee pain plus mechanical symptoms, no more than mild osteoarthritis, radiologic confirmation, and failure of conservative therapy with at least 6 weeks of formal physical therapy in the past year.",
+     "retrieval_score": 0.63994129184316
+    }
+   ],
+   "latency_ms": 11374.186840999755,
+   "cost_usd_estimated": 0.0014797500000000002,
+   "token_usage": {
+    "prompt_token_count": 828,
+    "candidates_token_count": 229,
+    "total_token_count": 3296,
+    "evidence_prompt_token_count": 828,
+    "evidence_candidates_token_count": 229
+   },
+   "retrieval_method": "vertex_embedding_cosine"
+  },
+  {
+   "case_id": "EVAL-KNE-03",
+   "procedure": "knee_arthroscopy",
+   "readiness": "READY_FOR_HUMAN_REVIEW",
+   "gold_readiness": "NOT_READY",
+   "gold_criterion_outcomes": {
+    "KNE-01": "met",
+    "KNE-02": "not_met",
+    "KNE-03": "met",
+    "KNE-04": "met",
+    "KNE-05": "not_applicable",
+    "KNE-EX-01": "fired",
+    "KNE-EX-02": "not_fired"
+   },
+   "criterion_results": [
+    {
+     "criterion_id": "KNE-01",
+     "status": "met",
+     "evidence_excerpts": [
+      "Significant knee pain with mechanical symptoms with knee locking."
+     ]
+    },
+    {
+     "criterion_id": "KNE-02",
+     "status": "not_met",
+     "evidence_excerpts": [
+      "Kellgren-Lawrence grade 4."
+     ]
+    },
+    {
+     "criterion_id": "KNE-03",
+     "status": "met",
+     "evidence_excerpts": [
+      "MRI confirms meniscal tear."
+     ]
+    },
+    {
+     "criterion_id": "KNE-04",
+     "status": "met",
+     "evidence_excerpts": [
+      "Completed 6 weeks of formal physical therapy."
+     ]
+    },
+    {
+     "criterion_id": "KNE-05",
+     "status": "missing",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "KNE-EX-01",
+     "status": "fired",
+     "evidence_excerpts": [
+      "Kellgren-Lawrence grade 4."
+     ]
+    },
+    {
+     "criterion_id": "KNE-EX-02",
+     "status": "not_fired",
+     "evidence_excerpts": [
+      "MRI confirms meniscal tear."
+     ]
+    }
+   ],
+   "clinical_note": "Significant knee pain with mechanical symptoms with knee locking. Kellgren-Lawrence grade 4. MRI confirms meniscal tear. Completed 6 weeks of formal physical therapy.",
+   "retrieval_keywords": [
+    "physical therapy"
+   ],
+   "retrieval_chunks": [
+    {
+     "chunk_id": "CH-0673-01",
+     "policy_id": "AETNA_CPB_0673",
+     "policy_version": "2024-09-11",
+     "procedure": "knee_arthroscopy",
+     "retrieval_instructions": "Open the source URL, find the knee arthroscopy section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Knee arthroscopy criteria",
+     "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html",
+     "text": "Paraphrase: knee arthroscopy criteria include significant knee pain plus mechanical symptoms, no more than mild osteoarthritis, radiologic confirmation, and failure of conservative therapy with at least 6 weeks of formal physical therapy in the past year.",
+     "retrieval_score": 0.6452005420671341
+    },
+    {
+     "chunk_id": "CH-0673-02",
+     "policy_id": "AETNA_CPB_0673",
+     "policy_version": "2024-09-11",
+     "procedure": "knee_arthroscopy",
+     "retrieval_instructions": "Open the source URL, find the exclusions section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Exclusions",
+     "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html",
+     "text": "Paraphrase: exclusions include moderate to severe osteoarthritis for debridement and diagnostic arthroscopy alone without radiologically proven pathology. A locked knee from a displaced bucket handle tear can waive conservative therapy.",
+     "retrieval_score": 0.6430168482065588
+    }
+   ],
+   "latency_ms": 11966.390120000142,
+   "cost_usd_estimated": 0.0020745,
+   "token_usage": {
+    "prompt_token_count": 826,
+    "candidates_token_count": 388,
+    "total_token_count": 2650,
+    "evidence_prompt_token_count": 826,
+    "evidence_candidates_token_count": 388
+   },
+   "retrieval_method": "vertex_embedding_cosine"
+  },
+  {
+   "case_id": "EVAL-KNE-04",
+   "procedure": "knee_arthroscopy",
+   "readiness": "NEEDS_MANUAL_REVIEW",
+   "gold_readiness": "NEEDS_MANUAL_REVIEW",
+   "gold_criterion_outcomes": {
+    "KNE-01": "uncertain",
+    "KNE-02": "met",
+    "KNE-03": "met",
+    "KNE-04": "met",
+    "KNE-05": "not_applicable",
+    "KNE-EX-01": "not_fired",
+    "KNE-EX-02": "not_fired"
+   },
+   "criterion_results": [
+    {
+     "criterion_id": "KNE-01",
+     "status": "uncertain",
+     "evidence_excerpts": [
+      "Knee pain with possible mechanical symptoms, unclear whether locking occurred."
+     ]
+    },
+    {
+     "criterion_id": "KNE-02",
+     "status": "met",
+     "evidence_excerpts": [
+      "Kellgren-Lawrence grade 1."
+     ]
+    },
+    {
+     "criterion_id": "KNE-03",
+     "status": "met",
+     "evidence_excerpts": [
+      "MRI confirms meniscal tear."
+     ]
+    },
+    {
+     "criterion_id": "KNE-04",
+     "status": "met",
+     "evidence_excerpts": [
+      "Completed 6 weeks of formal physical therapy."
+     ]
+    },
+    {
+     "criterion_id": "KNE-05",
+     "status": "not_applicable",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "KNE-EX-01",
+     "status": "not_fired",
+     "evidence_excerpts": [
+      "Kellgren-Lawrence grade 1."
+     ]
+    },
+    {
+     "criterion_id": "KNE-EX-02",
+     "status": "not_fired",
+     "evidence_excerpts": [
+      "MRI confirms meniscal tear."
+     ]
+    }
+   ],
+   "clinical_note": "Knee pain with possible mechanical symptoms, unclear whether locking occurred. Kellgren-Lawrence grade 1. MRI confirms meniscal tear. Completed 6 weeks of formal physical therapy.",
+   "retrieval_keywords": [
+    "physical therapy"
+   ],
+   "retrieval_chunks": [
+    {
+     "chunk_id": "CH-0673-01",
+     "policy_id": "AETNA_CPB_0673",
+     "policy_version": "2024-09-11",
+     "procedure": "knee_arthroscopy",
+     "retrieval_instructions": "Open the source URL, find the knee arthroscopy section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Knee arthroscopy criteria",
+     "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html",
+     "text": "Paraphrase: knee arthroscopy criteria include significant knee pain plus mechanical symptoms, no more than mild osteoarthritis, radiologic confirmation, and failure of conservative therapy with at least 6 weeks of formal physical therapy in the past year.",
+     "retrieval_score": 0.6721319536599336
+    },
+    {
+     "chunk_id": "CH-0673-02",
+     "policy_id": "AETNA_CPB_0673",
+     "policy_version": "2024-09-11",
+     "procedure": "knee_arthroscopy",
+     "retrieval_instructions": "Open the source URL, find the exclusions section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Exclusions",
+     "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html",
+     "text": "Paraphrase: exclusions include moderate to severe osteoarthritis for debridement and diagnostic arthroscopy alone without radiologically proven pathology. A locked knee from a displaced bucket handle tear can waive conservative therapy.",
+     "retrieval_score": 0.6390312168120879
+    }
+   ],
+   "latency_ms": 10555.756210000254,
+   "cost_usd_estimated": 0.00209625,
+   "token_usage": {
+    "prompt_token_count": 830,
+    "candidates_token_count": 393,
+    "total_token_count": 2722,
+    "evidence_prompt_token_count": 830,
+    "evidence_candidates_token_count": 393
+   },
+   "retrieval_method": "vertex_embedding_cosine"
+  },
+  {
+   "case_id": "EVAL-KNE-05",
+   "procedure": "knee_arthroscopy",
+   "readiness": "NEEDS_MANUAL_REVIEW",
+   "gold_readiness": "READY_FOR_HUMAN_REVIEW",
+   "gold_criterion_outcomes": {
+    "KNE-01": "met",
+    "KNE-02": "met",
+    "KNE-03": "met",
+    "KNE-04": "missing",
+    "KNE-05": "met",
+    "KNE-EX-01": "not_fired",
+    "KNE-EX-02": "not_fired"
+   },
+   "criterion_results": [
+    {
+     "criterion_id": "KNE-01",
+     "status": "met",
+     "evidence_excerpts": [
+      "Significant knee pain with mechanical symptoms with knee locking."
+     ]
+    },
+    {
+     "criterion_id": "KNE-02",
+     "status": "met",
+     "evidence_excerpts": [
+      "Kellgren-Lawrence grade 1."
+     ]
+    },
+    {
+     "criterion_id": "KNE-03",
+     "status": "met",
+     "evidence_excerpts": [
+      "MRI confirms meniscal tear."
+     ]
+    },
+    {
+     "criterion_id": "KNE-04",
+     "status": "not_met",
+     "evidence_excerpts": [
+      "No physical therapy yet because the knee is locked."
+     ]
+    },
+    {
+     "criterion_id": "KNE-05",
+     "status": "met",
+     "evidence_excerpts": [
+      "Locked knee due to displaced bucket handle tear."
+     ]
+    },
+    {
+     "criterion_id": "KNE-EX-01",
+     "status": "not_fired",
+     "evidence_excerpts": [
+      "Kellgren-Lawrence grade 1."
+     ]
+    },
+    {
+     "criterion_id": "KNE-EX-02",
+     "status": "not_fired",
+     "evidence_excerpts": [
+      "MRI confirms meniscal tear."
+     ]
+    }
+   ],
+   "clinical_note": "Significant knee pain with mechanical symptoms with knee locking. Locked knee due to displaced bucket handle tear. Kellgren-Lawrence grade 1. MRI confirms meniscal tear. No physical therapy yet because the knee is locked.",
+   "retrieval_keywords": [
+    "physical therapy"
+   ],
+   "retrieval_chunks": [
+    {
+     "chunk_id": "CH-0673-02",
+     "policy_id": "AETNA_CPB_0673",
+     "policy_version": "2024-09-11",
+     "procedure": "knee_arthroscopy",
+     "retrieval_instructions": "Open the source URL, find the exclusions section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Exclusions",
+     "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html",
+     "text": "Paraphrase: exclusions include moderate to severe osteoarthritis for debridement and diagnostic arthroscopy alone without radiologically proven pathology. A locked knee from a displaced bucket handle tear can waive conservative therapy.",
+     "retrieval_score": 0.7316622859520026
+    },
+    {
+     "chunk_id": "CH-0673-01",
+     "policy_id": "AETNA_CPB_0673",
+     "policy_version": "2024-09-11",
+     "procedure": "knee_arthroscopy",
+     "retrieval_instructions": "Open the source URL, find the knee arthroscopy section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Knee arthroscopy criteria",
+     "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html",
+     "text": "Paraphrase: knee arthroscopy criteria include significant knee pain plus mechanical symptoms, no more than mild osteoarthritis, radiologic confirmation, and failure of conservative therapy with at least 6 weeks of formal physical therapy in the past year.",
+     "retrieval_score": 0.5999652224423511
+    }
+   ],
+   "latency_ms": 10895.17771499959,
+   "cost_usd_estimated": 0.0015165,
+   "token_usage": {
+    "prompt_token_count": 837,
+    "candidates_token_count": 237,
+    "total_token_count": 2713,
+    "evidence_prompt_token_count": 837,
+    "evidence_candidates_token_count": 237
+   },
+   "retrieval_method": "vertex_embedding_cosine"
+  },
+  {
+   "case_id": "EVAL-KNE-06",
+   "procedure": "knee_arthroscopy",
+   "readiness": "NEEDS_MANUAL_REVIEW",
+   "gold_readiness": "NOT_READY",
+   "gold_criterion_outcomes": {
+    "KNE-01": "missing",
+    "KNE-02": "missing",
+    "KNE-03": "not_met",
+    "KNE-04": "missing",
+    "KNE-05": "not_applicable",
+    "KNE-EX-01": "not_fired",
+    "KNE-EX-02": "fired"
+   },
+   "criterion_results": [
+    {
+     "criterion_id": "KNE-01",
+     "status": "missing",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "KNE-02",
+     "status": "missing",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "KNE-03",
+     "status": "not_met",
+     "evidence_excerpts": [
+      "Request is for diagnostic arthroscopy alone, arthroscopy for diagnosis only without radiologic confirmation."
+     ]
+    },
+    {
+     "criterion_id": "KNE-04",
+     "status": "missing",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "KNE-05",
+     "status": "missing",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "KNE-EX-01",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "KNE-EX-02",
+     "status": "fired",
+     "evidence_excerpts": [
+      "Request is for diagnostic arthroscopy alone, arthroscopy for diagnosis only without radiologic confirmation."
+     ]
+    }
+   ],
+   "clinical_note": "Request is for diagnostic arthroscopy alone, arthroscopy for diagnosis only without radiologic confirmation. MRI shows no meniscal tear.",
+   "retrieval_keywords": [
+    "physical therapy"
+   ],
+   "retrieval_chunks": [
+    {
+     "chunk_id": "CH-0673-02",
+     "policy_id": "AETNA_CPB_0673",
+     "policy_version": "2024-09-11",
+     "procedure": "knee_arthroscopy",
+     "retrieval_instructions": "Open the source URL, find the exclusions section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Exclusions",
+     "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html",
+     "text": "Paraphrase: exclusions include moderate to severe osteoarthritis for debridement and diagnostic arthroscopy alone without radiologically proven pathology. A locked knee from a displaced bucket handle tear can waive conservative therapy.",
+     "retrieval_score": 0.7307330496806358
+    },
+    {
+     "chunk_id": "CH-0673-01",
+     "policy_id": "AETNA_CPB_0673",
+     "policy_version": "2024-09-11",
+     "procedure": "knee_arthroscopy",
+     "retrieval_instructions": "Open the source URL, find the knee arthroscopy section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Knee arthroscopy criteria",
+     "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html",
+     "text": "Paraphrase: knee arthroscopy criteria include significant knee pain plus mechanical symptoms, no more than mild osteoarthritis, radiologic confirmation, and failure of conservative therapy with at least 6 weeks of formal physical therapy in the past year.",
+     "retrieval_score": 0.7128299264711384
+    }
+   ],
+   "latency_ms": 12358.037014999354,
+   "cost_usd_estimated": 0.00141675,
+   "token_usage": {
+    "prompt_token_count": 819,
+    "candidates_token_count": 214,
+    "total_token_count": 2917,
+    "evidence_prompt_token_count": 819,
+    "evidence_candidates_token_count": 214
+   },
+   "retrieval_method": "vertex_embedding_cosine"
+  },
+  {
+   "case_id": "EVAL-KNE-07",
+   "procedure": "knee_arthroscopy",
+   "readiness": "READY_FOR_HUMAN_REVIEW",
+   "gold_readiness": "NEEDS_MANUAL_REVIEW",
+   "gold_criterion_outcomes": {
+    "KNE-01": "met",
+    "KNE-02": "met",
+    "KNE-03": "met",
+    "KNE-04": "met",
+    "KNE-05": "not_applicable",
+    "KNE-EX-01": "not_fired",
+    "KNE-EX-02": "not_fired"
+   },
+   "criterion_results": [
+    {
+     "criterion_id": "KNE-01",
+     "status": "met",
+     "evidence_excerpts": [
+      "Significant knee pain with mechanical symptoms with knee locking."
+     ]
+    },
+    {
+     "criterion_id": "KNE-02",
+     "status": "met",
+     "evidence_excerpts": [
+      "Kellgren-Lawrence grade 2."
+     ]
+    },
+    {
+     "criterion_id": "KNE-03",
+     "status": "met",
+     "evidence_excerpts": [
+      "MRI confirms meniscal tear."
+     ]
+    },
+    {
+     "criterion_id": "KNE-04",
+     "status": "met",
+     "evidence_excerpts": [
+      "Completed 8 weeks of formal physical therapy."
+     ]
+    },
+    {
+     "criterion_id": "KNE-05",
+     "status": "not_applicable",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "KNE-EX-01",
+     "status": "not_fired",
+     "evidence_excerpts": [
+      "Kellgren-Lawrence grade 2."
+     ]
+    },
+    {
+     "criterion_id": "KNE-EX-02",
+     "status": "not_fired",
+     "evidence_excerpts": [
+      "MRI confirms meniscal tear."
+     ]
+    }
+   ],
+   "clinical_note": "Significant knee pain with mechanical symptoms with knee locking. Kellgren-Lawrence grade 2. MRI confirms meniscal tear. Completed 8 weeks of formal physical therapy.",
+   "retrieval_keywords": [
+    "physical therapy"
+   ],
+   "retrieval_chunks": [
+    {
+     "chunk_id": "CH-0673-02",
+     "policy_id": "AETNA_CPB_0673",
+     "policy_version": "2024-09-11",
+     "procedure": "knee_arthroscopy",
+     "retrieval_instructions": "Open the source URL, find the exclusions section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Exclusions",
+     "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html",
+     "text": "Paraphrase: exclusions include moderate to severe osteoarthritis for debridement and diagnostic arthroscopy alone without radiologically proven pathology. A locked knee from a displaced bucket handle tear can waive conservative therapy.",
+     "retrieval_score": 0.6499167202253404
+    },
+    {
+     "chunk_id": "CH-0673-01",
+     "policy_id": "AETNA_CPB_0673",
+     "policy_version": "2024-09-11",
+     "procedure": "knee_arthroscopy",
+     "retrieval_instructions": "Open the source URL, find the knee arthroscopy section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Knee arthroscopy criteria",
+     "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html",
+     "text": "Paraphrase: knee arthroscopy criteria include significant knee pain plus mechanical symptoms, no more than mild osteoarthritis, radiologic confirmation, and failure of conservative therapy with at least 6 weeks of formal physical therapy in the past year.",
+     "retrieval_score": 0.6347252823475947
+    }
+   ],
+   "latency_ms": 14518.941694000205,
+   "cost_usd_estimated": 0.0020865000000000002,
+   "token_usage": {
+    "prompt_token_count": 827,
+    "candidates_token_count": 391,
+    "total_token_count": 3215,
+    "evidence_prompt_token_count": 827,
+    "evidence_candidates_token_count": 391
+   },
+   "retrieval_method": "vertex_embedding_cosine"
+  },
+  {
+   "case_id": "EVAL-KNE-08",
+   "procedure": "knee_arthroscopy",
+   "readiness": "NEEDS_MANUAL_REVIEW",
+   "gold_readiness": "NEEDS_MANUAL_REVIEW",
+   "gold_criterion_outcomes": {
+    "KNE-01": "met",
+    "KNE-02": "met",
+    "KNE-03": "contradictory",
+    "KNE-04": "met",
+    "KNE-05": "not_applicable",
+    "KNE-EX-01": "not_fired",
+    "KNE-EX-02": "not_fired"
+   },
+   "criterion_results": [
+    {
+     "criterion_id": "KNE-01",
+     "status": "met",
+     "evidence_excerpts": [
+      "Significant knee pain with mechanical symptoms with knee locking."
+     ]
+    },
+    {
+     "criterion_id": "KNE-02",
+     "status": "met",
+     "evidence_excerpts": [
+      "Kellgren-Lawrence grade 2."
+     ]
+    },
+    {
+     "criterion_id": "KNE-03",
+     "status": "contradictory",
+     "evidence_excerpts": [
+      "MRI confirms meniscal tear.",
+      "MRI shows no meniscal tear."
+     ]
+    },
+    {
+     "criterion_id": "KNE-04",
+     "status": "met",
+     "evidence_excerpts": [
+      "Completed 6 weeks of formal physical therapy."
+     ]
+    },
+    {
+     "criterion_id": "KNE-05",
+     "status": "missing",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "KNE-EX-01",
+     "status": "not_fired",
+     "evidence_excerpts": [
+      "Kellgren-Lawrence grade 2."
+     ]
+    },
+    {
+     "criterion_id": "KNE-EX-02",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    }
+   ],
+   "clinical_note": "Significant knee pain with mechanical symptoms with knee locking. Kellgren-Lawrence grade 2. MRI confirms meniscal tear. Later in the same note: MRI shows no meniscal tear. Completed 6 weeks of formal physical therapy.",
+   "retrieval_keywords": [
+    "physical therapy"
+   ],
+   "retrieval_chunks": [
+    {
+     "chunk_id": "CH-0673-01",
+     "policy_id": "AETNA_CPB_0673",
+     "policy_version": "2024-09-11",
+     "procedure": "knee_arthroscopy",
+     "retrieval_instructions": "Open the source URL, find the knee arthroscopy section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Knee arthroscopy criteria",
+     "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html",
+     "text": "Paraphrase: knee arthroscopy criteria include significant knee pain plus mechanical symptoms, no more than mild osteoarthritis, radiologic confirmation, and failure of conservative therapy with at least 6 weeks of formal physical therapy in the past year.",
+     "retrieval_score": 0.6786720245577935
+    },
+    {
+     "chunk_id": "CH-0673-02",
+     "policy_id": "AETNA_CPB_0673",
+     "policy_version": "2024-09-11",
+     "procedure": "knee_arthroscopy",
+     "retrieval_instructions": "Open the source URL, find the exclusions section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Exclusions",
+     "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html",
+     "text": "Paraphrase: exclusions include moderate to severe osteoarthritis for debridement and diagnostic arthroscopy alone without radiologically proven pathology. A locked knee from a displaced bucket handle tear can waive conservative therapy.",
+     "retrieval_score": 0.669598822686481
+    }
+   ],
+   "latency_ms": 12385.140943999431,
+   "cost_usd_estimated": 0.0014925,
+   "token_usage": {
+    "prompt_token_count": 840,
+    "candidates_token_count": 230,
+    "total_token_count": 3023,
+    "evidence_prompt_token_count": 840,
+    "evidence_candidates_token_count": 230
+   },
+   "retrieval_method": "vertex_embedding_cosine"
+  },
+  {
+   "case_id": "EVAL-KNE-09",
+   "procedure": "knee_arthroscopy",
+   "readiness": "NEEDS_MANUAL_REVIEW",
+   "gold_readiness": "NOT_READY",
+   "gold_criterion_outcomes": {
+    "KNE-01": "met",
+    "KNE-02": "met",
+    "KNE-03": "missing",
+    "KNE-04": "met",
+    "KNE-05": "not_applicable",
+    "KNE-EX-01": "not_fired",
+    "KNE-EX-02": "not_fired"
+   },
+   "criterion_results": [
+    {
+     "criterion_id": "KNE-01",
+     "status": "met",
+     "evidence_excerpts": [
+      "Significant knee pain with mechanical symptoms with knee locking."
+     ]
+    },
+    {
+     "criterion_id": "KNE-02",
+     "status": "met",
+     "evidence_excerpts": [
+      "Kellgren-Lawrence grade 2."
+     ]
+    },
+    {
+     "criterion_id": "KNE-03",
+     "status": "missing",
+     "evidence_excerpts": [
+      "No imaging report is included."
+     ]
+    },
+    {
+     "criterion_id": "KNE-04",
+     "status": "met",
+     "evidence_excerpts": [
+      "Completed 6 weeks of formal physical therapy."
+     ]
+    },
+    {
+     "criterion_id": "KNE-05",
+     "status": "missing",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "KNE-EX-01",
+     "status": "not_fired",
+     "evidence_excerpts": [
+      "Kellgren-Lawrence grade 2."
+     ]
+    },
+    {
+     "criterion_id": "KNE-EX-02",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    }
+   ],
+   "clinical_note": "Significant knee pain with mechanical symptoms with knee locking. Kellgren-Lawrence grade 2. Completed 6 weeks of formal physical therapy. No imaging report is included.",
+   "retrieval_keywords": [
+    "physical therapy"
+   ],
+   "retrieval_chunks": [
+    {
+     "chunk_id": "CH-0673-01",
+     "policy_id": "AETNA_CPB_0673",
+     "policy_version": "2024-09-11",
+     "procedure": "knee_arthroscopy",
+     "retrieval_instructions": "Open the source URL, find the knee arthroscopy section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Knee arthroscopy criteria",
+     "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html",
+     "text": "Paraphrase: knee arthroscopy criteria include significant knee pain plus mechanical symptoms, no more than mild osteoarthritis, radiologic confirmation, and failure of conservative therapy with at least 6 weeks of formal physical therapy in the past year.",
+     "retrieval_score": 0.6963526715534709
+    },
+    {
+     "chunk_id": "CH-0673-02",
+     "policy_id": "AETNA_CPB_0673",
+     "policy_version": "2024-09-11",
+     "procedure": "knee_arthroscopy",
+     "retrieval_instructions": "Open the source URL, find the exclusions section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Exclusions",
+     "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html",
+     "text": "Paraphrase: exclusions include moderate to severe osteoarthritis for debridement and diagnostic arthroscopy alone without radiologically proven pathology. A locked knee from a displaced bucket handle tear can waive conservative therapy.",
+     "retrieval_score": 0.6718647850685069
+    }
+   ],
+   "latency_ms": 10888.852535000296,
+   "cost_usd_estimated": 0.00144525,
+   "token_usage": {
+    "prompt_token_count": 827,
+    "candidates_token_count": 220,
+    "total_token_count": 2850,
+    "evidence_prompt_token_count": 827,
+    "evidence_candidates_token_count": 220
+   },
+   "retrieval_method": "vertex_embedding_cosine"
+  },
+  {
+   "case_id": "EVAL-BIO-01",
+   "procedure": "biologic_infusion",
+   "readiness": "READY_FOR_HUMAN_REVIEW",
+   "gold_readiness": "READY_FOR_HUMAN_REVIEW",
+   "gold_criterion_outcomes": {
+    "BIO-01": "met",
+    "BIO-02": "met",
+    "BIO-03": "met",
+    "BIO-04": "met",
+    "BIO-05": "met",
+    "BIO-06": "met",
+    "BIO-EX-01": "not_fired",
+    "BIO-EX-02": "not_fired",
+    "BIO-EX-03": "not_fired"
+   },
+   "criterion_results": [
+    {
+     "criterion_id": "BIO-01",
+     "status": "met",
+     "evidence_excerpts": [
+      "Patient age field: 33"
+     ]
+    },
+    {
+     "criterion_id": "BIO-02",
+     "status": "met",
+     "evidence_excerpts": [
+      "prescribed by a gastroenterologist"
+     ]
+    },
+    {
+     "criterion_id": "BIO-03",
+     "status": "met",
+     "evidence_excerpts": [
+      "Moderate to severe Crohn disease",
+      "Diagnosis codes: K50.90"
+     ]
+    },
+    {
+     "criterion_id": "BIO-04",
+     "status": "met",
+     "evidence_excerpts": [
+      "Dosing 5 mg per kg at weeks 0, 2, and 6, then maintenance dosing every 8 weeks."
+     ]
+    },
+    {
+     "criterion_id": "BIO-05",
+     "status": "met",
+     "evidence_excerpts": [
+      "TB screening documented before initiation."
+     ]
+    },
+    {
+     "criterion_id": "BIO-06",
+     "status": "met",
+     "evidence_excerpts": [
+      "Failed corticosteroids and failed immunomodulators."
+     ]
+    },
+    {
+     "criterion_id": "BIO-EX-01",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "BIO-EX-02",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "BIO-EX-03",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    }
+   ],
+   "clinical_note": "Moderate to severe Crohn disease, prescribed by a gastroenterologist. Dosing 5 mg per kg at weeks 0, 2, and 6, then maintenance dosing every 8 weeks. TB screening documented before initiation. Failed corticosteroids and failed immunomodulators.",
+   "retrieval_keywords": [
+    "Crohn"
+   ],
+   "retrieval_chunks": [
+    {
+     "chunk_id": "CH-IP0660-01",
+     "policy_id": "CIGNA_IP0660",
+     "policy_version": "2026",
+     "procedure": "biologic_infusion",
+     "retrieval_instructions": "Open the source URL, find the Crohn disease initial therapy section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Initial therapy criteria, Crohn disease",
+     "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf",
+     "text": "Paraphrase: Crohn disease initial infliximab criteria include age at least 6 years, gastroenterologist prescribing or consultation, moderate to severe Crohn disease, dosing up to 5 mg per kg at weeks 0, 2, and 6 then no more frequently than every 6 weeks, TB screening before initiation, and prior conventional therapy failure, intolerance, or contraindication.",
+     "retrieval_score": 0.8114517402291581
+    },
+    {
+     "chunk_id": "CH-IP0660-02",
+     "policy_id": "CIGNA_IP0660",
+     "policy_version": "2026",
+     "procedure": "biologic_infusion",
+     "retrieval_instructions": "Open the source URL, find the exclusions section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Exclusions",
+     "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf",
+     "text": "Paraphrase: exclusions include active serious infection, untreated latent TB, and known hypersensitivity to infliximab.",
+     "retrieval_score": 0.7017341124584374
+    }
+   ],
+   "latency_ms": 11622.745685000154,
+   "cost_usd_estimated": 0.00235575,
+   "token_usage": {
+    "prompt_token_count": 856,
+    "candidates_token_count": 457,
+    "total_token_count": 2709,
+    "evidence_prompt_token_count": 856,
+    "evidence_candidates_token_count": 457
+   },
+   "retrieval_method": "vertex_embedding_cosine"
+  },
+  {
+   "case_id": "EVAL-BIO-02",
+   "procedure": "biologic_infusion",
+   "readiness": "READY_FOR_HUMAN_REVIEW",
+   "gold_readiness": "NOT_READY",
+   "gold_criterion_outcomes": {
+    "BIO-01": "met",
+    "BIO-02": "met",
+    "BIO-03": "met",
+    "BIO-04": "met",
+    "BIO-05": "missing",
+    "BIO-06": "met",
+    "BIO-EX-01": "not_fired",
+    "BIO-EX-02": "not_fired",
+    "BIO-EX-03": "not_fired"
+   },
+   "criterion_results": [
+    {
+     "criterion_id": "BIO-01",
+     "status": "met",
+     "evidence_excerpts": [
+      "Patient age field: 33"
+     ]
+    },
+    {
+     "criterion_id": "BIO-02",
+     "status": "met",
+     "evidence_excerpts": [
+      "prescribed by a gastroenterologist"
+     ]
+    },
+    {
+     "criterion_id": "BIO-03",
+     "status": "met",
+     "evidence_excerpts": [
+      "Moderate to severe Crohn disease"
+     ]
+    },
+    {
+     "criterion_id": "BIO-04",
+     "status": "met",
+     "evidence_excerpts": [
+      "Dosing 5 mg per kg at weeks 0, 2, and 6"
+     ]
+    },
+    {
+     "criterion_id": "BIO-05",
+     "status": "not_met",
+     "evidence_excerpts": [
+      "No TB screening is documented."
+     ]
+    },
+    {
+     "criterion_id": "BIO-06",
+     "status": "met",
+     "evidence_excerpts": [
+      "Failed corticosteroids."
+     ]
+    },
+    {
+     "criterion_id": "BIO-EX-01",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "BIO-EX-02",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "BIO-EX-03",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    }
+   ],
+   "clinical_note": "Moderate to severe Crohn disease, prescribed by a gastroenterologist. Dosing 5 mg per kg at weeks 0, 2, and 6. Failed corticosteroids. No TB screening is documented.",
+   "retrieval_keywords": [
+    "Crohn"
+   ],
+   "retrieval_chunks": [
+    {
+     "chunk_id": "CH-IP0660-01",
+     "policy_id": "CIGNA_IP0660",
+     "policy_version": "2026",
+     "procedure": "biologic_infusion",
+     "retrieval_instructions": "Open the source URL, find the Crohn disease initial therapy section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Initial therapy criteria, Crohn disease",
+     "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf",
+     "text": "Paraphrase: Crohn disease initial infliximab criteria include age at least 6 years, gastroenterologist prescribing or consultation, moderate to severe Crohn disease, dosing up to 5 mg per kg at weeks 0, 2, and 6 then no more frequently than every 6 weeks, TB screening before initiation, and prior conventional therapy failure, intolerance, or contraindication.",
+     "retrieval_score": 0.8134871397112585
+    },
+    {
+     "chunk_id": "CH-IP0660-02",
+     "policy_id": "CIGNA_IP0660",
+     "policy_version": "2026",
+     "procedure": "biologic_infusion",
+     "retrieval_instructions": "Open the source URL, find the exclusions section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Exclusions",
+     "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf",
+     "text": "Paraphrase: exclusions include active serious infection, untreated latent TB, and known hypersensitivity to infliximab.",
+     "retrieval_score": 0.7092497562457174
+    }
+   ],
+   "latency_ms": 10788.428967000073,
+   "cost_usd_estimated": 0.00161475,
+   "token_usage": {
+    "prompt_token_count": 843,
+    "candidates_token_count": 262,
+    "total_token_count": 3269,
+    "evidence_prompt_token_count": 843,
+    "evidence_candidates_token_count": 262
+   },
+   "retrieval_method": "vertex_embedding_cosine"
+  },
+  {
+   "case_id": "EVAL-BIO-03",
+   "procedure": "biologic_infusion",
+   "readiness": "READY_FOR_HUMAN_REVIEW",
+   "gold_readiness": "NOT_READY",
+   "gold_criterion_outcomes": {
+    "BIO-01": "met",
+    "BIO-02": "met",
+    "BIO-03": "met",
+    "BIO-04": "met",
+    "BIO-05": "met",
+    "BIO-06": "met",
+    "BIO-EX-01": "fired",
+    "BIO-EX-02": "not_fired",
+    "BIO-EX-03": "not_fired"
+   },
+   "criterion_results": [
+    {
+     "criterion_id": "BIO-01",
+     "status": "met",
+     "evidence_excerpts": [
+      "Patient age field: 33"
+     ]
+    },
+    {
+     "criterion_id": "BIO-02",
+     "status": "met",
+     "evidence_excerpts": [
+      "prescribed by a gastroenterologist"
+     ]
+    },
+    {
+     "criterion_id": "BIO-03",
+     "status": "met",
+     "evidence_excerpts": [
+      "Moderate to severe Crohn disease"
+     ]
+    },
+    {
+     "criterion_id": "BIO-04",
+     "status": "met",
+     "evidence_excerpts": [
+      "Dosing 5 mg per kg at weeks 0, 2, and 6"
+     ]
+    },
+    {
+     "criterion_id": "BIO-05",
+     "status": "met",
+     "evidence_excerpts": [
+      "TB screening documented before initiation"
+     ]
+    },
+    {
+     "criterion_id": "BIO-06",
+     "status": "met",
+     "evidence_excerpts": [
+      "Failed corticosteroids"
+     ]
+    },
+    {
+     "criterion_id": "BIO-EX-01",
+     "status": "fired",
+     "evidence_excerpts": [
+      "Patient has an active serious infection requiring antibiotics"
+     ]
+    },
+    {
+     "criterion_id": "BIO-EX-02",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "BIO-EX-03",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    }
+   ],
+   "clinical_note": "Moderate to severe Crohn disease, prescribed by a gastroenterologist. Dosing 5 mg per kg at weeks 0, 2, and 6. TB screening documented before initiation. Failed corticosteroids. Patient has an active serious infection requiring antibiotics.",
+   "retrieval_keywords": [
+    "Crohn"
+   ],
+   "retrieval_chunks": [
+    {
+     "chunk_id": "CH-IP0660-01",
+     "policy_id": "CIGNA_IP0660",
+     "policy_version": "2026",
+     "procedure": "biologic_infusion",
+     "retrieval_instructions": "Open the source URL, find the Crohn disease initial therapy section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Initial therapy criteria, Crohn disease",
+     "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf",
+     "text": "Paraphrase: Crohn disease initial infliximab criteria include age at least 6 years, gastroenterologist prescribing or consultation, moderate to severe Crohn disease, dosing up to 5 mg per kg at weeks 0, 2, and 6 then no more frequently than every 6 weeks, TB screening before initiation, and prior conventional therapy failure, intolerance, or contraindication.",
+     "retrieval_score": 0.7783775925631088
+    },
+    {
+     "chunk_id": "CH-IP0660-02",
+     "policy_id": "CIGNA_IP0660",
+     "policy_version": "2026",
+     "procedure": "biologic_infusion",
+     "retrieval_instructions": "Open the source URL, find the exclusions section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Exclusions",
+     "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf",
+     "text": "Paraphrase: exclusions include active serious infection, untreated latent TB, and known hypersensitivity to infliximab.",
+     "retrieval_score": 0.7417306723290216
+    }
+   ],
+   "latency_ms": 9195.045217999905,
+   "cost_usd_estimated": 0.00161775,
+   "token_usage": {
+    "prompt_token_count": 852,
+    "candidates_token_count": 261,
+    "total_token_count": 2628,
+    "evidence_prompt_token_count": 852,
+    "evidence_candidates_token_count": 261
+   },
+   "retrieval_method": "vertex_embedding_cosine"
+  },
+  {
+   "case_id": "EVAL-BIO-04",
+   "procedure": "biologic_infusion",
+   "readiness": "READY_FOR_HUMAN_REVIEW",
+   "gold_readiness": "NOT_READY",
+   "gold_criterion_outcomes": {
+    "BIO-01": "met",
+    "BIO-02": "met",
+    "BIO-03": "met",
+    "BIO-04": "met",
+    "BIO-05": "missing",
+    "BIO-06": "met",
+    "BIO-EX-01": "not_fired",
+    "BIO-EX-02": "fired",
+    "BIO-EX-03": "not_fired"
+   },
+   "criterion_results": [
+    {
+     "criterion_id": "BIO-01",
+     "status": "met",
+     "evidence_excerpts": [
+      "Patient age field: 33"
+     ]
+    },
+    {
+     "criterion_id": "BIO-02",
+     "status": "met",
+     "evidence_excerpts": [
+      "prescribed by a gastroenterologist"
+     ]
+    },
+    {
+     "criterion_id": "BIO-03",
+     "status": "met",
+     "evidence_excerpts": [
+      "Moderate to severe Crohn disease"
+     ]
+    },
+    {
+     "criterion_id": "BIO-04",
+     "status": "met",
+     "evidence_excerpts": [
+      "Dosing 5 mg per kg at weeks 0, 2, and 6"
+     ]
+    },
+    {
+     "criterion_id": "BIO-05",
+     "status": "missing",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "BIO-06",
+     "status": "met",
+     "evidence_excerpts": [
+      "Failed corticosteroids"
+     ]
+    },
+    {
+     "criterion_id": "BIO-EX-01",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "BIO-EX-02",
+     "status": "fired",
+     "evidence_excerpts": [
+      "Untreated latent tuberculosis documented"
+     ]
+    },
+    {
+     "criterion_id": "BIO-EX-03",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    }
+   ],
+   "clinical_note": "Moderate to severe Crohn disease, prescribed by a gastroenterologist. Dosing 5 mg per kg at weeks 0, 2, and 6. Failed corticosteroids. Untreated latent tuberculosis documented.",
+   "retrieval_keywords": [
+    "Crohn"
+   ],
+   "retrieval_chunks": [
+    {
+     "chunk_id": "CH-IP0660-01",
+     "policy_id": "CIGNA_IP0660",
+     "policy_version": "2026",
+     "procedure": "biologic_infusion",
+     "retrieval_instructions": "Open the source URL, find the Crohn disease initial therapy section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Initial therapy criteria, Crohn disease",
+     "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf",
+     "text": "Paraphrase: Crohn disease initial infliximab criteria include age at least 6 years, gastroenterologist prescribing or consultation, moderate to severe Crohn disease, dosing up to 5 mg per kg at weeks 0, 2, and 6 then no more frequently than every 6 weeks, TB screening before initiation, and prior conventional therapy failure, intolerance, or contraindication.",
+     "retrieval_score": 0.7826694907979318
+    },
+    {
+     "chunk_id": "CH-IP0660-02",
+     "policy_id": "CIGNA_IP0660",
+     "policy_version": "2026",
+     "procedure": "biologic_infusion",
+     "retrieval_instructions": "Open the source URL, find the exclusions section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Exclusions",
+     "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf",
+     "text": "Paraphrase: exclusions include active serious infection, untreated latent TB, and known hypersensitivity to infliximab.",
+     "retrieval_score": 0.7296557655622683
+    }
+   ],
+   "latency_ms": 14264.370969999618,
+   "cost_usd_estimated": 0.00158475,
+   "token_usage": {
+    "prompt_token_count": 843,
+    "candidates_token_count": 254,
+    "total_token_count": 3154,
+    "evidence_prompt_token_count": 843,
+    "evidence_candidates_token_count": 254
+   },
+   "retrieval_method": "vertex_embedding_cosine"
+  },
+  {
+   "case_id": "EVAL-BIO-05",
+   "procedure": "biologic_infusion",
+   "readiness": "READY_FOR_HUMAN_REVIEW",
+   "gold_readiness": "NEEDS_MANUAL_REVIEW",
+   "gold_criterion_outcomes": {
+    "BIO-01": "met",
+    "BIO-02": "uncertain",
+    "BIO-03": "met",
+    "BIO-04": "met",
+    "BIO-05": "met",
+    "BIO-06": "met",
+    "BIO-EX-01": "not_fired",
+    "BIO-EX-02": "not_fired",
+    "BIO-EX-03": "not_fired"
+   },
+   "criterion_results": [
+    {
+     "criterion_id": "BIO-01",
+     "status": "met",
+     "evidence_excerpts": [
+      "Patient age field: 33"
+     ]
+    },
+    {
+     "criterion_id": "BIO-02",
+     "status": "not_met",
+     "evidence_excerpts": [
+      "prescribed by a primary care physician, with possible gastroenterology input that is not documented as a consultation"
+     ]
+    },
+    {
+     "criterion_id": "BIO-03",
+     "status": "met",
+     "evidence_excerpts": [
+      "Moderate to severe Crohn disease"
+     ]
+    },
+    {
+     "criterion_id": "BIO-04",
+     "status": "met",
+     "evidence_excerpts": [
+      "Dosing 5 mg per kg at weeks 0, 2, and 6."
+     ]
+    },
+    {
+     "criterion_id": "BIO-05",
+     "status": "met",
+     "evidence_excerpts": [
+      "TB screening documented before initiation."
+     ]
+    },
+    {
+     "criterion_id": "BIO-06",
+     "status": "met",
+     "evidence_excerpts": [
+      "Failed corticosteroids."
+     ]
+    },
+    {
+     "criterion_id": "BIO-EX-01",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "BIO-EX-02",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "BIO-EX-03",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    }
+   ],
+   "clinical_note": "Moderate to severe Crohn disease, prescribed by a primary care physician, with possible gastroenterology input that is not documented as a consultation. Dosing 5 mg per kg at weeks 0, 2, and 6. TB screening documented before initiation. Failed corticosteroids.",
+   "retrieval_keywords": [
+    "Crohn"
+   ],
+   "retrieval_chunks": [
+    {
+     "chunk_id": "CH-IP0660-01",
+     "policy_id": "CIGNA_IP0660",
+     "policy_version": "2026",
+     "procedure": "biologic_infusion",
+     "retrieval_instructions": "Open the source URL, find the Crohn disease initial therapy section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Initial therapy criteria, Crohn disease",
+     "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf",
+     "text": "Paraphrase: Crohn disease initial infliximab criteria include age at least 6 years, gastroenterologist prescribing or consultation, moderate to severe Crohn disease, dosing up to 5 mg per kg at weeks 0, 2, and 6 then no more frequently than every 6 weeks, TB screening before initiation, and prior conventional therapy failure, intolerance, or contraindication.",
+     "retrieval_score": 0.8147160937081848
+    },
+    {
+     "chunk_id": "CH-IP0660-02",
+     "policy_id": "CIGNA_IP0660",
+     "policy_version": "2026",
+     "procedure": "biologic_infusion",
+     "retrieval_instructions": "Open the source URL, find the exclusions section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Exclusions",
+     "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf",
+     "text": "Paraphrase: exclusions include active serious infection, untreated latent TB, and known hypersensitivity to infliximab.",
+     "retrieval_score": 0.7011757642664342
+    }
+   ],
+   "latency_ms": 7377.080952000142,
+   "cost_usd_estimated": 0.0015990000000000002,
+   "token_usage": {
+    "prompt_token_count": 857,
+    "candidates_token_count": 255,
+    "total_token_count": 2233,
+    "evidence_prompt_token_count": 857,
+    "evidence_candidates_token_count": 255
+   },
+   "retrieval_method": "vertex_embedding_cosine"
+  },
+  {
+   "case_id": "EVAL-BIO-06",
+   "procedure": "biologic_infusion",
+   "readiness": "READY_FOR_HUMAN_REVIEW",
+   "gold_readiness": "NOT_READY",
+   "gold_criterion_outcomes": {
+    "BIO-01": "met",
+    "BIO-02": "met",
+    "BIO-03": "met",
+    "BIO-04": "missing",
+    "BIO-05": "contradictory",
+    "BIO-06": "met",
+    "BIO-EX-01": "not_fired",
+    "BIO-EX-02": "fired",
+    "BIO-EX-03": "not_fired"
+   },
+   "criterion_results": [
+    {
+     "criterion_id": "BIO-01",
+     "status": "met",
+     "evidence_excerpts": [
+      "Patient age field: 33"
+     ]
+    },
+    {
+     "criterion_id": "BIO-02",
+     "status": "met",
+     "evidence_excerpts": [
+      "prescribed by a gastroenterologist"
+     ]
+    },
+    {
+     "criterion_id": "BIO-03",
+     "status": "met",
+     "evidence_excerpts": [
+      "Moderate to severe Crohn disease"
+     ]
+    },
+    {
+     "criterion_id": "BIO-04",
+     "status": "missing",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "BIO-05",
+     "status": "met",
+     "evidence_excerpts": [
+      "TB screening documented before initiation, test negative"
+     ]
+    },
+    {
+     "criterion_id": "BIO-06",
+     "status": "met",
+     "evidence_excerpts": [
+      "Failed corticosteroids"
+     ]
+    },
+    {
+     "criterion_id": "BIO-EX-01",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "BIO-EX-02",
+     "status": "fired",
+     "evidence_excerpts": [
+      "untreated latent tuberculosis documented"
+     ]
+    },
+    {
+     "criterion_id": "BIO-EX-03",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    }
+   ],
+   "clinical_note": "Moderate to severe Crohn disease, prescribed by a gastroenterologist. TB screening documented before initiation, test negative. Later in the same note: untreated latent tuberculosis documented. Failed corticosteroids.",
+   "retrieval_keywords": [
+    "Crohn"
+   ],
+   "retrieval_chunks": [
+    {
+     "chunk_id": "CH-IP0660-01",
+     "policy_id": "CIGNA_IP0660",
+     "policy_version": "2026",
+     "procedure": "biologic_infusion",
+     "retrieval_instructions": "Open the source URL, find the Crohn disease initial therapy section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Initial therapy criteria, Crohn disease",
+     "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf",
+     "text": "Paraphrase: Crohn disease initial infliximab criteria include age at least 6 years, gastroenterologist prescribing or consultation, moderate to severe Crohn disease, dosing up to 5 mg per kg at weeks 0, 2, and 6 then no more frequently than every 6 weeks, TB screening before initiation, and prior conventional therapy failure, intolerance, or contraindication.",
+     "retrieval_score": 0.7653141334505664
+    },
+    {
+     "chunk_id": "CH-IP0660-02",
+     "policy_id": "CIGNA_IP0660",
+     "policy_version": "2026",
+     "procedure": "biologic_infusion",
+     "retrieval_instructions": "Open the source URL, find the exclusions section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Exclusions",
+     "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf",
+     "text": "Paraphrase: exclusions include active serious infection, untreated latent TB, and known hypersensitivity to infliximab.",
+     "retrieval_score": 0.7514599076620022
+    }
+   ],
+   "latency_ms": 9437.483799999427,
+   "cost_usd_estimated": 0.0015435,
+   "token_usage": {
+    "prompt_token_count": 838,
+    "candidates_token_count": 244,
+    "total_token_count": 2727,
+    "evidence_prompt_token_count": 838,
+    "evidence_candidates_token_count": 244
+   },
+   "retrieval_method": "vertex_embedding_cosine"
+  },
+  {
+   "case_id": "EVAL-BIO-07",
+   "procedure": "biologic_infusion",
+   "readiness": "READY_FOR_HUMAN_REVIEW",
+   "gold_readiness": "NEEDS_MANUAL_REVIEW",
+   "gold_criterion_outcomes": {
+    "BIO-01": "met",
+    "BIO-02": "met",
+    "BIO-03": "met",
+    "BIO-04": "met",
+    "BIO-05": "met",
+    "BIO-06": "met",
+    "BIO-EX-01": "not_fired",
+    "BIO-EX-02": "not_fired",
+    "BIO-EX-03": "not_fired"
+   },
+   "criterion_results": [
+    {
+     "criterion_id": "BIO-01",
+     "status": "met",
+     "evidence_excerpts": [
+      "Patient age field: 33"
+     ]
+    },
+    {
+     "criterion_id": "BIO-02",
+     "status": "met",
+     "evidence_excerpts": [
+      "prescribed by a gastroenterologist."
+     ]
+    },
+    {
+     "criterion_id": "BIO-03",
+     "status": "met",
+     "evidence_excerpts": [
+      "Moderate to severe Crohn disease"
+     ]
+    },
+    {
+     "criterion_id": "BIO-04",
+     "status": "met",
+     "evidence_excerpts": [
+      "Dosing 5 mg per kg at weeks 0, 2, and 6."
+     ]
+    },
+    {
+     "criterion_id": "BIO-05",
+     "status": "met",
+     "evidence_excerpts": [
+      "TB screening documented before initiation."
+     ]
+    },
+    {
+     "criterion_id": "BIO-06",
+     "status": "met",
+     "evidence_excerpts": [
+      "Failed corticosteroids."
+     ]
+    },
+    {
+     "criterion_id": "BIO-EX-01",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "BIO-EX-02",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "BIO-EX-03",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    }
+   ],
+   "clinical_note": "Moderate to severe Crohn disease, prescribed by a gastroenterologist. Dosing 5 mg per kg at weeks 0, 2, and 6. TB screening documented before initiation. Failed corticosteroids.",
+   "retrieval_keywords": [
+    "Crohn"
+   ],
+   "retrieval_chunks": [
+    {
+     "chunk_id": "CH-IP0660-01",
+     "policy_id": "CIGNA_IP0660",
+     "policy_version": "2026",
+     "procedure": "biologic_infusion",
+     "retrieval_instructions": "Open the source URL, find the Crohn disease initial therapy section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Initial therapy criteria, Crohn disease",
+     "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf",
+     "text": "Paraphrase: Crohn disease initial infliximab criteria include age at least 6 years, gastroenterologist prescribing or consultation, moderate to severe Crohn disease, dosing up to 5 mg per kg at weeks 0, 2, and 6 then no more frequently than every 6 weeks, TB screening before initiation, and prior conventional therapy failure, intolerance, or contraindication.",
+     "retrieval_score": 0.8130560012705755
+    },
+    {
+     "chunk_id": "CH-IP0660-02",
+     "policy_id": "CIGNA_IP0660",
+     "policy_version": "2026",
+     "procedure": "biologic_infusion",
+     "retrieval_instructions": "Open the source URL, find the exclusions section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Exclusions",
+     "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf",
+     "text": "Paraphrase: exclusions include active serious infection, untreated latent TB, and known hypersensitivity to infliximab.",
+     "retrieval_score": 0.7001372418799937
+    }
+   ],
+   "latency_ms": 8883.572815000662,
+   "cost_usd_estimated": 0.00162225,
+   "token_usage": {
+    "prompt_token_count": 843,
+    "candidates_token_count": 264,
+    "total_token_count": 2198,
+    "evidence_prompt_token_count": 843,
+    "evidence_candidates_token_count": 264
+   },
+   "retrieval_method": "vertex_embedding_cosine"
+  },
+  {
+   "case_id": "EVAL-BIO-08",
+   "procedure": "biologic_infusion",
+   "readiness": "READY_FOR_HUMAN_REVIEW",
+   "gold_readiness": "NOT_READY",
+   "gold_criterion_outcomes": {
+    "BIO-01": "not_met",
+    "BIO-02": "met",
+    "BIO-03": "met",
+    "BIO-04": "met",
+    "BIO-05": "met",
+    "BIO-06": "met",
+    "BIO-EX-01": "not_fired",
+    "BIO-EX-02": "not_fired",
+    "BIO-EX-03": "not_fired"
+   },
+   "criterion_results": [
+    {
+     "criterion_id": "BIO-01",
+     "status": "not_met",
+     "evidence_excerpts": [
+      "Patient age field: 5"
+     ]
+    },
+    {
+     "criterion_id": "BIO-02",
+     "status": "met",
+     "evidence_excerpts": [
+      "prescribed by a gastroenterologist"
+     ]
+    },
+    {
+     "criterion_id": "BIO-03",
+     "status": "met",
+     "evidence_excerpts": [
+      "Moderate to severe Crohn disease"
+     ]
+    },
+    {
+     "criterion_id": "BIO-04",
+     "status": "met",
+     "evidence_excerpts": [
+      "Dosing 5 mg per kg at weeks 0, 2, and 6"
+     ]
+    },
+    {
+     "criterion_id": "BIO-05",
+     "status": "met",
+     "evidence_excerpts": [
+      "TB screening documented before initiation"
+     ]
+    },
+    {
+     "criterion_id": "BIO-06",
+     "status": "met",
+     "evidence_excerpts": [
+      "Failed corticosteroids"
+     ]
+    },
+    {
+     "criterion_id": "BIO-EX-01",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "BIO-EX-02",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "BIO-EX-03",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    }
+   ],
+   "clinical_note": "Moderate to severe Crohn disease, prescribed by a gastroenterologist. Dosing 5 mg per kg at weeks 0, 2, and 6. TB screening documented before initiation. Failed corticosteroids.",
+   "retrieval_keywords": [
+    "Crohn"
+   ],
+   "retrieval_chunks": [
+    {
+     "chunk_id": "CH-IP0660-01",
+     "policy_id": "CIGNA_IP0660",
+     "policy_version": "2026",
+     "procedure": "biologic_infusion",
+     "retrieval_instructions": "Open the source URL, find the Crohn disease initial therapy section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Initial therapy criteria, Crohn disease",
+     "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf",
+     "text": "Paraphrase: Crohn disease initial infliximab criteria include age at least 6 years, gastroenterologist prescribing or consultation, moderate to severe Crohn disease, dosing up to 5 mg per kg at weeks 0, 2, and 6 then no more frequently than every 6 weeks, TB screening before initiation, and prior conventional therapy failure, intolerance, or contraindication.",
+     "retrieval_score": 0.8130560012705755
+    },
+    {
+     "chunk_id": "CH-IP0660-02",
+     "policy_id": "CIGNA_IP0660",
+     "policy_version": "2026",
+     "procedure": "biologic_infusion",
+     "retrieval_instructions": "Open the source URL, find the exclusions section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Exclusions",
+     "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf",
+     "text": "Paraphrase: exclusions include active serious infection, untreated latent TB, and known hypersensitivity to infliximab.",
+     "retrieval_score": 0.7001372418799937
+    }
+   ],
+   "latency_ms": 13468.366012999468,
+   "cost_usd_estimated": 0.0022515,
+   "token_usage": {
+    "prompt_token_count": 842,
+    "candidates_token_count": 432,
+    "total_token_count": 2953,
+    "evidence_prompt_token_count": 842,
+    "evidence_candidates_token_count": 432
+   },
+   "retrieval_method": "vertex_embedding_cosine"
+  },
+  {
+   "case_id": "EVAL-BIO-09",
+   "procedure": "biologic_infusion",
+   "readiness": "READY_FOR_HUMAN_REVIEW",
+   "gold_readiness": "NEEDS_MANUAL_REVIEW",
+   "gold_criterion_outcomes": {
+    "BIO-01": "met",
+    "BIO-02": "met",
+    "BIO-03": "met",
+    "BIO-04": "met",
+    "BIO-05": "met",
+    "BIO-06": "met",
+    "BIO-EX-01": "not_fired",
+    "BIO-EX-02": "not_fired",
+    "BIO-EX-03": "not_fired"
+   },
+   "criterion_results": [
+    {
+     "criterion_id": "BIO-01",
+     "status": "met",
+     "evidence_excerpts": [
+      "Patient age field: 33"
+     ]
+    },
+    {
+     "criterion_id": "BIO-02",
+     "status": "met",
+     "evidence_excerpts": [
+      "prescribed by a gastroenterologist"
+     ]
+    },
+    {
+     "criterion_id": "BIO-03",
+     "status": "met",
+     "evidence_excerpts": [
+      "Moderate to severe Crohn disease"
+     ]
+    },
+    {
+     "criterion_id": "BIO-04",
+     "status": "met",
+     "evidence_excerpts": [
+      "Dosing 5 mg per kg at weeks 0, 2, and 6"
+     ]
+    },
+    {
+     "criterion_id": "BIO-05",
+     "status": "met",
+     "evidence_excerpts": [
+      "TB screening documented before initiation"
+     ]
+    },
+    {
+     "criterion_id": "BIO-06",
+     "status": "met",
+     "evidence_excerpts": [
+      "Failed corticosteroids"
+     ]
+    },
+    {
+     "criterion_id": "BIO-EX-01",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "BIO-EX-02",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    },
+    {
+     "criterion_id": "BIO-EX-03",
+     "status": "not_fired",
+     "evidence_excerpts": []
+    }
+   ],
+   "clinical_note": "Moderate to severe Crohn disease, prescribed by a gastroenterologist. Dosing 5 mg per kg at weeks 0, 2, and 6. TB screening documented before initiation. Failed corticosteroids.",
+   "retrieval_keywords": [
+    "Crohn"
+   ],
+   "retrieval_chunks": [
+    {
+     "chunk_id": "CH-IP0660-01",
+     "policy_id": "CIGNA_IP0660",
+     "policy_version": "2026",
+     "procedure": "biologic_infusion",
+     "retrieval_instructions": "Open the source URL, find the Crohn disease initial therapy section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Initial therapy criteria, Crohn disease",
+     "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf",
+     "text": "Paraphrase: Crohn disease initial infliximab criteria include age at least 6 years, gastroenterologist prescribing or consultation, moderate to severe Crohn disease, dosing up to 5 mg per kg at weeks 0, 2, and 6 then no more frequently than every 6 weeks, TB screening before initiation, and prior conventional therapy failure, intolerance, or contraindication.",
+     "retrieval_score": 0.8130560012705755
+    },
+    {
+     "chunk_id": "CH-IP0660-02",
+     "policy_id": "CIGNA_IP0660",
+     "policy_version": "2026",
+     "procedure": "biologic_infusion",
+     "retrieval_instructions": "Open the source URL, find the exclusions section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Exclusions",
+     "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf",
+     "text": "Paraphrase: exclusions include active serious infection, untreated latent TB, and known hypersensitivity to infliximab.",
+     "retrieval_score": 0.7001372418799937
+    }
+   ],
+   "latency_ms": 8176.812998000059,
+   "cost_usd_estimated": 0.00159225,
+   "token_usage": {
+    "prompt_token_count": 843,
+    "candidates_token_count": 256,
+    "total_token_count": 2258,
+    "evidence_prompt_token_count": 843,
+    "evidence_candidates_token_count": 256
+   },
+   "retrieval_method": "vertex_embedding_cosine"
+  }
+ ]
+}

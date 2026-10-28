@@ -1,0 +1,668 @@
+{
+ "policies": [
+  {
+   "criteria": [
+    {
+     "ambiguous_patterns": [
+      "possible radiculopathy",
+      "questionable radiculopathy",
+      "unclear radiculopathy"
+     ],
+     "criterion_id": "LUM-01",
+     "evidence_keywords": [
+      "radiculopathy",
+      "motor weakness",
+      "reflex"
+     ],
+     "field_check": "",
+     "kind": "required",
+     "negation_patterns": [
+      "no radiculopathy",
+      "no motor weakness",
+      "no reflex changes",
+      "radiculopathy absent",
+      "no objective motor"
+     ],
+     "positive_patterns": [
+      "radicular pain with motor weakness",
+      "motor weakness in the L5 distribution",
+      "diminished Achilles reflex",
+      "objective motor weakness in the",
+      "reflex changes in the L5 distribution",
+      "motor weakness and diminished reflex"
+     ],
+     "section": "Lumbar spine MRI criteria",
+     "source_policy_id": "AETNA_CPB_0236",
+     "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html",
+     "text": "Persistent back pain with radiculopathy evidenced by pain plus objective motor or reflex changes in the specific nerve root distribution."
+    },
+    {
+     "ambiguous_patterns": [
+      "some conservative therapy",
+      "unclear duration of conservative therapy"
+     ],
+     "criterion_id": "LUM-02",
+     "evidence_keywords": [
+      "conservative therapy",
+      "6 weeks",
+      "no improvement"
+     ],
+     "field_check": "",
+     "kind": "required",
+     "negation_patterns": [
+      "no conservative therapy",
+      "conservative therapy not tried",
+      "no conservative treatment"
+     ],
+     "positive_patterns": [
+      "6 weeks of conservative therapy",
+      "8 weeks of conservative therapy",
+      "12 weeks of conservative therapy",
+      "no improvement after 6 weeks of conservative therapy",
+      "no improvement after 8 weeks of conservative therapy",
+      "failed 6 weeks of conservative therapy"
+     ],
+     "section": "Lumbar spine MRI criteria",
+     "source_policy_id": "AETNA_CPB_0236",
+     "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html",
+     "text": "No improvement after 6 weeks of conservative therapy (moderate activity, analgesics, NSAIDs, muscle relaxants)."
+    },
+    {
+     "ambiguous_patterns": [
+      "possible red flag"
+     ],
+     "criterion_id": "LUM-03",
+     "evidence_keywords": [
+      "red flag",
+      "cauda equina",
+      "neurological deficit"
+     ],
+     "field_check": "",
+     "kind": "conditional",
+     "negation_patterns": [
+      "no red flags",
+      "no cauda equina"
+     ],
+     "positive_patterns": [
+      "rapidly progressing neurological deficit",
+      "suspected infection",
+      "suspected tumor",
+      "suspected fracture",
+      "cauda equina compression",
+      "major motor weakness"
+     ],
+     "section": "Red flag pathways",
+     "source_policy_id": "AETNA_CPB_0236",
+     "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html",
+     "text": "Red flag pathway documented, such as rapidly progressing neurological deficit, major motor weakness, suspected infection, tumor, fracture, or cauda equina compression."
+    },
+    {
+     "ambiguous_patterns": [],
+     "criterion_id": "LUM-EX-01",
+     "evidence_keywords": [
+      "duplicative",
+      "already completed"
+     ],
+     "field_check": "",
+     "kind": "exclusion",
+     "negation_patterns": [],
+     "positive_patterns": [
+      "lumbar MRI already completed for the same indication"
+     ],
+     "section": "Exclusions, simplified subset",
+     "source_policy_id": "AETNA_CPB_0236",
+     "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html",
+     "text": "Exclusion in this simplified subset: duplicative lumbar MRI already completed for the same indication with no new symptoms."
+    }
+   ],
+   "current_version": "2026",
+   "pathways": [
+    {
+     "description": "Aetna CPB 0236 any-of list: this pathway is one listed indication.",
+     "name": "Persistent pain with radiculopathy plus 6 weeks conservative therapy",
+     "pathway_id": "LUM-A",
+     "required_criterion_ids": [
+      "LUM-01",
+      "LUM-02"
+     ]
+    },
+    {
+     "description": "Red flag indications are listed separately from the conservative therapy pathway.",
+     "name": "Red flag pathway",
+     "pathway_id": "LUM-B",
+     "required_criterion_ids": [
+      "LUM-03"
+     ]
+    }
+   ],
+   "payer": "Aetna",
+   "payer_type": "commercial",
+   "policy_id": "AETNA_CPB_0236",
+   "procedure": "lumbar_mri",
+   "procedure_codes": [
+    "72148",
+    "72149",
+    "72158"
+   ],
+   "retrieval_date": "2026-10-27",
+   "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html",
+   "subset_note": "Simplified faithful subset, not a verbatim reproduction. The full policy at the source URL must be checked by a human reviewer.",
+   "supported_diagnosis_codes": [
+    "M54.16",
+    "M51.16",
+    "M54.5",
+    "M51.36"
+   ],
+   "title": "Magnetic Resonance Imaging (MRI) and Computed Tomography (CT) of the Spine",
+   "versions": [
+    {
+     "effective_date": "2026-01-01",
+     "notes": "Current version used for readiness review on 2026-10-27.",
+     "status": "current",
+     "version": "2026"
+    },
+    {
+     "effective_date": "2024-01-01",
+     "notes": "Outdated fixture, superseded by the current version. Cases using this version are stale by design.",
+     "status": "superseded",
+     "version": "2024"
+    }
+   ]
+  },
+  {
+   "criteria": [
+    {
+     "ambiguous_patterns": [
+      "possible mechanical symptoms",
+      "unclear mechanical symptoms"
+     ],
+     "criterion_id": "KNE-01",
+     "evidence_keywords": [
+      "knee pain",
+      "mechanical symptoms",
+      "locking"
+     ],
+     "field_check": "",
+     "kind": "required",
+     "negation_patterns": [
+      "no mechanical symptoms",
+      "no locking",
+      "no catching"
+     ],
+     "positive_patterns": [
+      "significant knee pain with mechanical symptoms",
+      "knee locking",
+      "catching in the knee",
+      "knee gives way",
+      "mechanical symptoms with knee locking"
+     ],
+     "section": "Knee arthroscopy criteria",
+     "source_policy_id": "AETNA_CPB_0673",
+     "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html",
+     "text": "Significant knee pain plus mechanical symptoms such as locking, catching, or giving way."
+    },
+    {
+     "ambiguous_patterns": [
+      "unclear osteoarthritis grade"
+     ],
+     "criterion_id": "KNE-02",
+     "evidence_keywords": [
+      "Kellgren-Lawrence",
+      "Outerbridge",
+      "mild osteoarthritis"
+     ],
+     "field_check": "",
+     "kind": "required",
+     "negation_patterns": [],
+     "positive_patterns": [
+      "Kellgren-Lawrence grade 2",
+      "Kellgren-Lawrence grade 1",
+      "Kellgren-Lawrence grade 0",
+      "Outerbridge grade 2",
+      "Outerbridge grade 1",
+      "mild osteoarthritis"
+     ],
+     "section": "Knee arthroscopy criteria",
+     "source_policy_id": "AETNA_CPB_0673",
+     "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html",
+     "text": "No more than mild osteoarthritis (Kellgren-Lawrence 0, 1, or 2, or modified Outerbridge Grade 0, 1, or 2)."
+    },
+    {
+     "ambiguous_patterns": [
+      "possible meniscal tear on MRI",
+      "unclear imaging finding"
+     ],
+     "criterion_id": "KNE-03",
+     "evidence_keywords": [
+      "MRI",
+      "X-ray",
+      "meniscal tear",
+      "loose body"
+     ],
+     "field_check": "",
+     "kind": "required",
+     "negation_patterns": [
+      "no meniscal tear on MRI",
+      "MRI shows no meniscal tear",
+      "no loose body on imaging"
+     ],
+     "positive_patterns": [
+      "MRI shows meniscal tear",
+      "MRI confirms meniscal tear",
+      "X-ray shows loose body",
+      "MRI shows loose body",
+      "radiograph confirms loose body"
+     ],
+     "section": "Knee arthroscopy criteria",
+     "source_policy_id": "AETNA_CPB_0673",
+     "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html",
+     "text": "Radiologic confirmation: X-ray for loose bodies, or MRI for meniscal tears or loose bodies."
+    },
+    {
+     "ambiguous_patterns": [
+      "some physical therapy",
+      "unclear duration of physical therapy"
+     ],
+     "criterion_id": "KNE-04",
+     "evidence_keywords": [
+      "physical therapy",
+      "6 weeks",
+      "PT notes"
+     ],
+     "field_check": "",
+     "kind": "required",
+     "negation_patterns": [
+      "no physical therapy",
+      "physical therapy not tried"
+     ],
+     "positive_patterns": [
+      "6 weeks of formal physical therapy",
+      "8 weeks of formal physical therapy",
+      "12 weeks of formal physical therapy",
+      "completed 6 weeks of formal physical therapy",
+      "failed 6 weeks of formal physical therapy"
+     ],
+     "section": "Knee arthroscopy criteria",
+     "source_policy_id": "AETNA_CPB_0673",
+     "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html",
+     "text": "Failure of conservative therapy defined as at least 6 weeks of formal physical therapy in the past year, confirmed by PT notes or claims history."
+    },
+    {
+     "ambiguous_patterns": [],
+     "criterion_id": "KNE-05",
+     "evidence_keywords": [
+      "bucket handle",
+      "locked knee"
+     ],
+     "field_check": "",
+     "kind": "conditional",
+     "negation_patterns": [],
+     "positive_patterns": [
+      "locked knee due to displaced bucket handle tear",
+      "displaced bucket handle tear with locked knee"
+     ],
+     "section": "Waiver pathway",
+     "source_policy_id": "AETNA_CPB_0673",
+     "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html",
+     "text": "Conditional waiver pathway: knee is locked due to a displaced bucket handle tear. In this simplified subset the pathway is recorded, not applied as an automatic waiver; a human reviewer decides."
+    },
+    {
+     "ambiguous_patterns": [],
+     "criterion_id": "KNE-EX-01",
+     "evidence_keywords": [
+      "Kellgren-Lawrence grade 3",
+      "Kellgren-Lawrence grade 4"
+     ],
+     "field_check": "",
+     "kind": "exclusion",
+     "negation_patterns": [],
+     "positive_patterns": [
+      "Kellgren-Lawrence grade 3",
+      "Kellgren-Lawrence grade 4",
+      "Outerbridge grade III",
+      "Outerbridge grade IV",
+      "moderate to severe osteoarthritis"
+     ],
+     "section": "Exclusions",
+     "source_policy_id": "AETNA_CPB_0673",
+     "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html",
+     "text": "Exclusion: moderate to severe osteoarthritis (Kellgren-Lawrence 3 or 4, Outerbridge III or IV) for debridement."
+    },
+    {
+     "ambiguous_patterns": [],
+     "criterion_id": "KNE-EX-02",
+     "evidence_keywords": [
+      "diagnostic arthroscopy alone"
+     ],
+     "field_check": "",
+     "kind": "exclusion",
+     "negation_patterns": [],
+     "positive_patterns": [
+      "diagnostic arthroscopy alone",
+      "arthroscopy for diagnosis only without radiologic confirmation"
+     ],
+     "section": "Exclusions",
+     "source_policy_id": "AETNA_CPB_0673",
+     "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html",
+     "text": "Exclusion: diagnostic arthroscopy alone without radiologically proven pathology."
+    }
+   ],
+   "current_version": "2024-09-11",
+   "pathways": [
+    {
+     "description": "Standard arthroscopy pathway in the simplified subset.",
+     "name": "Pain plus mechanical symptoms, mild OA, radiologic confirmation, failed PT",
+     "pathway_id": "KNE-A",
+     "required_criterion_ids": [
+      "KNE-01",
+      "KNE-02",
+      "KNE-03",
+      "KNE-04"
+     ]
+    },
+    {
+     "description": "Waiver pathway recorded in the subset. A human reviewer must check the full policy before any action.",
+     "name": "Locked knee from displaced bucket handle tear, PT requirement waived in this simplified subset",
+     "pathway_id": "KNE-B",
+     "required_criterion_ids": [
+      "KNE-01",
+      "KNE-02",
+      "KNE-03",
+      "KNE-05"
+     ]
+    }
+   ],
+   "payer": "Aetna",
+   "payer_type": "commercial",
+   "policy_id": "AETNA_CPB_0673",
+   "procedure": "knee_arthroscopy",
+   "procedure_codes": [
+    "29881",
+    "29880",
+    "29882"
+   ],
+   "retrieval_date": "2026-10-27",
+   "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html",
+   "subset_note": "Simplified faithful subset, not a verbatim reproduction. The full policy at the source URL must be checked by a human reviewer.",
+   "supported_diagnosis_codes": [
+    "M23.22",
+    "M23.32",
+    "M17.0",
+    "M17.9",
+    "S83.21"
+   ],
+   "title": "Osteoarthritis of the Knee: Selected Treatments",
+   "versions": [
+    {
+     "effective_date": "2024-09-11",
+     "notes": "Last review shown in the archived copy 09/11/2024. Originally effective 09/26/2003.",
+     "status": "current",
+     "version": "2024-09-11"
+    },
+    {
+     "effective_date": "2023-01-01",
+     "notes": "Outdated fixture, superseded by the current version. Cases using this version are stale by design.",
+     "status": "superseded",
+     "version": "2023"
+    }
+   ]
+  },
+  {
+   "criteria": [
+    {
+     "ambiguous_patterns": [],
+     "criterion_id": "BIO-01",
+     "evidence_keywords": [
+      "age"
+     ],
+     "field_check": "age_at_least_6",
+     "kind": "required",
+     "negation_patterns": [],
+     "positive_patterns": [],
+     "section": "Initial therapy criteria, Crohn disease",
+     "source_policy_id": "CIGNA_IP0660",
+     "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf",
+     "text": "Patient age at least 6 years."
+    },
+    {
+     "ambiguous_patterns": [
+      "possible gastroenterology input"
+     ],
+     "criterion_id": "BIO-02",
+     "evidence_keywords": [
+      "gastroenterologist"
+     ],
+     "field_check": "",
+     "kind": "required",
+     "negation_patterns": [
+      "no gastroenterologist",
+      "not prescribed by a gastroenterologist"
+     ],
+     "positive_patterns": [
+      "prescribed by a gastroenterologist",
+      "in consultation with a gastroenterologist",
+      "gastroenterology consultation documented"
+     ],
+     "section": "Initial therapy criteria, Crohn disease",
+     "source_policy_id": "CIGNA_IP0660",
+     "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf",
+     "text": "Medication prescribed by or in consultation with a gastroenterologist."
+    },
+    {
+     "ambiguous_patterns": [
+      "possible Crohn disease",
+      "unclear Crohn disease severity"
+     ],
+     "criterion_id": "BIO-03",
+     "evidence_keywords": [
+      "Crohn disease",
+      "moderate to severe"
+     ],
+     "field_check": "",
+     "kind": "required",
+     "negation_patterns": [
+      "mild Crohn disease",
+      "no Crohn disease"
+     ],
+     "positive_patterns": [
+      "moderate to severe Crohn disease",
+      "moderately to severely active Crohn disease",
+      "moderate Crohn disease",
+      "severe Crohn disease"
+     ],
+     "section": "Initial therapy criteria, Crohn disease",
+     "source_policy_id": "CIGNA_IP0660",
+     "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf",
+     "text": "Moderate to severe Crohn disease diagnosis."
+    },
+    {
+     "ambiguous_patterns": [
+      "unclear dosing schedule"
+     ],
+     "criterion_id": "BIO-04",
+     "evidence_keywords": [
+      "5 mg",
+      "weeks 0, 2, and 6",
+      "every 6 weeks"
+     ],
+     "field_check": "",
+     "kind": "required",
+     "negation_patterns": [
+      "dosing every 4 weeks",
+      "more frequently than every 6 weeks"
+     ],
+     "positive_patterns": [
+      "5 mg per kg at weeks 0, 2, and 6",
+      "5 mg/kg at weeks 0, 2, and 6",
+      "dosing every 8 weeks maintenance",
+      "maintenance dosing every 6 weeks"
+     ],
+     "section": "Initial therapy criteria, Crohn disease",
+     "source_policy_id": "CIGNA_IP0660",
+     "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf",
+     "text": "Initial dosing up to 5 mg per kg IV at weeks 0, 2, and 6, then no more frequently than every 6 weeks."
+    },
+    {
+     "ambiguous_patterns": [
+      "TB screening unclear"
+     ],
+     "criterion_id": "BIO-05",
+     "evidence_keywords": [
+      "TB screening",
+      "tuberculosis screening"
+     ],
+     "field_check": "",
+     "kind": "required",
+     "negation_patterns": [
+      "no TB screening",
+      "TB screening not documented"
+     ],
+     "positive_patterns": [
+      "TB screening documented before initiation",
+      "tuberculosis screening completed before initiation",
+      "Quantiferon test completed before initiation",
+      "TB test negative before initiation"
+     ],
+     "section": "Initial therapy criteria, Crohn disease",
+     "source_policy_id": "CIGNA_IP0660",
+     "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf",
+     "text": "TB screening documented before initiation."
+    },
+    {
+     "ambiguous_patterns": [
+      "unclear prior therapy history",
+      "prior therapy history unclear"
+     ],
+     "criterion_id": "BIO-06",
+     "evidence_keywords": [
+      "corticosteroids",
+      "immunomodulators",
+      "conventional therapy"
+     ],
+     "field_check": "",
+     "kind": "required",
+     "negation_patterns": [
+      "no prior conventional therapy",
+      "conventional therapy not tried"
+     ],
+     "positive_patterns": [
+      "failed corticosteroids",
+      "failed immunomodulators",
+      "intolerant to corticosteroids",
+      "corticosteroid failure documented",
+      "immunomodulator failure documented",
+      "failed conventional therapy",
+      "established on infliximab for 6 months with response",
+      "continuation therapy for 6 months with symptomatic response",
+      "at least 6 months of infliximab therapy with response"
+     ],
+     "section": "Initial therapy criteria, Crohn disease",
+     "source_policy_id": "CIGNA_IP0660",
+     "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf",
+     "text": "Prior conventional therapy failure, intolerance, or contraindication documented (corticosteroids, immunomodulators, or other conventional therapy), unless continuation case with at least 6 months established therapy and objective or symptomatic response."
+    },
+    {
+     "ambiguous_patterns": [],
+     "criterion_id": "BIO-EX-01",
+     "evidence_keywords": [
+      "active serious infection"
+     ],
+     "field_check": "",
+     "kind": "exclusion",
+     "negation_patterns": [],
+     "positive_patterns": [
+      "active serious infection",
+      "active infection requiring antibiotics"
+     ],
+     "section": "Exclusions",
+     "source_policy_id": "CIGNA_IP0660",
+     "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf",
+     "text": "Exclusion: active serious infection."
+    },
+    {
+     "ambiguous_patterns": [],
+     "criterion_id": "BIO-EX-02",
+     "evidence_keywords": [
+      "untreated latent TB"
+     ],
+     "field_check": "",
+     "kind": "exclusion",
+     "negation_patterns": [],
+     "positive_patterns": [
+      "untreated latent tuberculosis",
+      "untreated latent TB"
+     ],
+     "section": "Exclusions",
+     "source_policy_id": "CIGNA_IP0660",
+     "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf",
+     "text": "Exclusion: untreated latent TB."
+    },
+    {
+     "ambiguous_patterns": [],
+     "criterion_id": "BIO-EX-03",
+     "evidence_keywords": [
+      "hypersensitivity to infliximab"
+     ],
+     "field_check": "",
+     "kind": "exclusion",
+     "negation_patterns": [],
+     "positive_patterns": [
+      "hypersensitivity to infliximab",
+      "allergic reaction to infliximab"
+     ],
+     "section": "Exclusions",
+     "source_policy_id": "CIGNA_IP0660",
+     "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf",
+     "text": "Exclusion: known hypersensitivity to infliximab."
+    }
+   ],
+   "current_version": "2026",
+   "pathways": [
+    {
+     "description": "Initial therapy criteria in the simplified Crohn subset. See DATA_PROVENANCE for the March 2026 IP0660 change caveat.",
+     "name": "Crohn disease initial therapy",
+     "pathway_id": "BIO-A",
+     "required_criterion_ids": [
+      "BIO-01",
+      "BIO-02",
+      "BIO-03",
+      "BIO-04",
+      "BIO-05",
+      "BIO-06"
+     ]
+    }
+   ],
+   "payer": "Cigna",
+   "payer_type": "commercial",
+   "policy_id": "CIGNA_IP0660",
+   "procedure": "biologic_infusion",
+   "procedure_codes": [
+    "J1745"
+   ],
+   "retrieval_date": "2026-10-27",
+   "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf",
+   "subset_note": "Crohn disease modeled indication only. Simplified faithful subset, not a verbatim reproduction. The full policy at the source URL must be checked by a human reviewer.",
+   "supported_diagnosis_codes": [
+    "K50.00",
+    "K50.10",
+    "K50.90",
+    "K50.01"
+   ],
+   "title": "Inflammatory Conditions, Infliximab Intravenous Products Prior Authorization Policy",
+   "versions": [
+    {
+     "effective_date": "2026-01-01",
+     "notes": "Current version used for readiness review on 2026-10-27.",
+     "status": "current",
+     "version": "2026"
+    },
+    {
+     "effective_date": "2024-01-01",
+     "notes": "Outdated fixture, superseded by the current version. Cases using this version are stale by design.",
+     "status": "superseded",
+     "version": "2024"
+    }
+   ]
+  }
+ ]
+}

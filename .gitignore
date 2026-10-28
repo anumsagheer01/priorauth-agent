@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+# Virtual environments
+.venv/
+venv/
+env/
+# Environment and secrets (never commit values)
+.env
+.env.*
+*.pem
+*.key
+credentials.json
+service-account*.json
+# Test and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+# IDE and OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+# Streamlit and local runtime
+.streamlit/secrets.toml
+# Build artifacts
+*.log

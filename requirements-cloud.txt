@@ -1,0 +1,7 @@
+# Cloud-only dependencies. Do NOT install these for local mode.
+# google-adk is listed here separately so a local install never breaks.
+# At cloud enablement time, recheck the current ADK version and the
+# current model availability before installing or calling anything.
+google-adk>=2.0
+google-cloud-bigquery>=3.0
+google-cloud-storage>=2.0

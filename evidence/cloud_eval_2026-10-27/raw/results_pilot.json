@@ -1,0 +1,1304 @@
+{
+ "model": "gemini-3.5-flash",
+ "model_location": "global",
+ "data_location": "us-central1",
+ "embedding_model": "text-embedding-004",
+ "citation_verification": true,
+ "budget_spent_usd_estimated": 0.0081,
+ "adk_tool_call_counts": {
+  "search_policy_chunks": 3,
+  "validate_case_codes": 3,
+  "extract_evidence": 3
+ },
+ "adk_sessions": [
+  "session-7382dfb6082d",
+  "session-5bf13e6e4360",
+  "session-d97ce1624ea0"
+ ],
+ "adk_execution_note": "adk_tool_events in each row are events actually yielded by Runner.run_async. A row with empty adk_tool_events did not run through ADK and must not be presented as an ADK result.",
+ "cases_attempted": 3,
+ "cases_completed": 3,
+ "cases_not_completed": 0,
+ "not_completed_cases": [],
+ "metrics_denominator_note": "Metrics are computed over completed cases only. cases_completed is the denominator for case-level metrics; see metrics for criterion-level denominators. A partial report is not a full-run result.",
+ "metrics": {
+  "n_cases": 3,
+  "criterion_accuracy": 0.8,
+  "criterion_correct": 16,
+  "criterion_total": 20,
+  "case_readiness_accuracy": 0.6667,
+  "case_correct": 2,
+  "false_ready_rate": 0.0,
+  "false_ready": 0,
+  "non_ready_total": 3,
+  "missing_evidence_recall": 0.75,
+  "missing_caught": 3,
+  "missing_total": 4,
+  "citation_precision": 1.0,
+  "citation_good": 8,
+  "citation_total": 8,
+  "retrieval_recall_proxy": 1.0,
+  "retrieval_hits": 3,
+  "latency_ms_p50": 30285.4,
+  "latency_ms_p95": 32936.2,
+  "latency_ms_mean": 30716.3,
+  "cost_usd_total_estimated": 0.0081,
+  "cost_usd_mean_per_case": 0.0027,
+  "token_usage_total": {
+   "prompt": 3228,
+   "output": 1523
+  },
+  "by_procedure": {
+   "lumbar_mri": {
+    "cases": 1,
+    "case_correct": 0,
+    "crit_correct": 1,
+    "crit_total": 4,
+    "case_accuracy": 0.0,
+    "criterion_accuracy": 0.25
+   },
+   "knee_arthroscopy": {
+    "cases": 1,
+    "case_correct": 1,
+    "crit_correct": 6,
+    "crit_total": 7,
+    "case_accuracy": 1.0,
+    "criterion_accuracy": 0.8571
+   },
+   "biologic_infusion": {
+    "cases": 1,
+    "case_correct": 1,
+    "crit_correct": 9,
+    "crit_total": 9,
+    "case_accuracy": 1.0,
+    "criterion_accuracy": 1.0
+   }
+  },
+  "failures": [
+   {
+    "case_id": "EVAL-PMC-LUM-01",
+    "gold": "NEEDS_MANUAL_REVIEW",
+    "predicted": "NOT_READY",
+    "kind": "readiness_mismatch"
+   },
+   {
+    "case_id": "EVAL-PMC-KNE-01",
+    "criterion_id": "KNE-02",
+    "gold": "missing",
+    "predicted": "met",
+    "kind": "missing_called_met"
+   }
+  ]
+ },
+ "rows": [
+  {
+   "review_id": "REV-96c2e5569d12",
+   "case_id": "EVAL-PMC-LUM-01",
+   "policy_id": "AETNA_CPB_0236",
+   "policy_version": "2026",
+   "policy_version_current": true,
+   "readiness": "NOT_READY",
+   "criterion_results": [
+    {
+     "criterion_id": "LUM-01",
+     "status": "not_met",
+     "evidence_excerpts": [
+      "low back pain after a fall during sports three months earlier",
+      "tingling over the posterior bilateral lower limbs",
+      "no neuro deficit"
+     ],
+     "citation": {
+      "policy_id": "AETNA_CPB_0236",
+      "policy_version": "2026",
+      "section": "Lumbar spine MRI criteria",
+      "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html"
+     },
+     "notes": "The patient has low back pain and tingling, but no objective motor or reflex changes, as 'no neuro deficit' is documented."
+    },
+    {
+     "criterion_id": "LUM-02",
+     "status": "met",
+     "evidence_excerpts": [
+      "low back pain after a fall during sports three months earlier",
+      "no significant improvement with conservative treatment"
+     ],
+     "citation": {
+      "policy_id": "AETNA_CPB_0236",
+      "policy_version": "2026",
+      "section": "Lumbar spine MRI criteria",
+      "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html"
+     },
+     "notes": "The patient has had low back pain for three months (which is longer than 6 weeks) and has had no significant improvement with conservative treatment."
+    },
+    {
+     "criterion_id": "LUM-03",
+     "status": "missing",
+     "evidence_excerpts": [],
+     "citation": {
+      "policy_id": "AETNA_CPB_0236",
+      "policy_version": "2026",
+      "section": "Red flag pathways",
+      "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html"
+     },
+     "notes": "No red flag pathways are documented."
+    },
+    {
+     "criterion_id": "LUM-EX-01",
+     "status": "not_fired",
+     "evidence_excerpts": [],
+     "citation": {
+      "policy_id": "AETNA_CPB_0236",
+      "policy_version": "2026",
+      "section": "Exclusions, simplified subset",
+      "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html"
+     },
+     "notes": "There is no evidence of a duplicative lumbar MRI already completed for the same indication with no new symptoms."
+    }
+   ],
+   "code_validation": {
+    "diagnosis_checks": [
+     {
+      "code": "M54.16",
+      "code_type": "diagnosis",
+      "status": "valid",
+      "reason": "Diagnosis code is in the policy supported list."
+     }
+    ],
+    "procedure_check": {
+     "code": "72148",
+     "code_type": "procedure",
+     "status": "valid",
+     "reason": "Procedure code is in the policy procedure code list."
+    },
+    "overall_status": "valid"
+   },
+   "gaps": [
+    "LUM-01: not_met (The patient has low back pain and tingling, but no objective motor or reflex changes, as 'no neuro deficit' is documented.)",
+    "LUM-03: missing (No red flag pathways are documented.)"
+   ],
+   "critic_findings": [
+    "Pre-check: No pathway fully met. Non-met criteria: LUM-01, LUM-03."
+   ],
+   "draft_letter": {
+    "title": "Documentation draft: EVAL-PMC-LUM-01 under AETNA_CPB_0236",
+    "met_criteria_summary": [
+     "LUM-02: low back pain after a fall during sports three months earlier; no significant improvement with conservative treatment"
+    ],
+    "gaps": [
+     "LUM-01: not_met",
+     "LUM-03: missing"
+    ],
+    "body": "**DRAFT FOR HUMAN REVIEW ONLY \u2014 NOT FOR APPROVAL, DENIAL, OR SUBMISSION**\n\n**Case Identifier:** EVAL-PMC-LUM-01  \n**Procedure:** Lumbar MRI (`lumbar_mri`)  \n**Policy:** AETNA_CPB_0236 (Version 2026)  \n\n---\n\n### **Verified Met Criteria**\n* **LUM-02:** Low back pain after a fall during sports three months earlier; no significant improvement with conservative treatment.\n\n---\n\n### **Identified Gaps**\n* **LUM-01 (Not Met):** The patient has low back pain and tingling, but no objective motor or reflex changes, as 'no neuro deficit' is documented.\n* **LUM-03 (Missing):** No red flag pathways are documented.",
+    "disclaimer": "This draft is for human review only. It is not an approval, denial, or submission of a prior authorization. A human reviewer must verify every statement against the full policy and the complete clinical record before any action is taken."
+   },
+   "audit_entry": {
+    "case_id": "EVAL-PMC-LUM-01",
+    "policy_id": "AETNA_CPB_0236",
+    "policy_version": "2026",
+    "policy_version_current": true,
+    "criterion_results": [
+     {
+      "criterion_id": "LUM-01",
+      "status": "not_met",
+      "evidence_excerpts": [
+       "low back pain after a fall during sports three months earlier",
+       "tingling over the posterior bilateral lower limbs",
+       "no neuro deficit"
+      ],
+      "citation": {
+       "policy_id": "AETNA_CPB_0236",
+       "policy_version": "2026",
+       "section": "Lumbar spine MRI criteria",
+       "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html"
+      },
+      "notes": "The patient has low back pain and tingling, but no objective motor or reflex changes, as 'no neuro deficit' is documented."
+     },
+     {
+      "criterion_id": "LUM-02",
+      "status": "met",
+      "evidence_excerpts": [
+       "low back pain after a fall during sports three months earlier",
+       "no significant improvement with conservative treatment"
+      ],
+      "citation": {
+       "policy_id": "AETNA_CPB_0236",
+       "policy_version": "2026",
+       "section": "Lumbar spine MRI criteria",
+       "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html"
+      },
+      "notes": "The patient has had low back pain for three months (which is longer than 6 weeks) and has had no significant improvement with conservative treatment."
+     },
+     {
+      "criterion_id": "LUM-03",
+      "status": "missing",
+      "evidence_excerpts": [],
+      "citation": {
+       "policy_id": "AETNA_CPB_0236",
+       "policy_version": "2026",
+       "section": "Red flag pathways",
+       "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html"
+      },
+      "notes": "No red flag pathways are documented."
+     },
+     {
+      "criterion_id": "LUM-EX-01",
+      "status": "not_fired",
+      "evidence_excerpts": [],
+      "citation": {
+       "policy_id": "AETNA_CPB_0236",
+       "policy_version": "2026",
+       "section": "Exclusions, simplified subset",
+       "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html"
+      },
+      "notes": "There is no evidence of a duplicative lumbar MRI already completed for the same indication with no new symptoms."
+     }
+    ],
+    "readiness": "NOT_READY",
+    "engine_version": "2.0.0-real",
+    "timestamp": "2026-10-27T14:30:30.255396+00:00"
+   },
+   "engine_version": "2.0.0-real",
+   "latency_ms": 30285.430140000244,
+   "model_name": "gemini-3.5-flash",
+   "model_location": "global",
+   "data_location": "us-central1",
+   "embedding_model": "text-embedding-004",
+   "token_usage": {
+    "evidence_prompt_token_count": 854,
+    "evidence_candidates_token_count": 233,
+    "draft_prompt_token_count": 165,
+    "draft_candidates_token_count": 179
+   },
+   "cost_usd_estimated": 0.0023092499999999997,
+   "retrieval_method": "vertex_embedding_cosine",
+   "retrieval_chunks": [
+    {
+     "chunk_id": "CH-0236-01",
+     "policy_id": "AETNA_CPB_0236",
+     "policy_version": "2026",
+     "procedure": "lumbar_mri",
+     "retrieval_instructions": "Open the source URL, find the lumbar spine MRI section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Lumbar spine MRI criteria",
+     "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html",
+     "text": "Paraphrase: lumbar spine MRI criteria include persistent back pain with radiculopathy shown by pain plus objective motor or reflex changes in a specific nerve root distribution, and no improvement after 6 weeks of conservative therapy.",
+     "retrieval_score": 0.6411127098428826
+    },
+    {
+     "chunk_id": "CH-0236-03",
+     "policy_id": "AETNA_CPB_0236",
+     "policy_version": "2024",
+     "procedure": "lumbar_mri",
+     "retrieval_instructions": "This is an outdated fixture chunk. Do not use it for a current review; check the current policy version at the source URL.",
+     "section": "Lumbar spine MRI criteria",
+     "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html",
+     "text": "Paraphrase, OUTDATED 2024 fixture: an earlier version of the lumbar spine MRI criteria, superseded by the current version.",
+     "retrieval_score": 0.5431201606505296
+    },
+    {
+     "chunk_id": "CH-0236-02",
+     "policy_id": "AETNA_CPB_0236",
+     "policy_version": "2026",
+     "procedure": "lumbar_mri",
+     "retrieval_instructions": "Open the source URL, find the red flag section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Red flag pathways",
+     "source_url": "https://www.aetna.com/cpb/medical/data/200_299/0236.html",
+     "text": "Paraphrase: red flag pathways include rapidly progressing neurological deficit, major motor weakness, suspected infection, tumor, fracture, or cauda equina compression.",
+     "retrieval_score": 0.4785348255179881
+    }
+   ],
+   "tool_calls": [
+    "adk:search_policy_chunks",
+    "adk:validate_case_codes",
+    "adk:extract_evidence",
+    "citation_verifier:deterministic_quote_check",
+    "checklist_scorer:deterministic_pathway_guardrail",
+    "draft_generator:gemini_post_verification"
+   ],
+   "adk_session_id": "session-7382dfb6082d",
+   "adk_tools_invoked": [
+    "search_policy_chunks",
+    "validate_case_codes",
+    "extract_evidence"
+   ],
+   "adk_tool_events": [
+    {
+     "author": "priorauth_agent",
+     "is_final_response": false,
+     "function_calls": [
+      {
+       "name": "search_policy_chunks",
+       "args": "{'policy_id': 'AETNA_CPB_0236', 'query': 'lumbar spine MRI indications criteria'}"
+      }
+     ],
+     "function_responses": [],
+     "text": ""
+    },
+    {
+     "author": "priorauth_agent",
+     "is_final_response": false,
+     "function_calls": [],
+     "function_responses": [
+      {
+       "name": "search_policy_chunks",
+       "keys": [
+        "retrieval_method",
+        "chunks"
+       ]
+      }
+     ],
+     "text": ""
+    },
+    {
+     "author": "priorauth_agent",
+     "is_final_response": false,
+     "function_calls": [
+      {
+       "name": "validate_case_codes",
+       "args": "{'case_id': 'EVAL-PMC-LUM-01'}"
+      }
+     ],
+     "function_responses": [],
+     "text": ""
+    },
+    {
+     "author": "priorauth_agent",
+     "is_final_response": false,
+     "function_calls": [],
+     "function_responses": [
+      {
+       "name": "validate_case_codes",
+       "keys": [
+        "diagnosis_checks",
+        "procedure_check",
+        "overall_status"
+       ]
+      }
+     ],
+     "text": ""
+    },
+    {
+     "author": "priorauth_agent",
+     "is_final_response": false,
+     "function_calls": [
+      {
+       "name": "extract_evidence",
+       "args": "{'policy_id': 'AETNA_CPB_0236'}"
+      }
+     ],
+     "function_responses": [],
+     "text": ""
+    },
+    {
+     "author": "priorauth_agent",
+     "is_final_response": false,
+     "function_calls": [],
+     "function_responses": [
+      {
+       "name": "extract_evidence",
+       "keys": [
+        "criterion_outcomes",
+        "token_usage"
+       ]
+      }
+     ],
+     "text": ""
+    },
+    {
+     "author": "priorauth_agent",
+     "is_final_response": true,
+     "function_calls": [],
+     "function_responses": [],
+     "text": "I have successfully completed the requested steps for reviewing case **EVAL-PMC-LUM-01** against policy **AETNA_CPB_0236**:\n\n1. **Policy Search:** Retrieved relevant sections of policy `AETNA_CPB_0236` (lumbar spine MRI criteria and red flag pathways).\n2. **Case Code Validation:** Validated the codes for case `EVAL-PMC-LUM-01`. \n   - **Procedure Code:** `72148` (Valid)\n   - **Diagnosis Code:** `M54.16` (Valid)\n3. **Evidence Extraction:** Processed the clinical evidence for the policy's criteria:...[truncated]"
+    }
+   ],
+   "adk_final_response": "I have successfully completed the requested steps for reviewing case **EVAL-PMC-LUM-01** against policy **AETNA_CPB_0236**:\n\n1. **Policy Search:** Retrieved relevant sections of policy `AETNA_CPB_0236` (lumbar spine MRI criteria and red flag pathways).\n2. **Case Code Validation:** Validated the codes for case `EVAL-PMC-LUM-01`. \n   - **Procedure Code:** `72148` (Valid)\n   - **Diagnosis Code:** `M54.16` (Valid)\n3. **Evidence Extraction:** Processed the clinical evidence for the policy's criteria:\n   - **LUM-01 (Radiculopathy & Objective Neurological Findings):** Not met (patient has tingling, but no documented motor or reflex changes, and \"no neuro deficit\" is noted).\n   - **LUM-02 (Conservative Therapy Duration):** Met (pain for three months with no significant improvement after conservative treatment).\n   - **LUM-03 (Red Flags):** Missing (no red flag pathways documented).\n   - **LUM-EX-01 (Exclusion - Duplicate Scan):** Not fired.",
+   "gold_readiness": "NEEDS_MANUAL_REVIEW",
+   "gold_criterion_outcomes": {
+    "LUM-01": "uncertain",
+    "LUM-02": "uncertain",
+    "LUM-03": "not_applicable",
+    "LUM-EX-01": "not_fired"
+   },
+   "procedure": "lumbar_mri",
+   "clinical_note": "13-year-old girl with low back pain after a fall during sports three months earlier, tingling over the posterior bilateral lower limbs, straight leg raise positive at 50 degrees on the left and 60 degrees on the right, no neuro deficit, no bowel or bladder involvement, and no significant improvement with conservative treatment. MRI showed disc desiccation with diffuse disc bulge at L4-L5 causing severe compromise of bilateral lateral recesses.",
+   "retrieval_keywords": [
+    "conservative therapy"
+   ],
+   "categories": [
+    "ambiguous",
+    "published_vignette",
+    "atypical"
+   ],
+   "source_type": "published_case_report"
+  },
+  {
+   "review_id": "REV-cb4e5647e8c4",
+   "case_id": "EVAL-PMC-KNE-01",
+   "policy_id": "AETNA_CPB_0673",
+   "policy_version": "2024-09-11",
+   "policy_version_current": true,
+   "readiness": "NOT_READY",
+   "criterion_results": [
+    {
+     "criterion_id": "KNE-01",
+     "status": "met",
+     "evidence_excerpts": [
+      "left knee pain and mechanical symptoms, locking and catching"
+     ],
+     "citation": {
+      "policy_id": "AETNA_CPB_0673",
+      "policy_version": "2024-09-11",
+      "section": "Knee arthroscopy criteria",
+      "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html"
+     },
+     "notes": "The patient has knee pain and mechanical symptoms including locking and catching."
+    },
+    {
+     "criterion_id": "KNE-02",
+     "status": "met",
+     "evidence_excerpts": [
+      "left knee radiographs unremarkable"
+     ],
+     "citation": {
+      "policy_id": "AETNA_CPB_0673",
+      "policy_version": "2024-09-11",
+      "section": "Knee arthroscopy criteria",
+      "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html"
+     },
+     "notes": "Unremarkable radiographs indicate Kellgren-Lawrence Grade 0 (no osteoarthritis), which satisfies the requirement of no more than mild osteoarthritis."
+    },
+    {
+     "criterion_id": "KNE-03",
+     "status": "met",
+     "evidence_excerpts": [
+      "MRI confirmed a discoid medial meniscus with a horizontal oblique tear of the posterior horn of the medial meniscus"
+     ],
+     "citation": {
+      "policy_id": "AETNA_CPB_0673",
+      "policy_version": "2024-09-11",
+      "section": "Knee arthroscopy criteria",
+      "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html"
+     },
+     "notes": "The MRI confirmed a meniscal tear."
+    },
+    {
+     "criterion_id": "KNE-04",
+     "status": "missing",
+     "evidence_excerpts": [],
+     "citation": {
+      "policy_id": "AETNA_CPB_0673",
+      "policy_version": "2024-09-11",
+      "section": "Knee arthroscopy criteria",
+      "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html"
+     },
+     "notes": "There is no mention of conservative therapy or physical therapy in the note."
+    },
+    {
+     "criterion_id": "KNE-05",
+     "status": "not_applicable",
+     "evidence_excerpts": [],
+     "citation": {
+      "policy_id": "AETNA_CPB_0673",
+      "policy_version": "2024-09-11",
+      "section": "Waiver pathway",
+      "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html"
+     },
+     "notes": "The patient has a horizontal oblique tear, not a displaced bucket handle tear."
+    },
+    {
+     "criterion_id": "KNE-EX-01",
+     "status": "not_fired",
+     "evidence_excerpts": [
+      "left knee radiographs unremarkable"
+     ],
+     "citation": {
+      "policy_id": "AETNA_CPB_0673",
+      "policy_version": "2024-09-11",
+      "section": "Exclusions",
+      "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html"
+     },
+     "notes": "Radiographs are unremarkable, indicating no moderate to severe osteoarthritis."
+    },
+    {
+     "criterion_id": "KNE-EX-02",
+     "status": "not_fired",
+     "evidence_excerpts": [
+      "MRI confirmed a discoid medial meniscus with a horizontal oblique tear of the posterior horn of the medial meniscus. Arthroscopic saucerization with a 5-mm rim remaining and meniscal repair were performed."
+     ],
+     "citation": {
+      "policy_id": "AETNA_CPB_0673",
+      "policy_version": "2024-09-11",
+      "section": "Exclusions",
+      "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html"
+     },
+     "notes": "The surgery involved therapeutic interventions (saucerization and repair) for radiologically confirmed pathology, rather than a diagnostic arthroscopy alone."
+    }
+   ],
+   "code_validation": {
+    "diagnosis_checks": [
+     {
+      "code": "M23.32",
+      "code_type": "diagnosis",
+      "status": "valid",
+      "reason": "Diagnosis code is in the policy supported list."
+     }
+    ],
+    "procedure_check": {
+     "code": "29881",
+     "code_type": "procedure",
+     "status": "valid",
+     "reason": "Procedure code is in the policy procedure code list."
+    },
+    "overall_status": "valid"
+   },
+   "gaps": [
+    "KNE-04: missing (There is no mention of conservative therapy or physical therapy in the note.)"
+   ],
+   "critic_findings": [
+    "Pre-check: No pathway fully met. Non-met criteria: KNE-04."
+   ],
+   "draft_letter": {
+    "title": "Documentation draft: EVAL-PMC-KNE-01 under AETNA_CPB_0673",
+    "met_criteria_summary": [
+     "KNE-01: left knee pain and mechanical symptoms, locking and catching",
+     "KNE-02: left knee radiographs unremarkable",
+     "KNE-03: MRI confirmed a discoid medial meniscus with a horizontal oblique tear of the posterior horn of the medial meniscus"
+    ],
+    "gaps": [
+     "KNE-04: missing"
+    ],
+    "body": "### Clinical Documentation Draft (For Human Review Only)\n\n**Case ID:** EVAL-PMC-KNE-01  \n**Procedure:** Left Knee Arthroscopy  \n**Policy:** AETNA_CPB_0673 (Version 2024-09-11)\n\n---\n\n#### Verified Met Criteria\n*   **KNE-01:** Documented left knee pain and mechanical symptoms, specifically locking and catching.\n*   **KNE-02:** Left knee radiographs are unremarkable.\n*   **KNE-03:** MRI of the left knee confirmed a discoid medial meniscus with a horizontal oblique tear of the posterior horn of the medial meniscus.\n\n---\n\n#### Gaps / Missing Information\n*   **KNE-04:** Missing. There is no mention of conservative therapy or physical therapy in the provided clinical notes.\n\n---\n*This draft is provided for human review only to assist with the clinical evaluation process. It does not constitute an approval, denial, or final coverage decision.*",
+    "disclaimer": "This draft is for human review only. It is not an approval, denial, or submission of a prior authorization. A human reviewer must verify every statement against the full policy and the complete clinical record before any action is taken."
+   },
+   "audit_entry": {
+    "case_id": "EVAL-PMC-KNE-01",
+    "policy_id": "AETNA_CPB_0673",
+    "policy_version": "2024-09-11",
+    "policy_version_current": true,
+    "criterion_results": [
+     {
+      "criterion_id": "KNE-01",
+      "status": "met",
+      "evidence_excerpts": [
+       "left knee pain and mechanical symptoms, locking and catching"
+      ],
+      "citation": {
+       "policy_id": "AETNA_CPB_0673",
+       "policy_version": "2024-09-11",
+       "section": "Knee arthroscopy criteria",
+       "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html"
+      },
+      "notes": "The patient has knee pain and mechanical symptoms including locking and catching."
+     },
+     {
+      "criterion_id": "KNE-02",
+      "status": "met",
+      "evidence_excerpts": [
+       "left knee radiographs unremarkable"
+      ],
+      "citation": {
+       "policy_id": "AETNA_CPB_0673",
+       "policy_version": "2024-09-11",
+       "section": "Knee arthroscopy criteria",
+       "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html"
+      },
+      "notes": "Unremarkable radiographs indicate Kellgren-Lawrence Grade 0 (no osteoarthritis), which satisfies the requirement of no more than mild osteoarthritis."
+     },
+     {
+      "criterion_id": "KNE-03",
+      "status": "met",
+      "evidence_excerpts": [
+       "MRI confirmed a discoid medial meniscus with a horizontal oblique tear of the posterior horn of the medial meniscus"
+      ],
+      "citation": {
+       "policy_id": "AETNA_CPB_0673",
+       "policy_version": "2024-09-11",
+       "section": "Knee arthroscopy criteria",
+       "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html"
+      },
+      "notes": "The MRI confirmed a meniscal tear."
+     },
+     {
+      "criterion_id": "KNE-04",
+      "status": "missing",
+      "evidence_excerpts": [],
+      "citation": {
+       "policy_id": "AETNA_CPB_0673",
+       "policy_version": "2024-09-11",
+       "section": "Knee arthroscopy criteria",
+       "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html"
+      },
+      "notes": "There is no mention of conservative therapy or physical therapy in the note."
+     },
+     {
+      "criterion_id": "KNE-05",
+      "status": "not_applicable",
+      "evidence_excerpts": [],
+      "citation": {
+       "policy_id": "AETNA_CPB_0673",
+       "policy_version": "2024-09-11",
+       "section": "Waiver pathway",
+       "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html"
+      },
+      "notes": "The patient has a horizontal oblique tear, not a displaced bucket handle tear."
+     },
+     {
+      "criterion_id": "KNE-EX-01",
+      "status": "not_fired",
+      "evidence_excerpts": [
+       "left knee radiographs unremarkable"
+      ],
+      "citation": {
+       "policy_id": "AETNA_CPB_0673",
+       "policy_version": "2024-09-11",
+       "section": "Exclusions",
+       "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html"
+      },
+      "notes": "Radiographs are unremarkable, indicating no moderate to severe osteoarthritis."
+     },
+     {
+      "criterion_id": "KNE-EX-02",
+      "status": "not_fired",
+      "evidence_excerpts": [
+       "MRI confirmed a discoid medial meniscus with a horizontal oblique tear of the posterior horn of the medial meniscus. Arthroscopic saucerization with a 5-mm rim remaining and meniscal repair were performed."
+      ],
+      "citation": {
+       "policy_id": "AETNA_CPB_0673",
+       "policy_version": "2024-09-11",
+       "section": "Exclusions",
+       "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html"
+      },
+      "notes": "The surgery involved therapeutic interventions (saucerization and repair) for radiologically confirmed pathology, rather than a diagnostic arthroscopy alone."
+     }
+    ],
+    "readiness": "NOT_READY",
+    "engine_version": "2.0.0-real",
+    "timestamp": "2026-10-27T14:31:08.200851+00:00"
+   },
+   "engine_version": "2.0.0-real",
+   "latency_ms": 32936.187097000584,
+   "model_name": "gemini-3.5-flash",
+   "model_location": "global",
+   "data_location": "us-central1",
+   "embedding_model": "text-embedding-004",
+   "token_usage": {
+    "evidence_prompt_token_count": 922,
+    "evidence_candidates_token_count": 376,
+    "draft_prompt_token_count": 175,
+    "draft_candidates_token_count": 216
+   },
+   "cost_usd_estimated": 0.00304275,
+   "retrieval_method": "vertex_embedding_cosine",
+   "retrieval_chunks": [
+    {
+     "chunk_id": "CH-0673-02",
+     "policy_id": "AETNA_CPB_0673",
+     "policy_version": "2024-09-11",
+     "procedure": "knee_arthroscopy",
+     "retrieval_instructions": "Open the source URL, find the exclusions section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Exclusions",
+     "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html",
+     "text": "Paraphrase: exclusions include moderate to severe osteoarthritis for debridement and diagnostic arthroscopy alone without radiologically proven pathology. A locked knee from a displaced bucket handle tear can waive conservative therapy.",
+     "retrieval_score": 0.6430114429354699
+    },
+    {
+     "chunk_id": "CH-0673-01",
+     "policy_id": "AETNA_CPB_0673",
+     "policy_version": "2024-09-11",
+     "procedure": "knee_arthroscopy",
+     "retrieval_instructions": "Open the source URL, find the knee arthroscopy section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Knee arthroscopy criteria",
+     "source_url": "https://www.aetna.com/cpb/medical/data/600_699/0673.html",
+     "text": "Paraphrase: knee arthroscopy criteria include significant knee pain plus mechanical symptoms, no more than mild osteoarthritis, radiologic confirmation, and failure of conservative therapy with at least 6 weeks of formal physical therapy in the past year.",
+     "retrieval_score": 0.6088780971496972
+    }
+   ],
+   "tool_calls": [
+    "adk:search_policy_chunks",
+    "adk:validate_case_codes",
+    "adk:extract_evidence",
+    "citation_verifier:deterministic_quote_check",
+    "checklist_scorer:deterministic_pathway_guardrail",
+    "draft_generator:gemini_post_verification"
+   ],
+   "adk_session_id": "session-5bf13e6e4360",
+   "adk_tools_invoked": [
+    "search_policy_chunks",
+    "validate_case_codes",
+    "extract_evidence"
+   ],
+   "adk_tool_events": [
+    {
+     "author": "priorauth_agent",
+     "is_final_response": false,
+     "function_calls": [
+      {
+       "name": "search_policy_chunks",
+       "args": "{'policy_id': 'AETNA_CPB_0673', 'query': 'knee arthroscopy criteria indications'}"
+      }
+     ],
+     "function_responses": [],
+     "text": ""
+    },
+    {
+     "author": "priorauth_agent",
+     "is_final_response": false,
+     "function_calls": [],
+     "function_responses": [
+      {
+       "name": "search_policy_chunks",
+       "keys": [
+        "retrieval_method",
+        "chunks"
+       ]
+      }
+     ],
+     "text": ""
+    },
+    {
+     "author": "priorauth_agent",
+     "is_final_response": false,
+     "function_calls": [
+      {
+       "name": "validate_case_codes",
+       "args": "{'case_id': 'EVAL-PMC-KNE-01'}"
+      }
+     ],
+     "function_responses": [],
+     "text": ""
+    },
+    {
+     "author": "priorauth_agent",
+     "is_final_response": false,
+     "function_calls": [],
+     "function_responses": [
+      {
+       "name": "validate_case_codes",
+       "keys": [
+        "diagnosis_checks",
+        "procedure_check",
+        "overall_status"
+       ]
+      }
+     ],
+     "text": ""
+    },
+    {
+     "author": "priorauth_agent",
+     "is_final_response": false,
+     "function_calls": [
+      {
+       "name": "extract_evidence",
+       "args": "{'policy_id': 'AETNA_CPB_0673'}"
+      }
+     ],
+     "function_responses": [],
+     "text": ""
+    },
+    {
+     "author": "priorauth_agent",
+     "is_final_response": false,
+     "function_calls": [],
+     "function_responses": [
+      {
+       "name": "extract_evidence",
+       "keys": [
+        "criterion_outcomes",
+        "token_usage"
+       ]
+      }
+     ],
+     "text": ""
+    },
+    {
+     "author": "priorauth_agent",
+     "is_final_response": true,
+     "function_calls": [],
+     "function_responses": [],
+     "text": "I have completed the requested steps for reviewing case **EVAL-PMC-KNE-01** against policy **AETNA_CPB_0673** (version 2024-09-11) for the procedure **knee_arthroscopy**. \n\nBelow is the summary of the executed actions and retrieved data:\n\n### 1. Policy Chunks Search (`search_policy_chunks`)\nThe policy chunks retrieved for **AETNA_CPB_0673** outline the following criteria:\n*   **Knee Arthroscopy Criteria (CH-0673-01):** Includes significant knee pain plus mechanical symptoms, no more than mild os...[truncated]"
+    }
+   ],
+   "adk_final_response": "I have completed the requested steps for reviewing case **EVAL-PMC-KNE-01** against policy **AETNA_CPB_0673** (version 2024-09-11) for the procedure **knee_arthroscopy**. \n\nBelow is the summary of the executed actions and retrieved data:\n\n### 1. Policy Chunks Search (`search_policy_chunks`)\nThe policy chunks retrieved for **AETNA_CPB_0673** outline the following criteria:\n*   **Knee Arthroscopy Criteria (CH-0673-01):** Includes significant knee pain plus mechanical symptoms, no more than mild osteoarthritis, radiologic confirmation, and failure of conservative therapy (at least 6 weeks of formal physical therapy in the past year).\n*   **Exclusions (CH-0673-02):** Exclusions include moderate to severe osteoarthritis for debridement, and diagnostic arthroscopy alone without radiologically proven pathology. A locked knee from a displaced bucket handle tear can waive conservative therapy.\n\n### 2. Case Code Validation (`validate_case_codes`)\n*   **Diagnosis Code:** `M23.32` (Other meniscus ...[truncated]",
+   "gold_readiness": "NOT_READY",
+   "gold_criterion_outcomes": {
+    "KNE-01": "met",
+    "KNE-02": "missing",
+    "KNE-03": "met",
+    "KNE-04": "missing",
+    "KNE-05": "not_applicable",
+    "KNE-EX-01": "not_fired",
+    "KNE-EX-02": "not_fired"
+   },
+   "procedure": "knee_arthroscopy",
+   "clinical_note": "18-year-old male with left knee pain and mechanical symptoms, locking and catching, for 2 years, medial joint line tenderness, range of motion 0 to 130 degrees, left knee radiographs unremarkable. MRI confirmed a discoid medial meniscus with a horizontal oblique tear of the posterior horn of the medial meniscus. Arthroscopic saucerization with a 5-mm rim remaining and meniscal repair were performed.",
+   "retrieval_keywords": [
+    "physical therapy"
+   ],
+   "categories": [
+    "missing_evidence",
+    "published_vignette",
+    "atypical"
+   ],
+   "source_type": "published_case_report"
+  },
+  {
+   "review_id": "REV-c57920e18a76",
+   "case_id": "EVAL-PMC-BIO-01",
+   "policy_id": "CIGNA_IP0660",
+   "policy_version": "2026",
+   "policy_version_current": true,
+   "readiness": "NOT_READY",
+   "criterion_results": [
+    {
+     "criterion_id": "BIO-01",
+     "status": "met",
+     "evidence_excerpts": [],
+     "citation": {
+      "policy_id": "CIGNA_IP0660",
+      "policy_version": "2026",
+      "section": "Initial therapy criteria, Crohn disease",
+      "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf"
+     },
+     "notes": ""
+    },
+    {
+     "criterion_id": "BIO-02",
+     "status": "missing",
+     "evidence_excerpts": [],
+     "citation": {
+      "policy_id": "CIGNA_IP0660",
+      "policy_version": "2026",
+      "section": "Initial therapy criteria, Crohn disease",
+      "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf"
+     },
+     "notes": ""
+    },
+    {
+     "criterion_id": "BIO-03",
+     "status": "met",
+     "evidence_excerpts": [
+      "Crohn disease confirmed on ileocolonoscopy with severe active ileocolitis."
+     ],
+     "citation": {
+      "policy_id": "CIGNA_IP0660",
+      "policy_version": "2026",
+      "section": "Initial therapy criteria, Crohn disease",
+      "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf"
+     },
+     "notes": ""
+    },
+    {
+     "criterion_id": "BIO-04",
+     "status": "not_met",
+     "evidence_excerpts": [
+      "Infliximab 5 mg/kg was given at week 0, week 1, and week 4, then 5 mg/kg every 8 weeks."
+     ],
+     "citation": {
+      "policy_id": "CIGNA_IP0660",
+      "policy_version": "2026",
+      "section": "Initial therapy criteria, Crohn disease",
+      "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf"
+     },
+     "notes": ""
+    },
+    {
+     "criterion_id": "BIO-05",
+     "status": "missing",
+     "evidence_excerpts": [],
+     "citation": {
+      "policy_id": "CIGNA_IP0660",
+      "policy_version": "2026",
+      "section": "Initial therapy criteria, Crohn disease",
+      "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf"
+     },
+     "notes": ""
+    },
+    {
+     "criterion_id": "BIO-06",
+     "status": "met",
+     "evidence_excerpts": [
+      "Systemic corticosteroids gave rapid improvement, with relapse during tapering.",
+      "Both ileocolitis and myositis were quiescent at 20 months."
+     ],
+     "citation": {
+      "policy_id": "CIGNA_IP0660",
+      "policy_version": "2026",
+      "section": "Initial therapy criteria, Crohn disease",
+      "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf"
+     },
+     "notes": ""
+    },
+    {
+     "criterion_id": "BIO-EX-01",
+     "status": "not_fired",
+     "evidence_excerpts": [],
+     "citation": {
+      "policy_id": "CIGNA_IP0660",
+      "policy_version": "2026",
+      "section": "Exclusions",
+      "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf"
+     },
+     "notes": ""
+    },
+    {
+     "criterion_id": "BIO-EX-02",
+     "status": "not_fired",
+     "evidence_excerpts": [],
+     "citation": {
+      "policy_id": "CIGNA_IP0660",
+      "policy_version": "2026",
+      "section": "Exclusions",
+      "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf"
+     },
+     "notes": ""
+    },
+    {
+     "criterion_id": "BIO-EX-03",
+     "status": "not_fired",
+     "evidence_excerpts": [],
+     "citation": {
+      "policy_id": "CIGNA_IP0660",
+      "policy_version": "2026",
+      "section": "Exclusions",
+      "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf"
+     },
+     "notes": ""
+    }
+   ],
+   "code_validation": {
+    "diagnosis_checks": [
+     {
+      "code": "K50.90",
+      "code_type": "diagnosis",
+      "status": "valid",
+      "reason": "Diagnosis code is in the policy supported list."
+     }
+    ],
+    "procedure_check": {
+     "code": "J1745",
+     "code_type": "procedure",
+     "status": "valid",
+     "reason": "Procedure code is in the policy procedure code list."
+    },
+    "overall_status": "valid"
+   },
+   "gaps": [
+    "BIO-02: missing ()",
+    "BIO-04: not_met ()",
+    "BIO-05: missing ()"
+   ],
+   "critic_findings": [
+    "Pre-check: No pathway fully met. Non-met criteria: BIO-02, BIO-04, BIO-05."
+   ],
+   "draft_letter": {
+    "title": "Documentation draft: EVAL-PMC-BIO-01 under CIGNA_IP0660",
+    "met_criteria_summary": [
+     "BIO-01: ",
+     "BIO-03: Crohn disease confirmed on ileocolonoscopy with severe active ileocolitis.",
+     "BIO-06: Systemic corticosteroids gave rapid improvement, with relapse during tapering.; Both ileocolitis and myositis were quiescent at 20 months."
+    ],
+    "gaps": [
+     "BIO-02: missing",
+     "BIO-04: not_met",
+     "BIO-05: missing"
+    ],
+    "body": "**DRAFT FOR HUMAN REVIEW ONLY \u2014 NOT AN APPROVAL, DENIAL, OR SUBMISSION**\n\n**Case Identifier:** EVAL-PMC-BIO-01  \n**Proposed Procedure:** Biologic Infusion (`biologic_infusion`)  \n**Applicable Policy:** CIGNA_IP0660 (Version 2026)  \n\n---\n\n### **Verified Met Criteria**\nThe following criteria have been verified as met based on the clinical documentation provided:\n*   **BIO-01:** Verified met.\n*   **BIO-03:** Crohn disease confirmed on ileocolonoscopy with severe active ileocolitis.\n*   **BIO-06:** Systemic corticosteroids gave rapid improvement, with relapse during tapering; both ileocolitis and myositis were quiescent at 20 months.\n\n---\n\n### **Identified Gaps / Unmet Criteria**\nThe following criteria have not been established or are noted as missing/not met:\n*   **BIO-02:** Missing.\n*   **BIO-04:** Not met.\n*   **BIO-05:** Missing.",
+    "disclaimer": "This draft is for human review only. It is not an approval, denial, or submission of a prior authorization. A human reviewer must verify every statement against the full policy and the complete clinical record before any action is taken."
+   },
+   "audit_entry": {
+    "case_id": "EVAL-PMC-BIO-01",
+    "policy_id": "CIGNA_IP0660",
+    "policy_version": "2026",
+    "policy_version_current": true,
+    "criterion_results": [
+     {
+      "criterion_id": "BIO-01",
+      "status": "met",
+      "evidence_excerpts": [],
+      "citation": {
+       "policy_id": "CIGNA_IP0660",
+       "policy_version": "2026",
+       "section": "Initial therapy criteria, Crohn disease",
+       "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf"
+      },
+      "notes": ""
+     },
+     {
+      "criterion_id": "BIO-02",
+      "status": "missing",
+      "evidence_excerpts": [],
+      "citation": {
+       "policy_id": "CIGNA_IP0660",
+       "policy_version": "2026",
+       "section": "Initial therapy criteria, Crohn disease",
+       "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf"
+      },
+      "notes": ""
+     },
+     {
+      "criterion_id": "BIO-03",
+      "status": "met",
+      "evidence_excerpts": [
+       "Crohn disease confirmed on ileocolonoscopy with severe active ileocolitis."
+      ],
+      "citation": {
+       "policy_id": "CIGNA_IP0660",
+       "policy_version": "2026",
+       "section": "Initial therapy criteria, Crohn disease",
+       "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf"
+      },
+      "notes": ""
+     },
+     {
+      "criterion_id": "BIO-04",
+      "status": "not_met",
+      "evidence_excerpts": [
+       "Infliximab 5 mg/kg was given at week 0, week 1, and week 4, then 5 mg/kg every 8 weeks."
+      ],
+      "citation": {
+       "policy_id": "CIGNA_IP0660",
+       "policy_version": "2026",
+       "section": "Initial therapy criteria, Crohn disease",
+       "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf"
+      },
+      "notes": ""
+     },
+     {
+      "criterion_id": "BIO-05",
+      "status": "missing",
+      "evidence_excerpts": [],
+      "citation": {
+       "policy_id": "CIGNA_IP0660",
+       "policy_version": "2026",
+       "section": "Initial therapy criteria, Crohn disease",
+       "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf"
+      },
+      "notes": ""
+     },
+     {
+      "criterion_id": "BIO-06",
+      "status": "met",
+      "evidence_excerpts": [
+       "Systemic corticosteroids gave rapid improvement, with relapse during tapering.",
+       "Both ileocolitis and myositis were quiescent at 20 months."
+      ],
+      "citation": {
+       "policy_id": "CIGNA_IP0660",
+       "policy_version": "2026",
+       "section": "Initial therapy criteria, Crohn disease",
+       "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf"
+      },
+      "notes": ""
+     },
+     {
+      "criterion_id": "BIO-EX-01",
+      "status": "not_fired",
+      "evidence_excerpts": [],
+      "citation": {
+       "policy_id": "CIGNA_IP0660",
+       "policy_version": "2026",
+       "section": "Exclusions",
+       "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf"
+      },
+      "notes": ""
+     },
+     {
+      "criterion_id": "BIO-EX-02",
+      "status": "not_fired",
+      "evidence_excerpts": [],
+      "citation": {
+       "policy_id": "CIGNA_IP0660",
+       "policy_version": "2026",
+       "section": "Exclusions",
+       "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf"
+      },
+      "notes": ""
+     },
+     {
+      "criterion_id": "BIO-EX-03",
+      "status": "not_fired",
+      "evidence_excerpts": [],
+      "citation": {
+       "policy_id": "CIGNA_IP0660",
+       "policy_version": "2026",
+       "section": "Exclusions",
+       "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf"
+      },
+      "notes": ""
+     }
+    ],
+    "readiness": "NOT_READY",
+    "engine_version": "2.0.0-real",
+    "timestamp": "2026-10-27T14:31:42.138124+00:00"
+   },
+   "engine_version": "2.0.0-real",
+   "latency_ms": 28927.34603700046,
+   "model_name": "gemini-3.5-flash",
+   "model_location": "global",
+   "data_location": "us-central1",
+   "embedding_model": "text-embedding-004",
+   "token_usage": {
+    "evidence_prompt_token_count": 931,
+    "evidence_candidates_token_count": 281,
+    "draft_prompt_token_count": 181,
+    "draft_candidates_token_count": 238
+   },
+   "cost_usd_estimated": 0.00278025,
+   "retrieval_method": "vertex_embedding_cosine",
+   "retrieval_chunks": [
+    {
+     "chunk_id": "CH-IP0660-01",
+     "policy_id": "CIGNA_IP0660",
+     "policy_version": "2026",
+     "procedure": "biologic_infusion",
+     "retrieval_instructions": "Open the source URL, find the Crohn disease initial therapy section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Initial therapy criteria, Crohn disease",
+     "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf",
+     "text": "Paraphrase: Crohn disease initial infliximab criteria include age at least 6 years, gastroenterologist prescribing or consultation, moderate to severe Crohn disease, dosing up to 5 mg per kg at weeks 0, 2, and 6 then no more frequently than every 6 weeks, TB screening before initiation, and prior conventional therapy failure, intolerance, or contraindication.",
+     "retrieval_score": 0.7056781097440396
+    },
+    {
+     "chunk_id": "CH-IP0660-02",
+     "policy_id": "CIGNA_IP0660",
+     "policy_version": "2026",
+     "procedure": "biologic_infusion",
+     "retrieval_instructions": "Open the source URL, find the exclusions section, and compare the paraphrase below to the live policy text before relying on it.",
+     "section": "Exclusions",
+     "source_url": "https://v.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0660_coveragepositioncriteria_inflammatory_conditions_infliximab_intravenous_products_pa.pdf",
+     "text": "Paraphrase: exclusions include active serious infection, untreated latent TB, and known hypersensitivity to infliximab.",
+     "retrieval_score": 0.6113988477671299
+    }
+   ],
+   "tool_calls": [
+    "adk:search_policy_chunks",
+    "adk:validate_case_codes",
+    "adk:extract_evidence",
+    "citation_verifier:deterministic_quote_check",
+    "checklist_scorer:deterministic_pathway_guardrail",
+    "draft_generator:gemini_post_verification"
+   ],
+   "adk_session_id": "session-d97ce1624ea0",
+   "adk_tools_invoked": [
+    "search_policy_chunks",
+    "validate_case_codes",
+    "extract_evidence"
+   ],
+   "adk_tool_events": [
+    {
+     "author": "priorauth_agent",
+     "is_final_response": false,
+     "function_calls": [
+      {
+       "name": "search_policy_chunks",
+       "args": "{'policy_id': 'CIGNA_IP0660', 'query': 'biologic infusion clinical criteria indications'}"
+      }
+     ],
+     "function_responses": [],
+     "text": ""
+    },
+    {
+     "author": "priorauth_agent",
+     "is_final_response": false,
+     "function_calls": [],
+     "function_responses": [
+      {
+       "name": "search_policy_chunks",
+       "keys": [
+        "retrieval_method",
+        "chunks"
+       ]
+      }
+     ],
+     "text": ""
+    },
+    {
+     "author": "priorauth_agent",
+     "is_final_response": false,
+     "function_calls": [
+      {
+       "name": "validate_case_codes",
+       "args": "{'case_id': 'EVAL-PMC-BIO-01'}"
+      }
+     ],
+     "function_responses": [],
+     "text": ""
+    },
+    {
+     "author": "priorauth_agent",
+     "is_final_response": false,
+     "function_calls": [],
+     "function_responses": [
+      {
+       "name": "validate_case_codes",
+       "keys": [
+        "diagnosis_checks",
+        "procedure_check",
+        "overall_status"
+       ]
+      }
+     ],
+     "text": ""
+    },
+    {
+     "author": "priorauth_agent",
+     "is_final_response": false,
+     "function_calls": [
+      {
+       "name": "extract_evidence",
+       "args": "{'policy_id': 'CIGNA_IP0660'}"
+      }
+     ],
+     "function_responses": [],
+     "text": ""
+    },
+    {
+     "author": "priorauth_agent",
+     "is_final_response": false,
+     "function_calls": [],
+     "function_responses": [
+      {
+       "name": "extract_evidence",
+       "keys": [
+        "criterion_outcomes",
+        "token_usage"
+       ]
+      }
+     ],
+     "text": ""
+    },
+    {
+     "author": "priorauth_agent",
+     "is_final_response": true,
+     "function_calls": [],
+     "function_responses": [],
+     "text": "I have completed the requested actions for reviewing case **EVAL-PMC-BIO-01** against policy **CIGNA_IP0660** (version 2026, procedure: **biologic_infusion**).\n\n### 1. Policy Chunk Search (`search_policy_chunks`)\nI retrieved policy details for **CIGNA_IP0660**:\n* **Initial therapy criteria, Crohn disease (CH-IP0660-01):** Criteria include age at least 6 years, gastroenterologist prescribing or consultation, moderate to severe Crohn disease, dosing up to 5 mg per kg at weeks 0, 2, and 6 then no m...[truncated]"
+    }
+   ],
+   "adk_final_response": "I have completed the requested actions for reviewing case **EVAL-PMC-BIO-01** against policy **CIGNA_IP0660** (version 2026, procedure: **biologic_infusion**).\n\n### 1. Policy Chunk Search (`search_policy_chunks`)\nI retrieved policy details for **CIGNA_IP0660**:\n* **Initial therapy criteria, Crohn disease (CH-IP0660-01):** Criteria include age at least 6 years, gastroenterologist prescribing or consultation, moderate to severe Crohn disease, dosing up to 5 mg per kg at weeks 0, 2, and 6 then no more frequently than every 6 weeks, TB screening before initiation, and prior conventional therapy failure, intolerance, or contraindication.\n* **Exclusions (CH-IP0660-02):** Active serious infection, untreated latent TB, and known hypersensitivity to infliximab.\n\n### 2. Code Validation (`validate_case_codes`)\n* **Diagnosis Code:** `K50.90` (Crohn's disease, unspecified, without complications) is **valid** (present in the policy-supported list).\n* **Procedure Code:** `J1745` (Injection, inflixima...[truncated]",
+   "gold_readiness": "NOT_READY",
+   "gold_criterion_outcomes": {
+    "BIO-01": "met",
+    "BIO-02": "missing",
+    "BIO-03": "met",
+    "BIO-04": "not_met",
+    "BIO-05": "missing",
+    "BIO-06": "met",
+    "BIO-EX-01": "not_fired",
+    "BIO-EX-02": "not_fired",
+    "BIO-EX-03": "not_fired"
+   },
+   "procedure": "biologic_infusion",
+   "clinical_note": "33-year-old woman with Crohn disease confirmed on ileocolonoscopy with severe active ileocolitis. Systemic corticosteroids gave rapid improvement, with relapse during tapering. Infliximab 5 mg/kg was given at week 0, week 1, and week 4, then 5 mg/kg every 8 weeks. Both ileocolitis and myositis were quiescent at 20 months.",
+   "retrieval_keywords": [
+    "Crohn"
+   ],
+   "categories": [
+    "unsupported_claim",
+    "published_vignette",
+    "atypical",
+    "noncommercial_license"
+   ],
+   "source_type": "published_case_report"
+  }
+ ]
+}

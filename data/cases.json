@@ -1,0 +1,1485 @@
+{
+  "cases": [
+    {
+      "case_id": "LUM-001",
+      "procedure": "lumbar_mri",
+      "policy_id": "AETNA_CPB_0236",
+      "policy_version": "2026",
+      "diagnosis_codes": [
+        "M54.16"
+      ],
+      "procedure_code": "72148",
+      "patient_age": 52,
+      "clinical_note": "SYNTHETIC CASE. Patient: Alex Patel, age 52. Visit dates: 2026-03-02, 2026-04-10, 2026-05-18. History: persistent low back pain for 4 months, with prior visits for back pain and leg symptoms. Exam shows radicular pain with motor weakness in the L5 distribution and diminished Achilles reflex. The patient completed 6 weeks of conservative therapy with moderate activity, analgesics, NSAIDs, and muscle relaxants, with no improvement after 6 weeks of conservative therapy. Imaging requested: lumbar spine MRI. Prior therapy: moderate activity, analgesics, NSAIDs, and muscle relaxants as tolerated.",
+      "gold_readiness": "READY_FOR_HUMAN_REVIEW",
+      "gold_criterion_outcomes": {
+        "LUM-01": "met",
+        "LUM-02": "met",
+        "LUM-03": "not_applicable",
+        "LUM-EX-01": "not_fired"
+      },
+      "categories": [
+        "fully_documented"
+      ]
+    },
+    {
+      "case_id": "LUM-002",
+      "procedure": "lumbar_mri",
+      "policy_id": "AETNA_CPB_0236",
+      "policy_version": "2026",
+      "diagnosis_codes": [
+        "M54.16"
+      ],
+      "procedure_code": "72148",
+      "patient_age": 52,
+      "clinical_note": "SYNTHETIC CASE. Patient: Jordan Garcia, age 52. Visit dates: 2026-03-02, 2026-04-10, 2026-05-18. History: persistent low back pain for 4 months, with prior visits for back pain and leg symptoms. Exam documents objective motor weakness in the L5 distribution with reflex changes in the L5 distribution. The patient completed 8 weeks of conservative therapy with moderate activity, analgesics, NSAIDs, and muscle relaxants, with no improvement after 8 weeks of conservative therapy. Imaging requested: lumbar spine MRI. Prior therapy: moderate activity, analgesics, NSAIDs, and muscle relaxants as tolerated.",
+      "gold_readiness": "READY_FOR_HUMAN_REVIEW",
+      "gold_criterion_outcomes": {
+        "LUM-01": "met",
+        "LUM-02": "met",
+        "LUM-03": "not_applicable",
+        "LUM-EX-01": "not_fired"
+      },
+      "categories": [
+        "fully_documented"
+      ]
+    },
+    {
+      "case_id": "LUM-003",
+      "procedure": "lumbar_mri",
+      "policy_id": "AETNA_CPB_0236",
+      "policy_version": "2026",
+      "diagnosis_codes": [
+        "M54.16"
+      ],
+      "procedure_code": "72148",
+      "patient_age": 52,
+      "clinical_note": "SYNTHETIC CASE. Patient: Taylor Kim, age 52. Visit dates: 2026-03-02, 2026-04-10, 2026-05-18. History: persistent low back pain for 4 months, with prior visits for back pain and leg symptoms. Exam shows radicular pain with motor weakness in the L5 distribution and diminished Achilles reflex. The patient completed 6 weeks of conservative therapy with moderate activity, analgesics, NSAIDs, and muscle relaxants, with no improvement after 6 weeks of conservative therapy. Imaging requested: lumbar spine MRI. Prior therapy: moderate activity, analgesics, NSAIDs, and muscle relaxants as tolerated.",
+      "gold_readiness": "READY_FOR_HUMAN_REVIEW",
+      "gold_criterion_outcomes": {
+        "LUM-01": "met",
+        "LUM-02": "met",
+        "LUM-03": "not_applicable",
+        "LUM-EX-01": "not_fired"
+      },
+      "categories": [
+        "fully_documented"
+      ]
+    },
+    {
+      "case_id": "LUM-004",
+      "procedure": "lumbar_mri",
+      "policy_id": "AETNA_CPB_0236",
+      "policy_version": "2026",
+      "diagnosis_codes": [
+        "M54.16"
+      ],
+      "procedure_code": "72148",
+      "patient_age": 52,
+      "clinical_note": "SYNTHETIC CASE. Patient: Morgan Nguyen, age 52. Visit dates: 2026-03-02, 2026-04-10, 2026-05-18. History: persistent low back pain for 4 months, with prior visits for back pain and leg symptoms. Exam documents objective motor weakness in the L5 distribution with reflex changes in the L5 distribution. The patient completed 8 weeks of conservative therapy with moderate activity, analgesics, NSAIDs, and muscle relaxants, with no improvement after 8 weeks of conservative therapy. Imaging requested: lumbar spine MRI. Prior therapy: moderate activity, analgesics, NSAIDs, and muscle relaxants as tolerated.",
+      "gold_readiness": "READY_FOR_HUMAN_REVIEW",
+      "gold_criterion_outcomes": {
+        "LUM-01": "met",
+        "LUM-02": "met",
+        "LUM-03": "not_applicable",
+        "LUM-EX-01": "not_fired"
+      },
+      "categories": [
+        "fully_documented"
+      ]
+    },
+    {
+      "case_id": "LUM-005",
+      "procedure": "lumbar_mri",
+      "policy_id": "AETNA_CPB_0236",
+      "policy_version": "2026",
+      "diagnosis_codes": [
+        "M54.16"
+      ],
+      "procedure_code": "72148",
+      "patient_age": 52,
+      "clinical_note": "SYNTHETIC CASE. Patient: Taylor Kim, age 52. Visit dates: 2026-03-02, 2026-04-10, 2026-05-18. History: persistent low back pain for 4 months, with prior visits for back pain and leg symptoms. Exam shows radicular pain with motor weakness in the L5 distribution and diminished Achilles reflex.  Imaging requested: lumbar spine MRI. Prior therapy: moderate activity, analgesics, NSAIDs, and muscle relaxants as tolerated.",
+      "gold_readiness": "NOT_READY",
+      "gold_criterion_outcomes": {
+        "LUM-01": "met",
+        "LUM-02": "missing",
+        "LUM-03": "not_applicable",
+        "LUM-EX-01": "not_fired"
+      },
+      "categories": [
+        "missing_evidence"
+      ]
+    },
+    {
+      "case_id": "LUM-006",
+      "procedure": "lumbar_mri",
+      "policy_id": "AETNA_CPB_0236",
+      "policy_version": "2026",
+      "diagnosis_codes": [
+        "M54.16"
+      ],
+      "procedure_code": "72148",
+      "patient_age": 52,
+      "clinical_note": "SYNTHETIC CASE. Patient: Morgan Nguyen, age 52. Visit dates: 2026-03-02, 2026-04-10, 2026-05-18. History: persistent low back pain for 4 months, with prior visits for back pain and leg symptoms. Exam shows radicular pain with motor weakness in the L5 distribution and diminished Achilles reflex.  Imaging requested: lumbar spine MRI. Prior therapy: moderate activity, analgesics, NSAIDs, and muscle relaxants as tolerated.",
+      "gold_readiness": "NOT_READY",
+      "gold_criterion_outcomes": {
+        "LUM-01": "met",
+        "LUM-02": "missing",
+        "LUM-03": "not_applicable",
+        "LUM-EX-01": "not_fired"
+      },
+      "categories": [
+        "missing_evidence"
+      ]
+    },
+    {
+      "case_id": "LUM-007",
+      "procedure": "lumbar_mri",
+      "policy_id": "AETNA_CPB_0236",
+      "policy_version": "2026",
+      "diagnosis_codes": [
+        "M54.16"
+      ],
+      "procedure_code": "72148",
+      "patient_age": 52,
+      "clinical_note": "SYNTHETIC CASE. Patient: Sam Brown, age 52. Visit dates: 2026-03-02, 2026-04-10, 2026-05-18. History: persistent low back pain for 4 months, with prior visits for back pain and leg symptoms. Exam shows radicular pain with motor weakness in the L5 distribution and diminished Achilles reflex. The patient completed 6 weeks of conservative therapy with moderate activity, analgesics, NSAIDs, and muscle relaxants, with no improvement after 6 weeks of conservative therapy. Imaging requested: lumbar spine MRI. Prior therapy: moderate activity, analgesics, NSAIDs, and muscle relaxants as tolerated. A lumbar MRI already completed for the same indication is on file, with no new symptoms reported.",
+      "gold_readiness": "NOT_READY",
+      "gold_criterion_outcomes": {
+        "LUM-01": "met",
+        "LUM-02": "met",
+        "LUM-03": "not_applicable",
+        "LUM-EX-01": "fired"
+      },
+      "categories": [
+        "exclusion_triggered"
+      ]
+    },
+    {
+      "case_id": "LUM-008",
+      "procedure": "lumbar_mri",
+      "policy_id": "AETNA_CPB_0236",
+      "policy_version": "2026",
+      "diagnosis_codes": [
+        "M54.16"
+      ],
+      "procedure_code": "72148",
+      "patient_age": 52,
+      "clinical_note": "SYNTHETIC CASE. Patient: Alex Patel, age 52. Visit dates: 2026-03-02, 2026-04-10, 2026-05-18. History: persistent low back pain for 4 months, with prior visits for back pain and leg symptoms. Exam shows radicular pain with motor weakness in the L5 distribution and diminished Achilles reflex. The patient completed 6 weeks of conservative therapy with moderate activity, analgesics, NSAIDs, and muscle relaxants, with no improvement after 6 weeks of conservative therapy. Imaging requested: lumbar spine MRI. Prior therapy: moderate activity, analgesics, NSAIDs, and muscle relaxants as tolerated. A lumbar MRI already completed for the same indication is on file, with no new symptoms reported.",
+      "gold_readiness": "NOT_READY",
+      "gold_criterion_outcomes": {
+        "LUM-01": "met",
+        "LUM-02": "met",
+        "LUM-03": "not_applicable",
+        "LUM-EX-01": "fired"
+      },
+      "categories": [
+        "exclusion_triggered"
+      ]
+    },
+    {
+      "case_id": "LUM-009",
+      "procedure": "lumbar_mri",
+      "policy_id": "AETNA_CPB_0236",
+      "policy_version": "2026",
+      "diagnosis_codes": [
+        "J06.9"
+      ],
+      "procedure_code": "72148",
+      "patient_age": 52,
+      "clinical_note": "SYNTHETIC CASE. Patient: Jordan Garcia, age 52. Visit dates: 2026-03-02, 2026-04-10, 2026-05-18. History: persistent low back pain for 4 months, with prior visits for back pain and leg symptoms. Exam shows radicular pain with motor weakness in the L5 distribution and diminished Achilles reflex. The patient completed 6 weeks of conservative therapy with moderate activity, analgesics, NSAIDs, and muscle relaxants, with no improvement after 6 weeks of conservative therapy. Imaging requested: lumbar spine MRI. Prior therapy: moderate activity, analgesics, NSAIDs, and muscle relaxants as tolerated.",
+      "gold_readiness": "NEEDS_MANUAL_REVIEW",
+      "gold_criterion_outcomes": {
+        "LUM-01": "met",
+        "LUM-02": "met",
+        "LUM-03": "not_applicable",
+        "LUM-EX-01": "not_fired"
+      },
+      "categories": [
+        "incorrect_or_unsupported_code"
+      ]
+    },
+    {
+      "case_id": "LUM-010",
+      "procedure": "lumbar_mri",
+      "policy_id": "AETNA_CPB_0236",
+      "policy_version": "2026",
+      "diagnosis_codes": [
+        "XYZ"
+      ],
+      "procedure_code": "72148",
+      "patient_age": 52,
+      "clinical_note": "SYNTHETIC CASE. Patient: Taylor Kim, age 52. Visit dates: 2026-03-02, 2026-04-10, 2026-05-18. History: persistent low back pain for 4 months, with prior visits for back pain and leg symptoms. Exam shows radicular pain with motor weakness in the L5 distribution and diminished Achilles reflex. The patient completed 6 weeks of conservative therapy with moderate activity, analgesics, NSAIDs, and muscle relaxants, with no improvement after 6 weeks of conservative therapy. Imaging requested: lumbar spine MRI. Prior therapy: moderate activity, analgesics, NSAIDs, and muscle relaxants as tolerated.",
+      "gold_readiness": "NEEDS_MANUAL_REVIEW",
+      "gold_criterion_outcomes": {
+        "LUM-01": "met",
+        "LUM-02": "met",
+        "LUM-03": "not_applicable",
+        "LUM-EX-01": "not_fired"
+      },
+      "categories": [
+        "incorrect_or_unsupported_code"
+      ]
+    },
+    {
+      "case_id": "LUM-011",
+      "procedure": "lumbar_mri",
+      "policy_id": "AETNA_CPB_0236",
+      "policy_version": "2026",
+      "diagnosis_codes": [
+        "M54.16"
+      ],
+      "procedure_code": "72148",
+      "patient_age": 52,
+      "clinical_note": "SYNTHETIC CASE. Patient: Morgan Nguyen, age 52. Visit dates: 2026-03-02, 2026-04-10, 2026-05-18. History: persistent low back pain for 4 months, with prior visits for back pain and leg symptoms. Exam shows radicular pain with motor weakness in the L5 distribution and diminished Achilles reflex. The patient completed 6 weeks of conservative therapy with moderate activity, analgesics, NSAIDs, and muscle relaxants, with no improvement after 6 weeks of conservative therapy. Imaging requested: lumbar spine MRI. Prior therapy: moderate activity, analgesics, NSAIDs, and muscle relaxants as tolerated. The exam also states no radiculopathy and no motor weakness.",
+      "gold_readiness": "NEEDS_MANUAL_REVIEW",
+      "gold_criterion_outcomes": {
+        "LUM-01": "contradictory",
+        "LUM-02": "met",
+        "LUM-03": "not_applicable",
+        "LUM-EX-01": "not_fired"
+      },
+      "categories": [
+        "contradictory_notes"
+      ]
+    },
+    {
+      "case_id": "LUM-012",
+      "procedure": "lumbar_mri",
+      "policy_id": "AETNA_CPB_0236",
+      "policy_version": "2026",
+      "diagnosis_codes": [
+        "M54.16"
+      ],
+      "procedure_code": "72148",
+      "patient_age": 52,
+      "clinical_note": "SYNTHETIC CASE. Patient: Casey Smith, age 52. Visit dates: 2026-03-02, 2026-04-10, 2026-05-18. History: persistent low back pain for 4 months, with prior visits for back pain and leg symptoms. Exam shows radicular pain with motor weakness in the L5 distribution and diminished Achilles reflex. The patient completed 6 weeks of conservative therapy with moderate activity, analgesics, NSAIDs, and muscle relaxants, with no improvement after 6 weeks of conservative therapy. Imaging requested: lumbar spine MRI. Prior therapy: moderate activity, analgesics, NSAIDs, and muscle relaxants as tolerated. The exam also states no radiculopathy and no motor weakness.",
+      "gold_readiness": "NEEDS_MANUAL_REVIEW",
+      "gold_criterion_outcomes": {
+        "LUM-01": "contradictory",
+        "LUM-02": "met",
+        "LUM-03": "not_applicable",
+        "LUM-EX-01": "not_fired"
+      },
+      "categories": [
+        "contradictory_notes"
+      ]
+    },
+    {
+      "case_id": "LUM-013",
+      "procedure": "lumbar_mri",
+      "policy_id": "AETNA_CPB_0236",
+      "policy_version": "2026",
+      "diagnosis_codes": [
+        "M54.16"
+      ],
+      "procedure_code": "72148",
+      "patient_age": 52,
+      "clinical_note": "SYNTHETIC CASE. Patient: Riley Johnson, age 52. Visit dates: 2026-03-02, 2026-04-10, 2026-05-18. History: persistent low back pain for 4 months, with prior visits for back pain and leg symptoms. There is possible radiculopathy, but the exam is unclear. The patient completed 6 weeks of conservative therapy with moderate activity, analgesics, NSAIDs, and muscle relaxants, with no improvement after 6 weeks of conservative therapy. Imaging requested: lumbar spine MRI. Prior therapy: moderate activity, analgesics, NSAIDs, and muscle relaxants as tolerated.",
+      "gold_readiness": "NEEDS_MANUAL_REVIEW",
+      "gold_criterion_outcomes": {
+        "LUM-01": "uncertain",
+        "LUM-02": "met",
+        "LUM-03": "not_applicable",
+        "LUM-EX-01": "not_fired"
+      },
+      "categories": [
+        "ambiguous_history"
+      ]
+    },
+    {
+      "case_id": "LUM-014",
+      "procedure": "lumbar_mri",
+      "policy_id": "AETNA_CPB_0236",
+      "policy_version": "2026",
+      "diagnosis_codes": [
+        "M54.16"
+      ],
+      "procedure_code": "72148",
+      "patient_age": 52,
+      "clinical_note": "SYNTHETIC CASE. Patient: Jamie Lee, age 52. Visit dates: 2026-03-02, 2026-04-10, 2026-05-18. History: persistent low back pain for 4 months, with prior visits for back pain and leg symptoms. There is possible radiculopathy, but the exam is unclear. The patient completed 6 weeks of conservative therapy with moderate activity, analgesics, NSAIDs, and muscle relaxants, with no improvement after 6 weeks of conservative therapy. Imaging requested: lumbar spine MRI. Prior therapy: moderate activity, analgesics, NSAIDs, and muscle relaxants as tolerated.",
+      "gold_readiness": "NEEDS_MANUAL_REVIEW",
+      "gold_criterion_outcomes": {
+        "LUM-01": "uncertain",
+        "LUM-02": "met",
+        "LUM-03": "not_applicable",
+        "LUM-EX-01": "not_fired"
+      },
+      "categories": [
+        "ambiguous_history"
+      ]
+    },
+    {
+      "case_id": "LUM-015",
+      "procedure": "lumbar_mri",
+      "policy_id": "AETNA_CPB_0236",
+      "policy_version": "2024",
+      "diagnosis_codes": [
+        "M54.16"
+      ],
+      "procedure_code": "72148",
+      "patient_age": 52,
+      "clinical_note": "SYNTHETIC CASE. Patient: Sam Brown, age 52. Visit dates: 2026-03-02, 2026-04-10, 2026-05-18. History: persistent low back pain for 4 months, with prior visits for back pain and leg symptoms. Exam shows radicular pain with motor weakness in the L5 distribution and diminished Achilles reflex. The patient completed 6 weeks of conservative therapy with moderate activity, analgesics, NSAIDs, and muscle relaxants, with no improvement after 6 weeks of conservative therapy. Imaging requested: lumbar spine MRI. Prior therapy: moderate activity, analgesics, NSAIDs, and muscle relaxants as tolerated.",
+      "gold_readiness": "NEEDS_MANUAL_REVIEW",
+      "gold_criterion_outcomes": {
+        "LUM-01": "met",
+        "LUM-02": "met",
+        "LUM-03": "not_applicable",
+        "LUM-EX-01": "not_fired"
+      },
+      "categories": [
+        "outdated_policy"
+      ]
+    },
+    {
+      "case_id": "LUM-016",
+      "procedure": "lumbar_mri",
+      "policy_id": "AETNA_CPB_0236",
+      "policy_version": "2024",
+      "diagnosis_codes": [
+        "M54.16"
+      ],
+      "procedure_code": "72148",
+      "patient_age": 52,
+      "clinical_note": "SYNTHETIC CASE. Patient: Alex Patel, age 52. Visit dates: 2026-03-02, 2026-04-10, 2026-05-18. History: persistent low back pain for 4 months, with prior visits for back pain and leg symptoms. Exam shows radicular pain with motor weakness in the L5 distribution and diminished Achilles reflex. The patient completed 6 weeks of conservative therapy with moderate activity, analgesics, NSAIDs, and muscle relaxants, with no improvement after 6 weeks of conservative therapy. Imaging requested: lumbar spine MRI. Prior therapy: moderate activity, analgesics, NSAIDs, and muscle relaxants as tolerated.",
+      "gold_readiness": "NEEDS_MANUAL_REVIEW",
+      "gold_criterion_outcomes": {
+        "LUM-01": "met",
+        "LUM-02": "met",
+        "LUM-03": "not_applicable",
+        "LUM-EX-01": "not_fired"
+      },
+      "categories": [
+        "outdated_policy"
+      ]
+    },
+    {
+      "case_id": "LUM-017",
+      "procedure": "lumbar_mri",
+      "policy_id": "AETNA_CPB_0236",
+      "policy_version": "2026",
+      "diagnosis_codes": [
+        "M54.16"
+      ],
+      "procedure_code": "72148",
+      "patient_age": 52,
+      "clinical_note": "SYNTHETIC CASE. Patient: Jordan Garcia, age 52. Visit dates: 2026-03-02, 2026-04-10, 2026-05-18. History: persistent low back pain for 4 months, with prior visits for back pain and leg symptoms. Exam shows radicular pain with motor weakness in the L5 distribution and diminished Achilles reflex. The patient completed 3 weeks of conservative therapy with analgesics and NSAIDs. Imaging requested: lumbar spine MRI. Prior therapy: moderate activity, analgesics, NSAIDs, and muscle relaxants as tolerated.",
+      "gold_readiness": "NOT_READY",
+      "gold_criterion_outcomes": {
+        "LUM-01": "met",
+        "LUM-02": "not_met",
+        "LUM-03": "not_applicable",
+        "LUM-EX-01": "not_fired"
+      },
+      "categories": [
+        "incomplete_conservative"
+      ]
+    },
+    {
+      "case_id": "LUM-018",
+      "procedure": "lumbar_mri",
+      "policy_id": "AETNA_CPB_0236",
+      "policy_version": "2026",
+      "diagnosis_codes": [
+        "M54.16"
+      ],
+      "procedure_code": "72148",
+      "patient_age": 52,
+      "clinical_note": "SYNTHETIC CASE. Patient: Taylor Kim, age 52. Visit dates: 2026-03-02, 2026-04-10, 2026-05-18. History: persistent low back pain for 4 months, with prior visits for back pain and leg symptoms. Exam shows radicular pain with motor weakness in the L5 distribution and diminished Achilles reflex. The patient completed 3 weeks of conservative therapy with analgesics and NSAIDs. Imaging requested: lumbar spine MRI. Prior therapy: moderate activity, analgesics, NSAIDs, and muscle relaxants as tolerated.",
+      "gold_readiness": "NOT_READY",
+      "gold_criterion_outcomes": {
+        "LUM-01": "met",
+        "LUM-02": "not_met",
+        "LUM-03": "not_applicable",
+        "LUM-EX-01": "not_fired"
+      },
+      "categories": [
+        "incomplete_conservative"
+      ]
+    },
+    {
+      "case_id": "LUM-019",
+      "procedure": "lumbar_mri",
+      "policy_id": "AETNA_CPB_0236",
+      "policy_version": "2026",
+      "diagnosis_codes": [
+        "M54.16"
+      ],
+      "procedure_code": "72148",
+      "patient_age": 52,
+      "clinical_note": "SYNTHETIC CASE. Patient: Morgan Nguyen, age 52. Visit dates: 2026-03-02, 2026-04-10, 2026-05-18. History: persistent low back pain for 4 months, with prior visits for back pain and leg symptoms. Exam shows no radiculopathy, no motor weakness, and no reflex changes. The patient completed 6 weeks of conservative therapy with moderate activity, analgesics, NSAIDs, and muscle relaxants, with no improvement after 6 weeks of conservative therapy. Imaging requested: lumbar spine MRI. Prior therapy: moderate activity, analgesics, NSAIDs, and muscle relaxants as tolerated.",
+      "gold_readiness": "NOT_READY",
+      "gold_criterion_outcomes": {
+        "LUM-01": "not_met",
+        "LUM-02": "met",
+        "LUM-03": "not_applicable",
+        "LUM-EX-01": "not_fired"
+      },
+      "categories": [
+        "negated_findings"
+      ]
+    },
+    {
+      "case_id": "LUM-020",
+      "procedure": "lumbar_mri",
+      "policy_id": "AETNA_CPB_0236",
+      "policy_version": "2026",
+      "diagnosis_codes": [
+        "M54.16"
+      ],
+      "procedure_code": "72148",
+      "patient_age": 52,
+      "clinical_note": "SYNTHETIC CASE. Patient: Casey Smith, age 52. Visit dates: 2026-03-02, 2026-04-10, 2026-05-18. History: persistent low back pain for 4 months, with prior visits for back pain and leg symptoms. Patient reports back pain radiating down the leg, without a documented neurological exam. The patient completed 6 weeks of conservative therapy with moderate activity, analgesics, NSAIDs, and muscle relaxants, with no improvement after 6 weeks of conservative therapy. Imaging requested: lumbar spine MRI. Prior therapy: moderate activity, analgesics, NSAIDs, and muscle relaxants as tolerated.",
+      "gold_readiness": "NOT_READY",
+      "gold_criterion_outcomes": {
+        "LUM-01": "missing",
+        "LUM-02": "met",
+        "LUM-03": "not_applicable",
+        "LUM-EX-01": "not_fired"
+      },
+      "categories": [
+        "insufficient_evidence"
+      ]
+    },
+    {
+      "case_id": "KNE-001",
+      "procedure": "knee_arthroscopy",
+      "policy_id": "AETNA_CPB_0673",
+      "policy_version": "2024-09-11",
+      "diagnosis_codes": [
+        "M23.22"
+      ],
+      "procedure_code": "29881",
+      "patient_age": 48,
+      "clinical_note": "SYNTHETIC CASE. Patient: Alex Kim, age 48. Visit dates: 2026-02-14, 2026-03-20, 2026-04-28. History: knee pain for 5 months, worse with stairs and prolonged standing. Patient reports significant knee pain with mechanical symptoms, including knee locking and catching in the knee. Imaging grade is Kellgren-Lawrence grade 2, consistent with mild osteoarthritis. MRI shows meniscal tear in the medial meniscus. The patient completed 6 weeks of formal physical therapy in the past year, confirmed by PT notes. Imaging requested: knee arthroscopy with possible partial meniscectomy.",
+      "gold_readiness": "READY_FOR_HUMAN_REVIEW",
+      "gold_criterion_outcomes": {
+        "KNE-01": "met",
+        "KNE-02": "met",
+        "KNE-03": "met",
+        "KNE-04": "met",
+        "KNE-05": "not_applicable",
+        "KNE-EX-01": "not_fired",
+        "KNE-EX-02": "not_fired"
+      },
+      "categories": [
+        "fully_documented"
+      ]
+    },
+    {
+      "case_id": "KNE-002",
+      "procedure": "knee_arthroscopy",
+      "policy_id": "AETNA_CPB_0673",
+      "policy_version": "2024-09-11",
+      "diagnosis_codes": [
+        "M23.22"
+      ],
+      "procedure_code": "29881",
+      "patient_age": 48,
+      "clinical_note": "SYNTHETIC CASE. Patient: Jordan Nguyen, age 48. Visit dates: 2026-02-14, 2026-03-20, 2026-04-28. History: knee pain for 5 months, worse with stairs and prolonged standing. Patient reports significant knee pain with mechanical symptoms, including knee locking and catching in the knee. Imaging grade is Kellgren-Lawrence grade 2, consistent with mild osteoarthritis. MRI shows meniscal tear in the medial meniscus. The patient completed 8 weeks of formal physical therapy in the past year, confirmed by PT notes. Imaging requested: knee arthroscopy with possible partial meniscectomy.",
+      "gold_readiness": "READY_FOR_HUMAN_REVIEW",
+      "gold_criterion_outcomes": {
+        "KNE-01": "met",
+        "KNE-02": "met",
+        "KNE-03": "met",
+        "KNE-04": "met",
+        "KNE-05": "not_applicable",
+        "KNE-EX-01": "not_fired",
+        "KNE-EX-02": "not_fired"
+      },
+      "categories": [
+        "fully_documented"
+      ]
+    },
+    {
+      "case_id": "KNE-003",
+      "procedure": "knee_arthroscopy",
+      "policy_id": "AETNA_CPB_0673",
+      "policy_version": "2024-09-11",
+      "diagnosis_codes": [
+        "M23.22"
+      ],
+      "procedure_code": "29881",
+      "patient_age": 48,
+      "clinical_note": "SYNTHETIC CASE. Patient: Taylor Smith, age 48. Visit dates: 2026-02-14, 2026-03-20, 2026-04-28. History: knee pain for 5 months, worse with stairs and prolonged standing. Patient reports significant knee pain with mechanical symptoms, including knee locking and catching in the knee. Imaging grade is Kellgren-Lawrence grade 2, consistent with mild osteoarthritis. MRI shows meniscal tear in the medial meniscus. The patient completed 6 weeks of formal physical therapy in the past year, confirmed by PT notes. Imaging requested: knee arthroscopy with possible partial meniscectomy.",
+      "gold_readiness": "READY_FOR_HUMAN_REVIEW",
+      "gold_criterion_outcomes": {
+        "KNE-01": "met",
+        "KNE-02": "met",
+        "KNE-03": "met",
+        "KNE-04": "met",
+        "KNE-05": "not_applicable",
+        "KNE-EX-01": "not_fired",
+        "KNE-EX-02": "not_fired"
+      },
+      "categories": [
+        "fully_documented"
+      ]
+    },
+    {
+      "case_id": "KNE-004",
+      "procedure": "knee_arthroscopy",
+      "policy_id": "AETNA_CPB_0673",
+      "policy_version": "2024-09-11",
+      "diagnosis_codes": [
+        "M23.22"
+      ],
+      "procedure_code": "29881",
+      "patient_age": 48,
+      "clinical_note": "SYNTHETIC CASE. Patient: Morgan Johnson, age 48. Visit dates: 2026-02-14, 2026-03-20, 2026-04-28. History: knee pain for 5 months, worse with stairs and prolonged standing. Patient reports significant knee pain with mechanical symptoms, including knee locking and catching in the knee. Imaging grade is Kellgren-Lawrence grade 2, consistent with mild osteoarthritis. MRI shows meniscal tear in the medial meniscus. The patient completed 8 weeks of formal physical therapy in the past year, confirmed by PT notes. Imaging requested: knee arthroscopy with possible partial meniscectomy.",
+      "gold_readiness": "READY_FOR_HUMAN_REVIEW",
+      "gold_criterion_outcomes": {
+        "KNE-01": "met",
+        "KNE-02": "met",
+        "KNE-03": "met",
+        "KNE-04": "met",
+        "KNE-05": "not_applicable",
+        "KNE-EX-01": "not_fired",
+        "KNE-EX-02": "not_fired"
+      },
+      "categories": [
+        "fully_documented"
+      ]
+    },
+    {
+      "case_id": "KNE-005",
+      "procedure": "knee_arthroscopy",
+      "policy_id": "AETNA_CPB_0673",
+      "policy_version": "2024-09-11",
+      "diagnosis_codes": [
+        "M23.22"
+      ],
+      "procedure_code": "29881",
+      "patient_age": 48,
+      "clinical_note": "SYNTHETIC CASE. Patient: Taylor Smith, age 48. Visit dates: 2026-02-14, 2026-03-20, 2026-04-28. History: knee pain for 5 months, worse with stairs and prolonged standing. Patient reports significant knee pain with mechanical symptoms, including knee locking and catching in the knee. Imaging grade is Kellgren-Lawrence grade 2, consistent with mild osteoarthritis. MRI shows meniscal tear in the medial meniscus.  Imaging requested: knee arthroscopy with possible partial meniscectomy.",
+      "gold_readiness": "NOT_READY",
+      "gold_criterion_outcomes": {
+        "KNE-01": "met",
+        "KNE-02": "met",
+        "KNE-03": "met",
+        "KNE-04": "missing",
+        "KNE-05": "not_applicable",
+        "KNE-EX-01": "not_fired",
+        "KNE-EX-02": "not_fired"
+      },
+      "categories": [
+        "missing_evidence"
+      ]
+    },
+    {
+      "case_id": "KNE-006",
+      "procedure": "knee_arthroscopy",
+      "policy_id": "AETNA_CPB_0673",
+      "policy_version": "2024-09-11",
+      "diagnosis_codes": [
+        "M23.22"
+      ],
+      "procedure_code": "29881",
+      "patient_age": 48,
+      "clinical_note": "SYNTHETIC CASE. Patient: Morgan Johnson, age 48. Visit dates: 2026-02-14, 2026-03-20, 2026-04-28. History: knee pain for 5 months, worse with stairs and prolonged standing. Patient reports significant knee pain with mechanical symptoms, including knee locking and catching in the knee. Imaging grade is Kellgren-Lawrence grade 2, consistent with mild osteoarthritis. MRI shows meniscal tear in the medial meniscus.  Imaging requested: knee arthroscopy with possible partial meniscectomy.",
+      "gold_readiness": "NOT_READY",
+      "gold_criterion_outcomes": {
+        "KNE-01": "met",
+        "KNE-02": "met",
+        "KNE-03": "met",
+        "KNE-04": "missing",
+        "KNE-05": "not_applicable",
+        "KNE-EX-01": "not_fired",
+        "KNE-EX-02": "not_fired"
+      },
+      "categories": [
+        "missing_evidence"
+      ]
+    },
+    {
+      "case_id": "KNE-007",
+      "procedure": "knee_arthroscopy",
+      "policy_id": "AETNA_CPB_0673",
+      "policy_version": "2024-09-11",
+      "diagnosis_codes": [
+        "M23.22"
+      ],
+      "procedure_code": "29881",
+      "patient_age": 48,
+      "clinical_note": "SYNTHETIC CASE. Patient: Sam Garcia, age 48. Visit dates: 2026-02-14, 2026-03-20, 2026-04-28. History: knee pain for 5 months, worse with stairs and prolonged standing. Patient reports significant knee pain with mechanical symptoms, including knee locking and catching in the knee. Imaging grade is Kellgren-Lawrence grade 4, consistent with moderate to severe osteoarthritis. MRI shows meniscal tear in the medial meniscus. The patient completed 6 weeks of formal physical therapy in the past year, confirmed by PT notes. Imaging requested: knee arthroscopy with possible partial meniscectomy.",
+      "gold_readiness": "NOT_READY",
+      "gold_criterion_outcomes": {
+        "KNE-01": "met",
+        "KNE-02": "missing",
+        "KNE-03": "met",
+        "KNE-04": "met",
+        "KNE-05": "not_applicable",
+        "KNE-EX-01": "fired",
+        "KNE-EX-02": "not_fired"
+      },
+      "categories": [
+        "exclusion_triggered"
+      ]
+    },
+    {
+      "case_id": "KNE-008",
+      "procedure": "knee_arthroscopy",
+      "policy_id": "AETNA_CPB_0673",
+      "policy_version": "2024-09-11",
+      "diagnosis_codes": [
+        "M23.22"
+      ],
+      "procedure_code": "29881",
+      "patient_age": 48,
+      "clinical_note": "SYNTHETIC CASE. Patient: Alex Kim, age 48. Visit dates: 2026-02-14, 2026-03-20, 2026-04-28. History: knee pain for 5 months, worse with stairs and prolonged standing. Patient reports significant knee pain with mechanical symptoms, including knee locking and catching in the knee. Imaging grade is Kellgren-Lawrence grade 2, consistent with mild osteoarthritis.   Imaging requested: knee arthroscopy with possible partial meniscectomy. This request is for diagnostic arthroscopy alone without radiologic confirmation.",
+      "gold_readiness": "NOT_READY",
+      "gold_criterion_outcomes": {
+        "KNE-01": "met",
+        "KNE-02": "met",
+        "KNE-03": "missing",
+        "KNE-04": "missing",
+        "KNE-05": "not_applicable",
+        "KNE-EX-01": "not_fired",
+        "KNE-EX-02": "fired"
+      },
+      "categories": [
+        "exclusion_triggered"
+      ]
+    },
+    {
+      "case_id": "KNE-009",
+      "procedure": "knee_arthroscopy",
+      "policy_id": "AETNA_CPB_0673",
+      "policy_version": "2024-09-11",
+      "diagnosis_codes": [
+        "J06.9"
+      ],
+      "procedure_code": "29881",
+      "patient_age": 48,
+      "clinical_note": "SYNTHETIC CASE. Patient: Jordan Nguyen, age 48. Visit dates: 2026-02-14, 2026-03-20, 2026-04-28. History: knee pain for 5 months, worse with stairs and prolonged standing. Patient reports significant knee pain with mechanical symptoms, including knee locking and catching in the knee. Imaging grade is Kellgren-Lawrence grade 2, consistent with mild osteoarthritis. MRI shows meniscal tear in the medial meniscus. The patient completed 6 weeks of formal physical therapy in the past year, confirmed by PT notes. Imaging requested: knee arthroscopy with possible partial meniscectomy.",
+      "gold_readiness": "NEEDS_MANUAL_REVIEW",
+      "gold_criterion_outcomes": {
+        "KNE-01": "met",
+        "KNE-02": "met",
+        "KNE-03": "met",
+        "KNE-04": "met",
+        "KNE-05": "not_applicable",
+        "KNE-EX-01": "not_fired",
+        "KNE-EX-02": "not_fired"
+      },
+      "categories": [
+        "incorrect_or_unsupported_code"
+      ]
+    },
+    {
+      "case_id": "KNE-010",
+      "procedure": "knee_arthroscopy",
+      "policy_id": "AETNA_CPB_0673",
+      "policy_version": "2024-09-11",
+      "diagnosis_codes": [
+        "XYZ"
+      ],
+      "procedure_code": "29881",
+      "patient_age": 48,
+      "clinical_note": "SYNTHETIC CASE. Patient: Taylor Smith, age 48. Visit dates: 2026-02-14, 2026-03-20, 2026-04-28. History: knee pain for 5 months, worse with stairs and prolonged standing. Patient reports significant knee pain with mechanical symptoms, including knee locking and catching in the knee. Imaging grade is Kellgren-Lawrence grade 2, consistent with mild osteoarthritis. MRI shows meniscal tear in the medial meniscus. The patient completed 6 weeks of formal physical therapy in the past year, confirmed by PT notes. Imaging requested: knee arthroscopy with possible partial meniscectomy.",
+      "gold_readiness": "NEEDS_MANUAL_REVIEW",
+      "gold_criterion_outcomes": {
+        "KNE-01": "met",
+        "KNE-02": "met",
+        "KNE-03": "met",
+        "KNE-04": "met",
+        "KNE-05": "not_applicable",
+        "KNE-EX-01": "not_fired",
+        "KNE-EX-02": "not_fired"
+      },
+      "categories": [
+        "incorrect_or_unsupported_code"
+      ]
+    },
+    {
+      "case_id": "KNE-011",
+      "procedure": "knee_arthroscopy",
+      "policy_id": "AETNA_CPB_0673",
+      "policy_version": "2024-09-11",
+      "diagnosis_codes": [
+        "M23.22"
+      ],
+      "procedure_code": "29881",
+      "patient_age": 48,
+      "clinical_note": "SYNTHETIC CASE. Patient: Morgan Johnson, age 48. Visit dates: 2026-02-14, 2026-03-20, 2026-04-28. History: knee pain for 5 months, worse with stairs and prolonged standing. Patient reports significant knee pain with mechanical symptoms, including knee locking and catching in the knee. Imaging grade is Kellgren-Lawrence grade 2, consistent with mild osteoarthritis. MRI shows meniscal tear in the medial meniscus. The patient completed 6 weeks of formal physical therapy in the past year, confirmed by PT notes. Imaging requested: knee arthroscopy with possible partial meniscectomy. The exam also states no mechanical symptoms and no locking.",
+      "gold_readiness": "NEEDS_MANUAL_REVIEW",
+      "gold_criterion_outcomes": {
+        "KNE-01": "contradictory",
+        "KNE-02": "met",
+        "KNE-03": "met",
+        "KNE-04": "met",
+        "KNE-05": "not_applicable",
+        "KNE-EX-01": "not_fired",
+        "KNE-EX-02": "not_fired"
+      },
+      "categories": [
+        "contradictory_notes"
+      ]
+    },
+    {
+      "case_id": "KNE-012",
+      "procedure": "knee_arthroscopy",
+      "policy_id": "AETNA_CPB_0673",
+      "policy_version": "2024-09-11",
+      "diagnosis_codes": [
+        "M23.22"
+      ],
+      "procedure_code": "29881",
+      "patient_age": 48,
+      "clinical_note": "SYNTHETIC CASE. Patient: Casey Lee, age 48. Visit dates: 2026-02-14, 2026-03-20, 2026-04-28. History: knee pain for 5 months, worse with stairs and prolonged standing. Patient reports significant knee pain with mechanical symptoms, including knee locking and catching in the knee. Imaging grade is Kellgren-Lawrence grade 2, consistent with mild osteoarthritis. MRI shows meniscal tear in the medial meniscus. The patient completed 6 weeks of formal physical therapy in the past year, confirmed by PT notes. Imaging requested: knee arthroscopy with possible partial meniscectomy. The exam also states no mechanical symptoms and no locking.",
+      "gold_readiness": "NEEDS_MANUAL_REVIEW",
+      "gold_criterion_outcomes": {
+        "KNE-01": "contradictory",
+        "KNE-02": "met",
+        "KNE-03": "met",
+        "KNE-04": "met",
+        "KNE-05": "not_applicable",
+        "KNE-EX-01": "not_fired",
+        "KNE-EX-02": "not_fired"
+      },
+      "categories": [
+        "contradictory_notes"
+      ]
+    },
+    {
+      "case_id": "KNE-013",
+      "procedure": "knee_arthroscopy",
+      "policy_id": "AETNA_CPB_0673",
+      "policy_version": "2024-09-11",
+      "diagnosis_codes": [
+        "M23.22"
+      ],
+      "procedure_code": "29881",
+      "patient_age": 48,
+      "clinical_note": "SYNTHETIC CASE. Patient: Riley Brown, age 48. Visit dates: 2026-02-14, 2026-03-20, 2026-04-28. History: knee pain for 5 months, worse with stairs and prolonged standing. Patient reports significant knee pain with mechanical symptoms, including knee locking and catching in the knee. Imaging grade is Kellgren-Lawrence grade 2, consistent with mild osteoarthritis. MRI shows meniscal tear in the medial meniscus. The patient had some physical therapy, with unclear duration of physical therapy. Imaging requested: knee arthroscopy with possible partial meniscectomy.",
+      "gold_readiness": "NEEDS_MANUAL_REVIEW",
+      "gold_criterion_outcomes": {
+        "KNE-01": "met",
+        "KNE-02": "met",
+        "KNE-03": "met",
+        "KNE-04": "uncertain",
+        "KNE-05": "not_applicable",
+        "KNE-EX-01": "not_fired",
+        "KNE-EX-02": "not_fired"
+      },
+      "categories": [
+        "ambiguous_history"
+      ]
+    },
+    {
+      "case_id": "KNE-014",
+      "procedure": "knee_arthroscopy",
+      "policy_id": "AETNA_CPB_0673",
+      "policy_version": "2024-09-11",
+      "diagnosis_codes": [
+        "M23.22"
+      ],
+      "procedure_code": "29881",
+      "patient_age": 48,
+      "clinical_note": "SYNTHETIC CASE. Patient: Jamie Patel, age 48. Visit dates: 2026-02-14, 2026-03-20, 2026-04-28. History: knee pain for 5 months, worse with stairs and prolonged standing. Patient reports significant knee pain with mechanical symptoms, including knee locking and catching in the knee. Imaging grade is Kellgren-Lawrence grade 2, consistent with mild osteoarthritis. MRI shows meniscal tear in the medial meniscus. The patient had some physical therapy, with unclear duration of physical therapy. Imaging requested: knee arthroscopy with possible partial meniscectomy.",
+      "gold_readiness": "NEEDS_MANUAL_REVIEW",
+      "gold_criterion_outcomes": {
+        "KNE-01": "met",
+        "KNE-02": "met",
+        "KNE-03": "met",
+        "KNE-04": "uncertain",
+        "KNE-05": "not_applicable",
+        "KNE-EX-01": "not_fired",
+        "KNE-EX-02": "not_fired"
+      },
+      "categories": [
+        "ambiguous_history"
+      ]
+    },
+    {
+      "case_id": "KNE-015",
+      "procedure": "knee_arthroscopy",
+      "policy_id": "AETNA_CPB_0673",
+      "policy_version": "2023",
+      "diagnosis_codes": [
+        "M23.22"
+      ],
+      "procedure_code": "29881",
+      "patient_age": 48,
+      "clinical_note": "SYNTHETIC CASE. Patient: Sam Garcia, age 48. Visit dates: 2026-02-14, 2026-03-20, 2026-04-28. History: knee pain for 5 months, worse with stairs and prolonged standing. Patient reports significant knee pain with mechanical symptoms, including knee locking and catching in the knee. Imaging grade is Kellgren-Lawrence grade 2, consistent with mild osteoarthritis. MRI shows meniscal tear in the medial meniscus. The patient completed 6 weeks of formal physical therapy in the past year, confirmed by PT notes. Imaging requested: knee arthroscopy with possible partial meniscectomy.",
+      "gold_readiness": "NEEDS_MANUAL_REVIEW",
+      "gold_criterion_outcomes": {
+        "KNE-01": "met",
+        "KNE-02": "met",
+        "KNE-03": "met",
+        "KNE-04": "met",
+        "KNE-05": "not_applicable",
+        "KNE-EX-01": "not_fired",
+        "KNE-EX-02": "not_fired"
+      },
+      "categories": [
+        "outdated_policy"
+      ]
+    },
+    {
+      "case_id": "KNE-016",
+      "procedure": "knee_arthroscopy",
+      "policy_id": "AETNA_CPB_0673",
+      "policy_version": "2023",
+      "diagnosis_codes": [
+        "M23.22"
+      ],
+      "procedure_code": "29881",
+      "patient_age": 48,
+      "clinical_note": "SYNTHETIC CASE. Patient: Alex Kim, age 48. Visit dates: 2026-02-14, 2026-03-20, 2026-04-28. History: knee pain for 5 months, worse with stairs and prolonged standing. Patient reports significant knee pain with mechanical symptoms, including knee locking and catching in the knee. Imaging grade is Kellgren-Lawrence grade 2, consistent with mild osteoarthritis. MRI shows meniscal tear in the medial meniscus. The patient completed 6 weeks of formal physical therapy in the past year, confirmed by PT notes. Imaging requested: knee arthroscopy with possible partial meniscectomy.",
+      "gold_readiness": "NEEDS_MANUAL_REVIEW",
+      "gold_criterion_outcomes": {
+        "KNE-01": "met",
+        "KNE-02": "met",
+        "KNE-03": "met",
+        "KNE-04": "met",
+        "KNE-05": "not_applicable",
+        "KNE-EX-01": "not_fired",
+        "KNE-EX-02": "not_fired"
+      },
+      "categories": [
+        "outdated_policy"
+      ]
+    },
+    {
+      "case_id": "KNE-017",
+      "procedure": "knee_arthroscopy",
+      "policy_id": "AETNA_CPB_0673",
+      "policy_version": "2024-09-11",
+      "diagnosis_codes": [
+        "M23.22"
+      ],
+      "procedure_code": "29881",
+      "patient_age": 48,
+      "clinical_note": "SYNTHETIC CASE. Patient: Jordan Nguyen, age 48. Visit dates: 2026-02-14, 2026-03-20, 2026-04-28. History: knee pain for 5 months, worse with stairs and prolonged standing. Patient reports significant knee pain with mechanical symptoms, including knee locking and catching in the knee. Imaging grade is Kellgren-Lawrence grade 2, consistent with mild osteoarthritis. MRI shows meniscal tear in the medial meniscus. The patient completed 4 weeks of formal physical therapy in the past year. Imaging requested: knee arthroscopy with possible partial meniscectomy.",
+      "gold_readiness": "NOT_READY",
+      "gold_criterion_outcomes": {
+        "KNE-01": "met",
+        "KNE-02": "met",
+        "KNE-03": "met",
+        "KNE-04": "not_met",
+        "KNE-05": "not_applicable",
+        "KNE-EX-01": "not_fired",
+        "KNE-EX-02": "not_fired"
+      },
+      "categories": [
+        "incomplete_conservative"
+      ]
+    },
+    {
+      "case_id": "KNE-018",
+      "procedure": "knee_arthroscopy",
+      "policy_id": "AETNA_CPB_0673",
+      "policy_version": "2024-09-11",
+      "diagnosis_codes": [
+        "M23.22"
+      ],
+      "procedure_code": "29881",
+      "patient_age": 48,
+      "clinical_note": "SYNTHETIC CASE. Patient: Taylor Smith, age 48. Visit dates: 2026-02-14, 2026-03-20, 2026-04-28. History: knee pain for 5 months, worse with stairs and prolonged standing. Patient reports significant knee pain with mechanical symptoms, including knee locking and catching in the knee. Imaging grade is Kellgren-Lawrence grade 2, consistent with mild osteoarthritis. MRI shows meniscal tear in the medial meniscus. The patient completed 4 weeks of formal physical therapy in the past year. Imaging requested: knee arthroscopy with possible partial meniscectomy.",
+      "gold_readiness": "NOT_READY",
+      "gold_criterion_outcomes": {
+        "KNE-01": "met",
+        "KNE-02": "met",
+        "KNE-03": "met",
+        "KNE-04": "not_met",
+        "KNE-05": "not_applicable",
+        "KNE-EX-01": "not_fired",
+        "KNE-EX-02": "not_fired"
+      },
+      "categories": [
+        "incomplete_conservative"
+      ]
+    },
+    {
+      "case_id": "KNE-019",
+      "procedure": "knee_arthroscopy",
+      "policy_id": "AETNA_CPB_0673",
+      "policy_version": "2024-09-11",
+      "diagnosis_codes": [
+        "M23.22"
+      ],
+      "procedure_code": "29881",
+      "patient_age": 48,
+      "clinical_note": "SYNTHETIC CASE. Patient: Morgan Johnson, age 48. Visit dates: 2026-02-14, 2026-03-20, 2026-04-28. History: knee pain for 5 months, worse with stairs and prolonged standing. Patient reports significant knee pain with mechanical symptoms, including knee locking and catching in the knee. Imaging grade is Kellgren-Lawrence grade 2, consistent with mild osteoarthritis. MRI shows no meniscal tear on MRI and no loose body on imaging. The patient completed 6 weeks of formal physical therapy in the past year, confirmed by PT notes. Imaging requested: knee arthroscopy with possible partial meniscectomy.",
+      "gold_readiness": "NOT_READY",
+      "gold_criterion_outcomes": {
+        "KNE-01": "met",
+        "KNE-02": "met",
+        "KNE-03": "not_met",
+        "KNE-04": "met",
+        "KNE-05": "not_applicable",
+        "KNE-EX-01": "not_fired",
+        "KNE-EX-02": "not_fired"
+      },
+      "categories": [
+        "negated_findings"
+      ]
+    },
+    {
+      "case_id": "KNE-020",
+      "procedure": "knee_arthroscopy",
+      "policy_id": "AETNA_CPB_0673",
+      "policy_version": "2024-09-11",
+      "diagnosis_codes": [
+        "M23.22"
+      ],
+      "procedure_code": "29881",
+      "patient_age": 48,
+      "clinical_note": "SYNTHETIC CASE. Patient: Casey Lee, age 48. Visit dates: 2026-02-14, 2026-03-20, 2026-04-28. History: knee pain for 5 months, worse with stairs and prolonged standing. Patient reports knee pain and occasional discomfort. Imaging grade is Kellgren-Lawrence grade 2, consistent with mild osteoarthritis. MRI shows meniscal tear in the medial meniscus. The patient completed 6 weeks of formal physical therapy in the past year, confirmed by PT notes. Imaging requested: knee arthroscopy with possible partial meniscectomy.",
+      "gold_readiness": "NOT_READY",
+      "gold_criterion_outcomes": {
+        "KNE-01": "missing",
+        "KNE-02": "met",
+        "KNE-03": "met",
+        "KNE-04": "met",
+        "KNE-05": "not_applicable",
+        "KNE-EX-01": "not_fired",
+        "KNE-EX-02": "not_fired"
+      },
+      "categories": [
+        "insufficient_evidence"
+      ]
+    },
+    {
+      "case_id": "BIO-001",
+      "procedure": "biologic_infusion",
+      "policy_id": "CIGNA_IP0660",
+      "policy_version": "2026",
+      "diagnosis_codes": [
+        "K50.00"
+      ],
+      "procedure_code": "J1745",
+      "patient_age": 34,
+      "clinical_note": "SYNTHETIC CASE. Patient: Jordan Nguyen, age 34. Visit dates: 2026-01-12, 2026-02-09, 2026-03-16. History: abdominal pain, diarrhea, and weight loss over 8 months, with prior gastroenterology follow-up. Infliximab was prescribed by a gastroenterologist. Diagnosis is moderate to severe Crohn disease. Planned dosing is 5 mg per kg at weeks 0, 2, and 6, then maintenance dosing every 6 weeks. TB screening documented before initiation, with a negative result. The patient failed corticosteroids and failed immunomodulators, with documented intolerance to prior therapy. Treatment requested: infliximab intravenous infusion.",
+      "gold_readiness": "READY_FOR_HUMAN_REVIEW",
+      "gold_criterion_outcomes": {
+        "BIO-01": "met",
+        "BIO-02": "met",
+        "BIO-03": "met",
+        "BIO-04": "met",
+        "BIO-05": "met",
+        "BIO-06": "met",
+        "BIO-EX-01": "not_fired",
+        "BIO-EX-02": "not_fired",
+        "BIO-EX-03": "not_fired"
+      },
+      "categories": [
+        "fully_documented"
+      ]
+    },
+    {
+      "case_id": "BIO-002",
+      "procedure": "biologic_infusion",
+      "policy_id": "CIGNA_IP0660",
+      "policy_version": "2026",
+      "diagnosis_codes": [
+        "K50.00"
+      ],
+      "procedure_code": "J1745",
+      "patient_age": 34,
+      "clinical_note": "SYNTHETIC CASE. Patient: Taylor Smith, age 34. Visit dates: 2026-01-12, 2026-02-09, 2026-03-16. History: abdominal pain, diarrhea, and weight loss over 8 months, with prior gastroenterology follow-up. Infliximab was prescribed by a gastroenterologist. Diagnosis is moderate to severe Crohn disease. Planned dosing is 5 mg per kg at weeks 0, 2, and 6, then maintenance dosing every 6 weeks. TB screening documented before initiation, with a negative result. The patient has corticosteroid failure documented and immunomodulator failure documented after conventional therapy. Treatment requested: infliximab intravenous infusion.",
+      "gold_readiness": "READY_FOR_HUMAN_REVIEW",
+      "gold_criterion_outcomes": {
+        "BIO-01": "met",
+        "BIO-02": "met",
+        "BIO-03": "met",
+        "BIO-04": "met",
+        "BIO-05": "met",
+        "BIO-06": "met",
+        "BIO-EX-01": "not_fired",
+        "BIO-EX-02": "not_fired",
+        "BIO-EX-03": "not_fired"
+      },
+      "categories": [
+        "fully_documented"
+      ]
+    },
+    {
+      "case_id": "BIO-003",
+      "procedure": "biologic_infusion",
+      "policy_id": "CIGNA_IP0660",
+      "policy_version": "2026",
+      "diagnosis_codes": [
+        "K50.00"
+      ],
+      "procedure_code": "J1745",
+      "patient_age": 34,
+      "clinical_note": "SYNTHETIC CASE. Patient: Morgan Johnson, age 34. Visit dates: 2026-01-12, 2026-02-09, 2026-03-16. History: abdominal pain, diarrhea, and weight loss over 8 months, with prior gastroenterology follow-up. Infliximab was prescribed by a gastroenterologist. Diagnosis is moderate to severe Crohn disease. Planned dosing is 5 mg per kg at weeks 0, 2, and 6, then maintenance dosing every 6 weeks. TB screening documented before initiation, with a negative result. The patient failed corticosteroids and failed immunomodulators, with documented intolerance to prior therapy. Treatment requested: infliximab intravenous infusion.",
+      "gold_readiness": "READY_FOR_HUMAN_REVIEW",
+      "gold_criterion_outcomes": {
+        "BIO-01": "met",
+        "BIO-02": "met",
+        "BIO-03": "met",
+        "BIO-04": "met",
+        "BIO-05": "met",
+        "BIO-06": "met",
+        "BIO-EX-01": "not_fired",
+        "BIO-EX-02": "not_fired",
+        "BIO-EX-03": "not_fired"
+      },
+      "categories": [
+        "fully_documented"
+      ]
+    },
+    {
+      "case_id": "BIO-004",
+      "procedure": "biologic_infusion",
+      "policy_id": "CIGNA_IP0660",
+      "policy_version": "2026",
+      "diagnosis_codes": [
+        "K50.00"
+      ],
+      "procedure_code": "J1745",
+      "patient_age": 34,
+      "clinical_note": "SYNTHETIC CASE. Patient: Casey Lee, age 34. Visit dates: 2026-01-12, 2026-02-09, 2026-03-16. History: abdominal pain, diarrhea, and weight loss over 8 months, with prior gastroenterology follow-up. Infliximab was prescribed by a gastroenterologist. Diagnosis is moderate to severe Crohn disease. Planned dosing is 5 mg per kg at weeks 0, 2, and 6, then maintenance dosing every 6 weeks. TB screening documented before initiation, with a negative result. The patient has corticosteroid failure documented and immunomodulator failure documented after conventional therapy. Treatment requested: infliximab intravenous infusion.",
+      "gold_readiness": "READY_FOR_HUMAN_REVIEW",
+      "gold_criterion_outcomes": {
+        "BIO-01": "met",
+        "BIO-02": "met",
+        "BIO-03": "met",
+        "BIO-04": "met",
+        "BIO-05": "met",
+        "BIO-06": "met",
+        "BIO-EX-01": "not_fired",
+        "BIO-EX-02": "not_fired",
+        "BIO-EX-03": "not_fired"
+      },
+      "categories": [
+        "fully_documented"
+      ]
+    },
+    {
+      "case_id": "BIO-005",
+      "procedure": "biologic_infusion",
+      "policy_id": "CIGNA_IP0660",
+      "policy_version": "2026",
+      "diagnosis_codes": [
+        "K50.00"
+      ],
+      "procedure_code": "J1745",
+      "patient_age": 34,
+      "clinical_note": "SYNTHETIC CASE. Patient: Morgan Johnson, age 34. Visit dates: 2026-01-12, 2026-02-09, 2026-03-16. History: abdominal pain, diarrhea, and weight loss over 8 months, with prior gastroenterology follow-up. Infliximab was prescribed by a gastroenterologist. Diagnosis is moderate to severe Crohn disease. Planned dosing is 5 mg per kg at weeks 0, 2, and 6, then maintenance dosing every 6 weeks.  The patient failed corticosteroids and failed immunomodulators, with documented intolerance to prior therapy. Treatment requested: infliximab intravenous infusion.",
+      "gold_readiness": "NOT_READY",
+      "gold_criterion_outcomes": {
+        "BIO-01": "met",
+        "BIO-02": "met",
+        "BIO-03": "met",
+        "BIO-04": "met",
+        "BIO-05": "missing",
+        "BIO-06": "met",
+        "BIO-EX-01": "not_fired",
+        "BIO-EX-02": "not_fired",
+        "BIO-EX-03": "not_fired"
+      },
+      "categories": [
+        "missing_evidence"
+      ]
+    },
+    {
+      "case_id": "BIO-006",
+      "procedure": "biologic_infusion",
+      "policy_id": "CIGNA_IP0660",
+      "policy_version": "2026",
+      "diagnosis_codes": [
+        "K50.00"
+      ],
+      "procedure_code": "J1745",
+      "patient_age": 34,
+      "clinical_note": "SYNTHETIC CASE. Patient: Casey Lee, age 34. Visit dates: 2026-01-12, 2026-02-09, 2026-03-16. History: abdominal pain, diarrhea, and weight loss over 8 months, with prior gastroenterology follow-up. Infliximab was prescribed by a gastroenterologist. Diagnosis is moderate to severe Crohn disease. Planned dosing is 5 mg per kg at weeks 0, 2, and 6, then maintenance dosing every 6 weeks.  The patient failed corticosteroids and failed immunomodulators, with documented intolerance to prior therapy. Treatment requested: infliximab intravenous infusion.",
+      "gold_readiness": "NOT_READY",
+      "gold_criterion_outcomes": {
+        "BIO-01": "met",
+        "BIO-02": "met",
+        "BIO-03": "met",
+        "BIO-04": "met",
+        "BIO-05": "missing",
+        "BIO-06": "met",
+        "BIO-EX-01": "not_fired",
+        "BIO-EX-02": "not_fired",
+        "BIO-EX-03": "not_fired"
+      },
+      "categories": [
+        "missing_evidence"
+      ]
+    },
+    {
+      "case_id": "BIO-007",
+      "procedure": "biologic_infusion",
+      "policy_id": "CIGNA_IP0660",
+      "policy_version": "2026",
+      "diagnosis_codes": [
+        "K50.00"
+      ],
+      "procedure_code": "J1745",
+      "patient_age": 34,
+      "clinical_note": "SYNTHETIC CASE. Patient: Alex Kim, age 34. Visit dates: 2026-01-12, 2026-02-09, 2026-03-16. History: abdominal pain, diarrhea, and weight loss over 8 months, with prior gastroenterology follow-up. Infliximab was prescribed by a gastroenterologist. Diagnosis is moderate to severe Crohn disease. Planned dosing is 5 mg per kg at weeks 0, 2, and 6, then maintenance dosing every 6 weeks. TB screening documented before initiation, with a negative result. The patient failed corticosteroids and failed immunomodulators, with documented intolerance to prior therapy. Treatment requested: infliximab intravenous infusion. Patient has active serious infection requiring antibiotics.",
+      "gold_readiness": "NOT_READY",
+      "gold_criterion_outcomes": {
+        "BIO-01": "met",
+        "BIO-02": "met",
+        "BIO-03": "met",
+        "BIO-04": "met",
+        "BIO-05": "met",
+        "BIO-06": "met",
+        "BIO-EX-01": "fired",
+        "BIO-EX-02": "not_fired",
+        "BIO-EX-03": "not_fired"
+      },
+      "categories": [
+        "exclusion_triggered"
+      ]
+    },
+    {
+      "case_id": "BIO-008",
+      "procedure": "biologic_infusion",
+      "policy_id": "CIGNA_IP0660",
+      "policy_version": "2026",
+      "diagnosis_codes": [
+        "K50.00"
+      ],
+      "procedure_code": "J1745",
+      "patient_age": 34,
+      "clinical_note": "SYNTHETIC CASE. Patient: Jordan Nguyen, age 34. Visit dates: 2026-01-12, 2026-02-09, 2026-03-16. History: abdominal pain, diarrhea, and weight loss over 8 months, with prior gastroenterology follow-up. Infliximab was prescribed by a gastroenterologist. Diagnosis is moderate to severe Crohn disease. Planned dosing is 5 mg per kg at weeks 0, 2, and 6, then maintenance dosing every 6 weeks. TB screening documented before initiation, with a negative result. The patient failed corticosteroids and failed immunomodulators, with documented intolerance to prior therapy. Treatment requested: infliximab intravenous infusion. Patient has untreated latent tuberculosis.",
+      "gold_readiness": "NOT_READY",
+      "gold_criterion_outcomes": {
+        "BIO-01": "met",
+        "BIO-02": "met",
+        "BIO-03": "met",
+        "BIO-04": "met",
+        "BIO-05": "met",
+        "BIO-06": "met",
+        "BIO-EX-01": "not_fired",
+        "BIO-EX-02": "fired",
+        "BIO-EX-03": "not_fired"
+      },
+      "categories": [
+        "exclusion_triggered"
+      ]
+    },
+    {
+      "case_id": "BIO-009",
+      "procedure": "biologic_infusion",
+      "policy_id": "CIGNA_IP0660",
+      "policy_version": "2026",
+      "diagnosis_codes": [
+        "J06.9"
+      ],
+      "procedure_code": "J1745",
+      "patient_age": 34,
+      "clinical_note": "SYNTHETIC CASE. Patient: Taylor Smith, age 34. Visit dates: 2026-01-12, 2026-02-09, 2026-03-16. History: abdominal pain, diarrhea, and weight loss over 8 months, with prior gastroenterology follow-up. Infliximab was prescribed by a gastroenterologist. Diagnosis is moderate to severe Crohn disease. Planned dosing is 5 mg per kg at weeks 0, 2, and 6, then maintenance dosing every 6 weeks. TB screening documented before initiation, with a negative result. The patient failed corticosteroids and failed immunomodulators, with documented intolerance to prior therapy. Treatment requested: infliximab intravenous infusion.",
+      "gold_readiness": "NEEDS_MANUAL_REVIEW",
+      "gold_criterion_outcomes": {
+        "BIO-01": "met",
+        "BIO-02": "met",
+        "BIO-03": "met",
+        "BIO-04": "met",
+        "BIO-05": "met",
+        "BIO-06": "met",
+        "BIO-EX-01": "not_fired",
+        "BIO-EX-02": "not_fired",
+        "BIO-EX-03": "not_fired"
+      },
+      "categories": [
+        "incorrect_or_unsupported_code"
+      ]
+    },
+    {
+      "case_id": "BIO-010",
+      "procedure": "biologic_infusion",
+      "policy_id": "CIGNA_IP0660",
+      "policy_version": "2026",
+      "diagnosis_codes": [
+        "XYZ"
+      ],
+      "procedure_code": "J1745",
+      "patient_age": 34,
+      "clinical_note": "SYNTHETIC CASE. Patient: Morgan Johnson, age 34. Visit dates: 2026-01-12, 2026-02-09, 2026-03-16. History: abdominal pain, diarrhea, and weight loss over 8 months, with prior gastroenterology follow-up. Infliximab was prescribed by a gastroenterologist. Diagnosis is moderate to severe Crohn disease. Planned dosing is 5 mg per kg at weeks 0, 2, and 6, then maintenance dosing every 6 weeks. TB screening documented before initiation, with a negative result. The patient failed corticosteroids and failed immunomodulators, with documented intolerance to prior therapy. Treatment requested: infliximab intravenous infusion.",
+      "gold_readiness": "NEEDS_MANUAL_REVIEW",
+      "gold_criterion_outcomes": {
+        "BIO-01": "met",
+        "BIO-02": "met",
+        "BIO-03": "met",
+        "BIO-04": "met",
+        "BIO-05": "met",
+        "BIO-06": "met",
+        "BIO-EX-01": "not_fired",
+        "BIO-EX-02": "not_fired",
+        "BIO-EX-03": "not_fired"
+      },
+      "categories": [
+        "incorrect_or_unsupported_code"
+      ]
+    },
+    {
+      "case_id": "BIO-011",
+      "procedure": "biologic_infusion",
+      "policy_id": "CIGNA_IP0660",
+      "policy_version": "2026",
+      "diagnosis_codes": [
+        "K50.00"
+      ],
+      "procedure_code": "J1745",
+      "patient_age": 34,
+      "clinical_note": "SYNTHETIC CASE. Patient: Casey Lee, age 34. Visit dates: 2026-01-12, 2026-02-09, 2026-03-16. History: abdominal pain, diarrhea, and weight loss over 8 months, with prior gastroenterology follow-up. Infliximab was prescribed by a gastroenterologist. Diagnosis is moderate to severe Crohn disease. Planned dosing is 5 mg per kg at weeks 0, 2, and 6, then maintenance dosing every 6 weeks. TB screening documented before initiation, with a negative result. The patient failed corticosteroids and failed immunomodulators, with documented intolerance to prior therapy. Treatment requested: infliximab intravenous infusion. The note also states mild Crohn disease.",
+      "gold_readiness": "NEEDS_MANUAL_REVIEW",
+      "gold_criterion_outcomes": {
+        "BIO-01": "met",
+        "BIO-02": "met",
+        "BIO-03": "contradictory",
+        "BIO-04": "met",
+        "BIO-05": "met",
+        "BIO-06": "met",
+        "BIO-EX-01": "not_fired",
+        "BIO-EX-02": "not_fired",
+        "BIO-EX-03": "not_fired"
+      },
+      "categories": [
+        "contradictory_notes"
+      ]
+    },
+    {
+      "case_id": "BIO-012",
+      "procedure": "biologic_infusion",
+      "policy_id": "CIGNA_IP0660",
+      "policy_version": "2026",
+      "diagnosis_codes": [
+        "K50.00"
+      ],
+      "procedure_code": "J1745",
+      "patient_age": 34,
+      "clinical_note": "SYNTHETIC CASE. Patient: Riley Brown, age 34. Visit dates: 2026-01-12, 2026-02-09, 2026-03-16. History: abdominal pain, diarrhea, and weight loss over 8 months, with prior gastroenterology follow-up. Infliximab was prescribed by a gastroenterologist. Diagnosis is moderate to severe Crohn disease. Planned dosing is 5 mg per kg at weeks 0, 2, and 6, then maintenance dosing every 6 weeks. TB screening documented before initiation, with a negative result. The patient failed corticosteroids and failed immunomodulators, with documented intolerance to prior therapy. Treatment requested: infliximab intravenous infusion. The note also states mild Crohn disease.",
+      "gold_readiness": "NEEDS_MANUAL_REVIEW",
+      "gold_criterion_outcomes": {
+        "BIO-01": "met",
+        "BIO-02": "met",
+        "BIO-03": "contradictory",
+        "BIO-04": "met",
+        "BIO-05": "met",
+        "BIO-06": "met",
+        "BIO-EX-01": "not_fired",
+        "BIO-EX-02": "not_fired",
+        "BIO-EX-03": "not_fired"
+      },
+      "categories": [
+        "contradictory_notes"
+      ]
+    },
+    {
+      "case_id": "BIO-013",
+      "procedure": "biologic_infusion",
+      "policy_id": "CIGNA_IP0660",
+      "policy_version": "2026",
+      "diagnosis_codes": [
+        "K50.00"
+      ],
+      "procedure_code": "J1745",
+      "patient_age": 34,
+      "clinical_note": "SYNTHETIC CASE. Patient: Jamie Patel, age 34. Visit dates: 2026-01-12, 2026-02-09, 2026-03-16. History: abdominal pain, diarrhea, and weight loss over 8 months, with prior gastroenterology follow-up. Infliximab was prescribed by a gastroenterologist. Diagnosis is moderate to severe Crohn disease. Planned dosing is 5 mg per kg at weeks 0, 2, and 6, then maintenance dosing every 6 weeks. TB screening documented before initiation, with a negative result. Prior therapy history unclear, with unclear prior therapy history. Treatment requested: infliximab intravenous infusion.",
+      "gold_readiness": "NEEDS_MANUAL_REVIEW",
+      "gold_criterion_outcomes": {
+        "BIO-01": "met",
+        "BIO-02": "met",
+        "BIO-03": "met",
+        "BIO-04": "met",
+        "BIO-05": "met",
+        "BIO-06": "uncertain",
+        "BIO-EX-01": "not_fired",
+        "BIO-EX-02": "not_fired",
+        "BIO-EX-03": "not_fired"
+      },
+      "categories": [
+        "ambiguous_history"
+      ]
+    },
+    {
+      "case_id": "BIO-014",
+      "procedure": "biologic_infusion",
+      "policy_id": "CIGNA_IP0660",
+      "policy_version": "2026",
+      "diagnosis_codes": [
+        "K50.00"
+      ],
+      "procedure_code": "J1745",
+      "patient_age": 34,
+      "clinical_note": "SYNTHETIC CASE. Patient: Sam Garcia, age 34. Visit dates: 2026-01-12, 2026-02-09, 2026-03-16. History: abdominal pain, diarrhea, and weight loss over 8 months, with prior gastroenterology follow-up. Infliximab was prescribed by a gastroenterologist. Diagnosis is moderate to severe Crohn disease. Planned dosing is 5 mg per kg at weeks 0, 2, and 6, then maintenance dosing every 6 weeks. TB screening documented before initiation, with a negative result. Prior therapy history unclear, with unclear prior therapy history. Treatment requested: infliximab intravenous infusion.",
+      "gold_readiness": "NEEDS_MANUAL_REVIEW",
+      "gold_criterion_outcomes": {
+        "BIO-01": "met",
+        "BIO-02": "met",
+        "BIO-03": "met",
+        "BIO-04": "met",
+        "BIO-05": "met",
+        "BIO-06": "uncertain",
+        "BIO-EX-01": "not_fired",
+        "BIO-EX-02": "not_fired",
+        "BIO-EX-03": "not_fired"
+      },
+      "categories": [
+        "ambiguous_history"
+      ]
+    },
+    {
+      "case_id": "BIO-015",
+      "procedure": "biologic_infusion",
+      "policy_id": "CIGNA_IP0660",
+      "policy_version": "2024",
+      "diagnosis_codes": [
+        "K50.00"
+      ],
+      "procedure_code": "J1745",
+      "patient_age": 34,
+      "clinical_note": "SYNTHETIC CASE. Patient: Alex Kim, age 34. Visit dates: 2026-01-12, 2026-02-09, 2026-03-16. History: abdominal pain, diarrhea, and weight loss over 8 months, with prior gastroenterology follow-up. Infliximab was prescribed by a gastroenterologist. Diagnosis is moderate to severe Crohn disease. Planned dosing is 5 mg per kg at weeks 0, 2, and 6, then maintenance dosing every 6 weeks. TB screening documented before initiation, with a negative result. The patient failed corticosteroids and failed immunomodulators, with documented intolerance to prior therapy. Treatment requested: infliximab intravenous infusion.",
+      "gold_readiness": "NEEDS_MANUAL_REVIEW",
+      "gold_criterion_outcomes": {
+        "BIO-01": "met",
+        "BIO-02": "met",
+        "BIO-03": "met",
+        "BIO-04": "met",
+        "BIO-05": "met",
+        "BIO-06": "met",
+        "BIO-EX-01": "not_fired",
+        "BIO-EX-02": "not_fired",
+        "BIO-EX-03": "not_fired"
+      },
+      "categories": [
+        "outdated_policy"
+      ]
+    },
+    {
+      "case_id": "BIO-016",
+      "procedure": "biologic_infusion",
+      "policy_id": "CIGNA_IP0660",
+      "policy_version": "2026",
+      "diagnosis_codes": [
+        "K50.00"
+      ],
+      "procedure_code": "J1745",
+      "patient_age": 34,
+      "clinical_note": "SYNTHETIC CASE. Patient: Jordan Nguyen, age 34. Visit dates: 2026-01-12, 2026-02-09, 2026-03-16. History: abdominal pain, diarrhea, and weight loss over 8 months, with prior gastroenterology follow-up. Infliximab was prescribed by a gastroenterologist. Diagnosis is moderate to severe Crohn disease. Planned dosing is 5 mg per kg at weeks 0, 2, and 6, then maintenance dosing every 6 weeks. TB screening documented before initiation, with a negative result. Patient tried corticosteroids briefly, with no documented failure, intolerance, or contraindication. Treatment requested: infliximab intravenous infusion.",
+      "gold_readiness": "NOT_READY",
+      "gold_criterion_outcomes": {
+        "BIO-01": "met",
+        "BIO-02": "met",
+        "BIO-03": "met",
+        "BIO-04": "met",
+        "BIO-05": "met",
+        "BIO-06": "missing",
+        "BIO-EX-01": "not_fired",
+        "BIO-EX-02": "not_fired",
+        "BIO-EX-03": "not_fired"
+      },
+      "categories": [
+        "incomplete_conservative"
+      ]
+    },
+    {
+      "case_id": "BIO-017",
+      "procedure": "biologic_infusion",
+      "policy_id": "CIGNA_IP0660",
+      "policy_version": "2026",
+      "diagnosis_codes": [
+        "K50.00"
+      ],
+      "procedure_code": "J1745",
+      "patient_age": 34,
+      "clinical_note": "SYNTHETIC CASE. Patient: Taylor Smith, age 34. Visit dates: 2026-01-12, 2026-02-09, 2026-03-16. History: abdominal pain, diarrhea, and weight loss over 8 months, with prior gastroenterology follow-up. Infliximab was prescribed by a gastroenterologist. Diagnosis is moderate to severe Crohn disease. Planned dosing is 5 mg per kg at weeks 0, 2, and 6, then maintenance dosing every 6 weeks. TB screening documented before initiation, with a negative result. Patient tried corticosteroids briefly, with no documented failure, intolerance, or contraindication. Treatment requested: infliximab intravenous infusion.",
+      "gold_readiness": "NOT_READY",
+      "gold_criterion_outcomes": {
+        "BIO-01": "met",
+        "BIO-02": "met",
+        "BIO-03": "met",
+        "BIO-04": "met",
+        "BIO-05": "met",
+        "BIO-06": "missing",
+        "BIO-EX-01": "not_fired",
+        "BIO-EX-02": "not_fired",
+        "BIO-EX-03": "not_fired"
+      },
+      "categories": [
+        "incomplete_conservative"
+      ]
+    },
+    {
+      "case_id": "BIO-018",
+      "procedure": "biologic_infusion",
+      "policy_id": "CIGNA_IP0660",
+      "policy_version": "2026",
+      "diagnosis_codes": [
+        "K50.00"
+      ],
+      "procedure_code": "J1745",
+      "patient_age": 34,
+      "clinical_note": "SYNTHETIC CASE. Patient: Morgan Johnson, age 34. Visit dates: 2026-01-12, 2026-02-09, 2026-03-16. History: abdominal pain, diarrhea, and weight loss over 8 months, with prior gastroenterology follow-up. No gastroenterologist prescribed this medication, and no gastroenterology input is documented. Diagnosis is moderate to severe Crohn disease. Planned dosing is 5 mg per kg at weeks 0, 2, and 6, then maintenance dosing every 6 weeks. TB screening documented before initiation, with a negative result. The patient failed corticosteroids and failed immunomodulators, with documented intolerance to prior therapy. Treatment requested: infliximab intravenous infusion.",
+      "gold_readiness": "NOT_READY",
+      "gold_criterion_outcomes": {
+        "BIO-01": "met",
+        "BIO-02": "not_met",
+        "BIO-03": "met",
+        "BIO-04": "met",
+        "BIO-05": "met",
+        "BIO-06": "met",
+        "BIO-EX-01": "not_fired",
+        "BIO-EX-02": "not_fired",
+        "BIO-EX-03": "not_fired"
+      },
+      "categories": [
+        "negated_findings"
+      ]
+    },
+    {
+      "case_id": "BIO-019",
+      "procedure": "biologic_infusion",
+      "policy_id": "CIGNA_IP0660",
+      "policy_version": "2026",
+      "diagnosis_codes": [
+        "K50.00"
+      ],
+      "procedure_code": "J1745",
+      "patient_age": 34,
+      "clinical_note": "SYNTHETIC CASE. Patient: Casey Lee, age 34. Visit dates: 2026-01-12, 2026-02-09, 2026-03-16. History: abdominal pain, diarrhea, and weight loss over 8 months, with prior gastroenterology follow-up. Infliximab was prescribed by a gastroenterologist. Patient has Crohn disease, without a documented severity grade. Planned dosing is 5 mg per kg at weeks 0, 2, and 6, then maintenance dosing every 6 weeks. TB screening documented before initiation, with a negative result. The patient failed corticosteroids and failed immunomodulators, with documented intolerance to prior therapy. Treatment requested: infliximab intravenous infusion.",
+      "gold_readiness": "NOT_READY",
+      "gold_criterion_outcomes": {
+        "BIO-01": "met",
+        "BIO-02": "met",
+        "BIO-03": "missing",
+        "BIO-04": "met",
+        "BIO-05": "met",
+        "BIO-06": "met",
+        "BIO-EX-01": "not_fired",
+        "BIO-EX-02": "not_fired",
+        "BIO-EX-03": "not_fired"
+      },
+      "categories": [
+        "insufficient_evidence"
+      ]
+    },
+    {
+      "case_id": "BIO-020",
+      "procedure": "biologic_infusion",
+      "policy_id": "CIGNA_IP0660",
+      "policy_version": "2026",
+      "diagnosis_codes": [
+        "K50.00"
+      ],
+      "procedure_code": "J1745",
+      "patient_age": 34,
+      "clinical_note": "SYNTHETIC CASE. Patient: Riley Brown, age 34. Visit dates: 2026-01-12, 2026-02-09, 2026-03-16. History: abdominal pain, diarrhea, and weight loss over 8 months, with prior gastroenterology follow-up. Infliximab was prescribed by a gastroenterologist. Patient has Crohn disease, with severity not clearly documented in this note. Planned dosing is 5 mg per kg at weeks 0, 2, and 6, then maintenance dosing every 6 weeks. TB screening documented before initiation, with a negative result. The patient failed corticosteroids and failed immunomodulators, with documented intolerance to prior therapy. Treatment requested: infliximab intravenous infusion.",
+      "gold_readiness": "NOT_READY",
+      "gold_criterion_outcomes": {
+        "BIO-01": "met",
+        "BIO-02": "met",
+        "BIO-03": "missing",
+        "BIO-04": "met",
+        "BIO-05": "met",
+        "BIO-06": "met",
+        "BIO-EX-01": "not_fired",
+        "BIO-EX-02": "not_fired",
+        "BIO-EX-03": "not_fired"
+      },
+      "categories": [
+        "insufficient_evidence"
+      ]
+    }
+  ],
+  "note": "All cases are synthetic. No real patient data, no PHI."
+}

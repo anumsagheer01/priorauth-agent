@@ -1,0 +1,5 @@
+Cases evaluated: 30
+Gold non-ready cases (denominator): 25
+False-ready cases: 0
+False-ready rate: 0.0000 (0/25)
+No false-ready case in this run. Do not generalize this to other case sets.

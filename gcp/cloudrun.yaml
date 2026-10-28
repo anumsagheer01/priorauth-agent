@@ -1,0 +1,43 @@
+# Cloud Run config, prepared only, NOT deployed.
+# Deploy only from Cloud Shell after separate IAM approval, then delete
+# after screenshots. See docs/DEPLOYMENT.md for exact instructions and
+# required IAM roles. Deployment FAILED on 2026-10-27 on IAM
+# permissions; no URL, screenshot, or deployed review exists.
+# Model values below are the Cloud Shell-verified pair from
+# 2026-10-27 (gemini-3.5-flash at global, data us-central1). Re-verify
+# model availability with a minimal live call before any redeploy;
+# do not assume these values are still valid, and do not use
+# gemini-3.8-flash, which returned 404 in us-central1 on 2026-10-27.
+# This YAML is a record, not the deploy path: gcp/deploy_cloudrun.sh
+# deploys with --source . and its own --set-env-vars, which take
+# precedence. Keep the service name, region, port, and env names
+# identical in both files.
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: priorauth-agent-demo
+  annotations:
+    run.googleapis.com/ingress: all
+spec:
+  template:
+    metadata:
+      annotations:
+        run.googleapis.com/execution-environment: gen2
+    spec:
+      containers:
+        - image: gcr.io/delivery-experience-511901/priorauth-agent:latest
+          ports:
+            - containerPort: 8000
+          env:
+            - name: GOOGLE_CLOUD_PROJECT
+              value: "delivery-experience-511901"
+            - name: PRIORAUTH_MODEL
+              value: "gemini-3.5-flash"
+            - name: PRIORAUTH_MODEL_LOCATION
+              value: "global"
+            - name: PRIORAUTH_DATA_LOCATION
+              value: "us-central1"
+            - name: PRIORAUTH_DATASET
+              value: "priorauth_agent"
+            - name: PRIORAUTH_EMBEDDING_MODEL
+              value: "text-embedding-004"

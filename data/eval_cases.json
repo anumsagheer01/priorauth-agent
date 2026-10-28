@@ -1,0 +1,1061 @@
+{
+ "annotation_note": "Annotated before any model run. Gold criterion outcomes were authored by the builder. Gold readiness was derived from those outcomes by the deterministic pathway scorer in tools.checklist_scorer, plus code validation and policy version checks, not by a model. Only 3 cases derive from published case reports, paraphrased in short form with source and license. The other 27 are structured test fixtures, clearly labeled, not real patient notes and not presented as real. This set was not used to optimize the agent, because no model run had happened when it was written.",
+ "cases": [
+  {
+   "case_id": "EVAL-PMC-LUM-01",
+   "procedure": "lumbar_mri",
+   "policy_id": "AETNA_CPB_0236",
+   "policy_version": "2026",
+   "diagnosis_codes": [
+    "M54.16"
+   ],
+   "procedure_code": "72148",
+   "patient_age": 13,
+   "clinical_note": "13-year-old girl with low back pain after a fall during sports three months earlier, tingling over the posterior bilateral lower limbs, straight leg raise positive at 50 degrees on the left and 60 degrees on the right, no neuro deficit, no bowel or bladder involvement, and no significant improvement with conservative treatment. MRI showed disc desiccation with diffuse disc bulge at L4-L5 causing severe compromise of bilateral lateral recesses.",
+   "gold_readiness": "NEEDS_MANUAL_REVIEW",
+   "gold_criterion_outcomes": {
+    "LUM-01": "uncertain",
+    "LUM-02": "uncertain",
+    "LUM-03": "not_applicable",
+    "LUM-EX-01": "not_fired"
+   },
+   "categories": [
+    "ambiguous",
+    "published_vignette",
+    "atypical"
+   ],
+   "source_type": "published_case_report",
+   "source_id": "PMC11475090",
+   "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11475090/",
+   "source_license": "CC BY 4.0",
+   "annotation_rationale": "Radiculopathy needs objective motor or reflex changes, which are not documented, so LUM-01 is uncertain, not met. Conservative duration is not stated, so LUM-02 is uncertain, not met. Atypical adolescent surgical case, not a typical adult approval example.",
+   "is_synthetic": false,
+   "gold_rationale": "Pathway LUM-A is uncertain; a human must resolve the uncertain criteria.",
+   "retrieval_keywords": [
+    "conservative therapy"
+   ]
+  },
+  {
+   "case_id": "EVAL-PMC-KNE-01",
+   "procedure": "knee_arthroscopy",
+   "policy_id": "AETNA_CPB_0673",
+   "policy_version": "2024-09-11",
+   "diagnosis_codes": [
+    "M23.32"
+   ],
+   "procedure_code": "29881",
+   "patient_age": 18,
+   "clinical_note": "18-year-old male with left knee pain and mechanical symptoms, locking and catching, for 2 years, medial joint line tenderness, range of motion 0 to 130 degrees, left knee radiographs unremarkable. MRI confirmed a discoid medial meniscus with a horizontal oblique tear of the posterior horn of the medial meniscus. Arthroscopic saucerization with a 5-mm rim remaining and meniscal repair were performed.",
+   "gold_readiness": "NOT_READY",
+   "gold_criterion_outcomes": {
+    "KNE-01": "met",
+    "KNE-02": "missing",
+    "KNE-03": "met",
+    "KNE-04": "missing",
+    "KNE-05": "not_applicable",
+    "KNE-EX-01": "not_fired",
+    "KNE-EX-02": "not_fired"
+   },
+   "categories": [
+    "missing_evidence",
+    "published_vignette",
+    "atypical"
+   ],
+   "source_type": "published_case_report",
+   "source_id": "PMC7993418",
+   "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7993418/",
+   "source_license": "CC BY",
+   "annotation_rationale": "Discoid meniscus is extremely rare. No Kellgren-Lawrence grade and no physical therapy are documented, so those criteria are missing.",
+   "is_synthetic": false,
+   "gold_rationale": "No pathway fully met. Non-met criteria: KNE-02, KNE-04.",
+   "retrieval_keywords": [
+    "physical therapy"
+   ]
+  },
+  {
+   "case_id": "EVAL-PMC-BIO-01",
+   "procedure": "biologic_infusion",
+   "policy_id": "CIGNA_IP0660",
+   "policy_version": "2026",
+   "diagnosis_codes": [
+    "K50.90"
+   ],
+   "procedure_code": "J1745",
+   "patient_age": 33,
+   "clinical_note": "33-year-old woman with Crohn disease confirmed on ileocolonoscopy with severe active ileocolitis. Systemic corticosteroids gave rapid improvement, with relapse during tapering. Infliximab 5 mg/kg was given at week 0, week 1, and week 4, then 5 mg/kg every 8 weeks. Both ileocolitis and myositis were quiescent at 20 months.",
+   "gold_readiness": "NOT_READY",
+   "gold_criterion_outcomes": {
+    "BIO-01": "met",
+    "BIO-02": "missing",
+    "BIO-03": "met",
+    "BIO-04": "not_met",
+    "BIO-05": "missing",
+    "BIO-06": "met",
+    "BIO-EX-01": "not_fired",
+    "BIO-EX-02": "not_fired",
+    "BIO-EX-03": "not_fired"
+   },
+   "categories": [
+    "unsupported_claim",
+    "published_vignette",
+    "atypical",
+    "noncommercial_license"
+   ],
+   "source_type": "published_case_report",
+   "source_id": "PMC8891723",
+   "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8891723/",
+   "source_license": "CC BY-NC 4.0, non-commercial only",
+   "annotation_rationale": "Dosing weeks 0, 1, and 4 do not match the subset criterion weeks 0, 2, and 6, so BIO-04 is not_met. No gastroenterologist prescriber and no TB screening are stated, so those are missing. License is non-commercial only.",
+   "is_synthetic": false,
+   "gold_rationale": "No pathway fully met. Non-met criteria: BIO-02, BIO-04, BIO-05.",
+   "retrieval_keywords": [
+    "Crohn"
+   ]
+  },
+  {
+   "case_id": "EVAL-LUM-01",
+   "procedure": "lumbar_mri",
+   "policy_id": "AETNA_CPB_0236",
+   "policy_version": "2026",
+   "diagnosis_codes": [
+    "M54.16"
+   ],
+   "procedure_code": "72148",
+   "patient_age": 45,
+   "clinical_note": "Persistent low back pain with radicular pain with motor weakness in the L5 distribution and diminished Achilles reflex. No improvement after 8 weeks of conservative therapy with moderate activity, analgesics, NSAIDs, and muscle relaxants.",
+   "gold_readiness": "READY_FOR_HUMAN_REVIEW",
+   "gold_criterion_outcomes": {
+    "LUM-01": "met",
+    "LUM-02": "met",
+    "LUM-03": "not_applicable",
+    "LUM-EX-01": "not_fired"
+   },
+   "categories": [
+    "ready_pathway"
+   ],
+   "source_type": "structured_test_fixture",
+   "source_id": "",
+   "source_url": "",
+   "source_license": "",
+   "annotation_rationale": "Clean ready pathway A.",
+   "is_synthetic": true,
+   "gold_rationale": "Pathway LUM-A fully met, no exclusion fires, codes are valid, and the policy version is current.",
+   "retrieval_keywords": [
+    "conservative therapy"
+   ]
+  },
+  {
+   "case_id": "EVAL-LUM-02",
+   "procedure": "lumbar_mri",
+   "policy_id": "AETNA_CPB_0236",
+   "policy_version": "2026",
+   "diagnosis_codes": [
+    "M54.16"
+   ],
+   "procedure_code": "72148",
+   "patient_age": 52,
+   "clinical_note": "Persistent low back pain with radicular pain with motor weakness in the L5 distribution. The patient had some conservative therapy with NSAIDs, but the duration and response are unclear.",
+   "gold_readiness": "NEEDS_MANUAL_REVIEW",
+   "gold_criterion_outcomes": {
+    "LUM-01": "met",
+    "LUM-02": "uncertain",
+    "LUM-03": "not_applicable",
+    "LUM-EX-01": "not_fired"
+   },
+   "categories": [
+    "ambiguous",
+    "incomplete_conservative"
+   ],
+   "source_type": "structured_test_fixture",
+   "source_id": "",
+   "source_url": "",
+   "source_license": "",
+   "annotation_rationale": "Unclear conservative duration must not be counted as met.",
+   "is_synthetic": true,
+   "gold_rationale": "Pathway LUM-A is uncertain; a human must resolve the uncertain criteria.",
+   "retrieval_keywords": [
+    "conservative therapy"
+   ]
+  },
+  {
+   "case_id": "EVAL-LUM-03",
+   "procedure": "lumbar_mri",
+   "policy_id": "AETNA_CPB_0236",
+   "policy_version": "2026",
+   "diagnosis_codes": [
+    "M54.16"
+   ],
+   "procedure_code": "72148",
+   "patient_age": 48,
+   "clinical_note": "Persistent low back pain with motor weakness in the L5 distribution and diminished Achilles reflex, and no improvement after 6 weeks of conservative therapy. Later in the same note: no motor weakness, reflexes normal, no radiculopathy.",
+   "gold_readiness": "NEEDS_MANUAL_REVIEW",
+   "gold_criterion_outcomes": {
+    "LUM-01": "contradictory",
+    "LUM-02": "met",
+    "LUM-03": "not_applicable",
+    "LUM-EX-01": "not_fired"
+   },
+   "categories": [
+    "contradiction"
+   ],
+   "source_type": "structured_test_fixture",
+   "source_id": "",
+   "source_url": "",
+   "source_license": "",
+   "annotation_rationale": "Same criterion both asserted and negated.",
+   "is_synthetic": true,
+   "gold_rationale": "Contradictory evidence: LUM-01.",
+   "retrieval_keywords": [
+    "conservative therapy"
+   ]
+  },
+  {
+   "case_id": "EVAL-LUM-04",
+   "procedure": "lumbar_mri",
+   "policy_id": "AETNA_CPB_0236",
+   "policy_version": "2026",
+   "diagnosis_codes": [
+    "M54.16"
+   ],
+   "procedure_code": "72148",
+   "patient_age": 60,
+   "clinical_note": "Low back pain without radiculopathy. No motor weakness, no reflex changes. No improvement after 6 weeks of conservative therapy with NSAIDs and muscle relaxants.",
+   "gold_readiness": "NOT_READY",
+   "gold_criterion_outcomes": {
+    "LUM-01": "not_met",
+    "LUM-02": "met",
+    "LUM-03": "not_applicable",
+    "LUM-EX-01": "not_fired"
+   },
+   "categories": [
+    "negation"
+   ],
+   "source_type": "structured_test_fixture",
+   "source_id": "",
+   "source_url": "",
+   "source_license": "",
+   "annotation_rationale": "Explicit negation is not_met, not missing.",
+   "is_synthetic": true,
+   "gold_rationale": "No pathway fully met. Non-met criteria: LUM-01.",
+   "retrieval_keywords": [
+    "conservative therapy"
+   ]
+  },
+  {
+   "case_id": "EVAL-LUM-05",
+   "procedure": "lumbar_mri",
+   "policy_id": "AETNA_CPB_0236",
+   "policy_version": "2026",
+   "diagnosis_codes": [
+    "M54.16"
+   ],
+   "procedure_code": "72148",
+   "patient_age": 55,
+   "clinical_note": "Rapidly progressing neurological deficit with major motor weakness and suspected cauda equina compression. Urgent lumbar MRI requested.",
+   "gold_readiness": "READY_FOR_HUMAN_REVIEW",
+   "gold_criterion_outcomes": {
+    "LUM-01": "missing",
+    "LUM-02": "missing",
+    "LUM-03": "met",
+    "LUM-EX-01": "not_fired"
+   },
+   "categories": [
+    "ready_pathway",
+    "red_flag"
+   ],
+   "source_type": "structured_test_fixture",
+   "source_id": "",
+   "source_url": "",
+   "source_license": "",
+   "annotation_rationale": "Red flag pathway B alone can be ready in the any-of subset.",
+   "is_synthetic": true,
+   "gold_rationale": "Pathway LUM-B fully met, no exclusion fires, codes are valid, and the policy version is current.",
+   "retrieval_keywords": [
+    "conservative therapy"
+   ]
+  },
+  {
+   "case_id": "EVAL-LUM-06",
+   "procedure": "lumbar_mri",
+   "policy_id": "AETNA_CPB_0236",
+   "policy_version": "2024",
+   "diagnosis_codes": [
+    "M54.16"
+   ],
+   "procedure_code": "72148",
+   "patient_age": 45,
+   "clinical_note": "Persistent low back pain with radicular pain with motor weakness in the L5 distribution and diminished Achilles reflex. No improvement after 8 weeks of conservative therapy.",
+   "gold_readiness": "NEEDS_MANUAL_REVIEW",
+   "gold_criterion_outcomes": {
+    "LUM-01": "met",
+    "LUM-02": "met",
+    "LUM-03": "not_applicable",
+    "LUM-EX-01": "not_fired"
+   },
+   "categories": [
+    "outdated_policy"
+   ],
+   "source_type": "structured_test_fixture",
+   "source_id": "",
+   "source_url": "",
+   "source_license": "",
+   "annotation_rationale": "Criteria met but policy version is superseded.",
+   "is_synthetic": true,
+   "gold_rationale": "Policy version is not current; a human must check the current policy.",
+   "retrieval_keywords": [
+    "conservative therapy"
+   ]
+  },
+  {
+   "case_id": "EVAL-LUM-07",
+   "procedure": "lumbar_mri",
+   "policy_id": "AETNA_CPB_0236",
+   "policy_version": "2026",
+   "diagnosis_codes": [
+    "Z00.00"
+   ],
+   "procedure_code": "72148",
+   "patient_age": 45,
+   "clinical_note": "Persistent low back pain with radicular pain with motor weakness in the L5 distribution and diminished Achilles reflex. No improvement after 8 weeks of conservative therapy.",
+   "gold_readiness": "NEEDS_MANUAL_REVIEW",
+   "gold_criterion_outcomes": {
+    "LUM-01": "met",
+    "LUM-02": "met",
+    "LUM-03": "not_applicable",
+    "LUM-EX-01": "not_fired"
+   },
+   "categories": [
+    "incorrect_code"
+   ],
+   "source_type": "structured_test_fixture",
+   "source_id": "",
+   "source_url": "",
+   "source_license": "",
+   "annotation_rationale": "Diagnosis code is not in the policy supported list.",
+   "is_synthetic": true,
+   "gold_rationale": "Code validation is unsupported; a human must resolve the codes.",
+   "retrieval_keywords": [
+    "conservative therapy"
+   ]
+  },
+  {
+   "case_id": "EVAL-LUM-08",
+   "procedure": "lumbar_mri",
+   "policy_id": "AETNA_CPB_0236",
+   "policy_version": "2026",
+   "diagnosis_codes": [
+    "M54.16"
+   ],
+   "procedure_code": "72148",
+   "patient_age": 45,
+   "clinical_note": "Persistent low back pain with motor weakness in the L5 distribution. No improvement after 6 weeks of conservative therapy. Lumbar MRI already completed for the same indication with no new symptoms.",
+   "gold_readiness": "NOT_READY",
+   "gold_criterion_outcomes": {
+    "LUM-01": "met",
+    "LUM-02": "met",
+    "LUM-03": "not_applicable",
+    "LUM-EX-01": "fired"
+   },
+   "categories": [
+    "exclusion"
+   ],
+   "source_type": "structured_test_fixture",
+   "source_id": "",
+   "source_url": "",
+   "source_license": "",
+   "annotation_rationale": "Duplicative imaging exclusion fires.",
+   "is_synthetic": true,
+   "gold_rationale": "Exclusion fired: LUM-EX-01. An exclusion cannot be overridden.",
+   "retrieval_keywords": [
+    "conservative therapy"
+   ]
+  },
+  {
+   "case_id": "EVAL-LUM-09",
+   "procedure": "lumbar_mri",
+   "policy_id": "AETNA_CPB_0236",
+   "policy_version": "2026",
+   "diagnosis_codes": [
+    "M54.16"
+   ],
+   "procedure_code": "72148",
+   "patient_age": 45,
+   "clinical_note": "Patient reports 6 weeks of conservative therapy, but the record shows only 3 weeks of NSAIDs, with no moderate activity plan and no muscle relaxant documented. Persistent low back pain with motor weakness in the L5 distribution.",
+   "gold_readiness": "NEEDS_MANUAL_REVIEW",
+   "gold_criterion_outcomes": {
+    "LUM-01": "met",
+    "LUM-02": "uncertain",
+    "LUM-03": "not_applicable",
+    "LUM-EX-01": "not_fired"
+   },
+   "categories": [
+    "ambiguous",
+    "unsupported_claim",
+    "incomplete_conservative"
+   ],
+   "source_type": "structured_test_fixture",
+   "source_id": "",
+   "source_url": "",
+   "source_license": "",
+   "annotation_rationale": "Patient claim conflicts with the documented record duration.",
+   "is_synthetic": true,
+   "gold_rationale": "Pathway LUM-A is uncertain; a human must resolve the uncertain criteria.",
+   "retrieval_keywords": [
+    "conservative therapy"
+   ]
+  },
+  {
+   "case_id": "EVAL-KNE-01",
+   "procedure": "knee_arthroscopy",
+   "policy_id": "AETNA_CPB_0673",
+   "policy_version": "2024-09-11",
+   "diagnosis_codes": [
+    "M23.32"
+   ],
+   "procedure_code": "29881",
+   "patient_age": 40,
+   "clinical_note": "Significant knee pain with mechanical symptoms with knee locking and catching. Kellgren-Lawrence grade 2. MRI confirms meniscal tear. Completed 8 weeks of formal physical therapy with no improvement.",
+   "gold_readiness": "READY_FOR_HUMAN_REVIEW",
+   "gold_criterion_outcomes": {
+    "KNE-01": "met",
+    "KNE-02": "met",
+    "KNE-03": "met",
+    "KNE-04": "met",
+    "KNE-05": "not_applicable",
+    "KNE-EX-01": "not_fired",
+    "KNE-EX-02": "not_fired"
+   },
+   "categories": [
+    "ready_pathway"
+   ],
+   "source_type": "structured_test_fixture",
+   "source_id": "",
+   "source_url": "",
+   "source_license": "",
+   "annotation_rationale": "Clean ready pathway A.",
+   "is_synthetic": true,
+   "gold_rationale": "Pathway KNE-A fully met, no exclusion fires, codes are valid, and the policy version is current.",
+   "retrieval_keywords": [
+    "physical therapy"
+   ]
+  },
+  {
+   "case_id": "EVAL-KNE-02",
+   "procedure": "knee_arthroscopy",
+   "policy_id": "AETNA_CPB_0673",
+   "policy_version": "2024-09-11",
+   "diagnosis_codes": [
+    "M23.32"
+   ],
+   "procedure_code": "29881",
+   "patient_age": 40,
+   "clinical_note": "Significant knee pain with mechanical symptoms with knee locking. Kellgren-Lawrence grade 2. MRI confirms meniscal tear. Only 3 weeks of formal physical therapy completed.",
+   "gold_readiness": "NOT_READY",
+   "gold_criterion_outcomes": {
+    "KNE-01": "met",
+    "KNE-02": "met",
+    "KNE-03": "met",
+    "KNE-04": "not_met",
+    "KNE-05": "not_applicable",
+    "KNE-EX-01": "not_fired",
+    "KNE-EX-02": "not_fired"
+   },
+   "categories": [
+    "incomplete_conservative"
+   ],
+   "source_type": "structured_test_fixture",
+   "source_id": "",
+   "source_url": "",
+   "source_license": "",
+   "annotation_rationale": "3 weeks is below the 6 week PT threshold.",
+   "is_synthetic": true,
+   "gold_rationale": "No pathway fully met. Non-met criteria: KNE-04.",
+   "retrieval_keywords": [
+    "physical therapy"
+   ]
+  },
+  {
+   "case_id": "EVAL-KNE-03",
+   "procedure": "knee_arthroscopy",
+   "policy_id": "AETNA_CPB_0673",
+   "policy_version": "2024-09-11",
+   "diagnosis_codes": [
+    "M17.0"
+   ],
+   "procedure_code": "29881",
+   "patient_age": 65,
+   "clinical_note": "Significant knee pain with mechanical symptoms with knee locking. Kellgren-Lawrence grade 4. MRI confirms meniscal tear. Completed 6 weeks of formal physical therapy.",
+   "gold_readiness": "NOT_READY",
+   "gold_criterion_outcomes": {
+    "KNE-01": "met",
+    "KNE-02": "not_met",
+    "KNE-03": "met",
+    "KNE-04": "met",
+    "KNE-05": "not_applicable",
+    "KNE-EX-01": "fired",
+    "KNE-EX-02": "not_fired"
+   },
+   "categories": [
+    "exclusion"
+   ],
+   "source_type": "structured_test_fixture",
+   "source_id": "",
+   "source_url": "",
+   "source_license": "",
+   "annotation_rationale": "Severe OA exclusion fires for debridement in the subset.",
+   "is_synthetic": true,
+   "gold_rationale": "Exclusion fired: KNE-EX-01. An exclusion cannot be overridden.",
+   "retrieval_keywords": [
+    "physical therapy"
+   ]
+  },
+  {
+   "case_id": "EVAL-KNE-04",
+   "procedure": "knee_arthroscopy",
+   "policy_id": "AETNA_CPB_0673",
+   "policy_version": "2024-09-11",
+   "diagnosis_codes": [
+    "M23.32"
+   ],
+   "procedure_code": "29881",
+   "patient_age": 40,
+   "clinical_note": "Knee pain with possible mechanical symptoms, unclear whether locking occurred. Kellgren-Lawrence grade 1. MRI confirms meniscal tear. Completed 6 weeks of formal physical therapy.",
+   "gold_readiness": "NEEDS_MANUAL_REVIEW",
+   "gold_criterion_outcomes": {
+    "KNE-01": "uncertain",
+    "KNE-02": "met",
+    "KNE-03": "met",
+    "KNE-04": "met",
+    "KNE-05": "not_applicable",
+    "KNE-EX-01": "not_fired",
+    "KNE-EX-02": "not_fired"
+   },
+   "categories": [
+    "ambiguous"
+   ],
+   "source_type": "structured_test_fixture",
+   "source_id": "",
+   "source_url": "",
+   "source_license": "",
+   "annotation_rationale": "Possible or unclear symptoms are uncertain, not met.",
+   "is_synthetic": true,
+   "gold_rationale": "Pathway KNE-A is uncertain; a human must resolve the uncertain criteria.",
+   "retrieval_keywords": [
+    "physical therapy"
+   ]
+  },
+  {
+   "case_id": "EVAL-KNE-05",
+   "procedure": "knee_arthroscopy",
+   "policy_id": "AETNA_CPB_0673",
+   "policy_version": "2024-09-11",
+   "diagnosis_codes": [
+    "M23.32"
+   ],
+   "procedure_code": "29881",
+   "patient_age": 30,
+   "clinical_note": "Significant knee pain with mechanical symptoms with knee locking. Locked knee due to displaced bucket handle tear. Kellgren-Lawrence grade 1. MRI confirms meniscal tear. No physical therapy yet because the knee is locked.",
+   "gold_readiness": "READY_FOR_HUMAN_REVIEW",
+   "gold_criterion_outcomes": {
+    "KNE-01": "met",
+    "KNE-02": "met",
+    "KNE-03": "met",
+    "KNE-04": "missing",
+    "KNE-05": "met",
+    "KNE-EX-01": "not_fired",
+    "KNE-EX-02": "not_fired"
+   },
+   "categories": [
+    "ready_pathway",
+    "waiver"
+   ],
+   "source_type": "structured_test_fixture",
+   "source_id": "",
+   "source_url": "",
+   "source_license": "",
+   "annotation_rationale": "Waiver pathway B in the simplified subset. Human must check the full policy.",
+   "is_synthetic": true,
+   "gold_rationale": "Pathway KNE-B fully met, no exclusion fires, codes are valid, and the policy version is current.",
+   "retrieval_keywords": [
+    "physical therapy"
+   ]
+  },
+  {
+   "case_id": "EVAL-KNE-06",
+   "procedure": "knee_arthroscopy",
+   "policy_id": "AETNA_CPB_0673",
+   "policy_version": "2024-09-11",
+   "diagnosis_codes": [
+    "M23.32"
+   ],
+   "procedure_code": "29881",
+   "patient_age": 40,
+   "clinical_note": "Request is for diagnostic arthroscopy alone, arthroscopy for diagnosis only without radiologic confirmation. MRI shows no meniscal tear.",
+   "gold_readiness": "NOT_READY",
+   "gold_criterion_outcomes": {
+    "KNE-01": "missing",
+    "KNE-02": "missing",
+    "KNE-03": "not_met",
+    "KNE-04": "missing",
+    "KNE-05": "not_applicable",
+    "KNE-EX-01": "not_fired",
+    "KNE-EX-02": "fired"
+   },
+   "categories": [
+    "exclusion",
+    "missing_evidence"
+   ],
+   "source_type": "structured_test_fixture",
+   "source_id": "",
+   "source_url": "",
+   "source_license": "",
+   "annotation_rationale": "Diagnostic arthroscopy alone is an exclusion in the subset.",
+   "is_synthetic": true,
+   "gold_rationale": "Exclusion fired: KNE-EX-02. An exclusion cannot be overridden.",
+   "retrieval_keywords": [
+    "physical therapy"
+   ]
+  },
+  {
+   "case_id": "EVAL-KNE-07",
+   "procedure": "knee_arthroscopy",
+   "policy_id": "AETNA_CPB_0673",
+   "policy_version": "2023",
+   "diagnosis_codes": [
+    "M23.32"
+   ],
+   "procedure_code": "29881",
+   "patient_age": 40,
+   "clinical_note": "Significant knee pain with mechanical symptoms with knee locking. Kellgren-Lawrence grade 2. MRI confirms meniscal tear. Completed 8 weeks of formal physical therapy.",
+   "gold_readiness": "NEEDS_MANUAL_REVIEW",
+   "gold_criterion_outcomes": {
+    "KNE-01": "met",
+    "KNE-02": "met",
+    "KNE-03": "met",
+    "KNE-04": "met",
+    "KNE-05": "not_applicable",
+    "KNE-EX-01": "not_fired",
+    "KNE-EX-02": "not_fired"
+   },
+   "categories": [
+    "outdated_policy"
+   ],
+   "source_type": "structured_test_fixture",
+   "source_id": "",
+   "source_url": "",
+   "source_license": "",
+   "annotation_rationale": "Criteria met but policy version is superseded.",
+   "is_synthetic": true,
+   "gold_rationale": "Policy version is not current; a human must check the current policy.",
+   "retrieval_keywords": [
+    "physical therapy"
+   ]
+  },
+  {
+   "case_id": "EVAL-KNE-08",
+   "procedure": "knee_arthroscopy",
+   "policy_id": "AETNA_CPB_0673",
+   "policy_version": "2024-09-11",
+   "diagnosis_codes": [
+    "M23.32"
+   ],
+   "procedure_code": "29881",
+   "patient_age": 40,
+   "clinical_note": "Significant knee pain with mechanical symptoms with knee locking. Kellgren-Lawrence grade 2. MRI confirms meniscal tear. Later in the same note: MRI shows no meniscal tear. Completed 6 weeks of formal physical therapy.",
+   "gold_readiness": "NEEDS_MANUAL_REVIEW",
+   "gold_criterion_outcomes": {
+    "KNE-01": "met",
+    "KNE-02": "met",
+    "KNE-03": "contradictory",
+    "KNE-04": "met",
+    "KNE-05": "not_applicable",
+    "KNE-EX-01": "not_fired",
+    "KNE-EX-02": "not_fired"
+   },
+   "categories": [
+    "contradiction"
+   ],
+   "source_type": "structured_test_fixture",
+   "source_id": "",
+   "source_url": "",
+   "source_license": "",
+   "annotation_rationale": "Imaging finding both asserted and negated.",
+   "is_synthetic": true,
+   "gold_rationale": "Contradictory evidence: KNE-03.",
+   "retrieval_keywords": [
+    "physical therapy"
+   ]
+  },
+  {
+   "case_id": "EVAL-KNE-09",
+   "procedure": "knee_arthroscopy",
+   "policy_id": "AETNA_CPB_0673",
+   "policy_version": "2024-09-11",
+   "diagnosis_codes": [
+    "M23.32"
+   ],
+   "procedure_code": "29881",
+   "patient_age": 40,
+   "clinical_note": "Significant knee pain with mechanical symptoms with knee locking. Kellgren-Lawrence grade 2. Completed 6 weeks of formal physical therapy. No imaging report is included.",
+   "gold_readiness": "NOT_READY",
+   "gold_criterion_outcomes": {
+    "KNE-01": "met",
+    "KNE-02": "met",
+    "KNE-03": "missing",
+    "KNE-04": "met",
+    "KNE-05": "not_applicable",
+    "KNE-EX-01": "not_fired",
+    "KNE-EX-02": "not_fired"
+   },
+   "categories": [
+    "missing_evidence"
+   ],
+   "source_type": "structured_test_fixture",
+   "source_id": "",
+   "source_url": "",
+   "source_license": "",
+   "annotation_rationale": "Radiologic confirmation is missing, not assumed.",
+   "is_synthetic": true,
+   "gold_rationale": "No pathway fully met. Non-met criteria: KNE-03.",
+   "retrieval_keywords": [
+    "physical therapy"
+   ]
+  },
+  {
+   "case_id": "EVAL-BIO-01",
+   "procedure": "biologic_infusion",
+   "policy_id": "CIGNA_IP0660",
+   "policy_version": "2026",
+   "diagnosis_codes": [
+    "K50.90"
+   ],
+   "procedure_code": "J1745",
+   "patient_age": 33,
+   "clinical_note": "Moderate to severe Crohn disease, prescribed by a gastroenterologist. Dosing 5 mg per kg at weeks 0, 2, and 6, then maintenance dosing every 8 weeks. TB screening documented before initiation. Failed corticosteroids and failed immunomodulators.",
+   "gold_readiness": "READY_FOR_HUMAN_REVIEW",
+   "gold_criterion_outcomes": {
+    "BIO-01": "met",
+    "BIO-02": "met",
+    "BIO-03": "met",
+    "BIO-04": "met",
+    "BIO-05": "met",
+    "BIO-06": "met",
+    "BIO-EX-01": "not_fired",
+    "BIO-EX-02": "not_fired",
+    "BIO-EX-03": "not_fired"
+   },
+   "categories": [
+    "ready_pathway"
+   ],
+   "source_type": "structured_test_fixture",
+   "source_id": "",
+   "source_url": "",
+   "source_license": "",
+   "annotation_rationale": "Clean ready pathway.",
+   "is_synthetic": true,
+   "gold_rationale": "Pathway BIO-A fully met, no exclusion fires, codes are valid, and the policy version is current.",
+   "retrieval_keywords": [
+    "Crohn"
+   ]
+  },
+  {
+   "case_id": "EVAL-BIO-02",
+   "procedure": "biologic_infusion",
+   "policy_id": "CIGNA_IP0660",
+   "policy_version": "2026",
+   "diagnosis_codes": [
+    "K50.90"
+   ],
+   "procedure_code": "J1745",
+   "patient_age": 33,
+   "clinical_note": "Moderate to severe Crohn disease, prescribed by a gastroenterologist. Dosing 5 mg per kg at weeks 0, 2, and 6. Failed corticosteroids. No TB screening is documented.",
+   "gold_readiness": "NOT_READY",
+   "gold_criterion_outcomes": {
+    "BIO-01": "met",
+    "BIO-02": "met",
+    "BIO-03": "met",
+    "BIO-04": "met",
+    "BIO-05": "missing",
+    "BIO-06": "met",
+    "BIO-EX-01": "not_fired",
+    "BIO-EX-02": "not_fired",
+    "BIO-EX-03": "not_fired"
+   },
+   "categories": [
+    "missing_evidence"
+   ],
+   "source_type": "structured_test_fixture",
+   "source_id": "",
+   "source_url": "",
+   "source_license": "",
+   "annotation_rationale": "TB screening missing, not assumed from other labs.",
+   "is_synthetic": true,
+   "gold_rationale": "No pathway fully met. Non-met criteria: BIO-05.",
+   "retrieval_keywords": [
+    "Crohn"
+   ]
+  },
+  {
+   "case_id": "EVAL-BIO-03",
+   "procedure": "biologic_infusion",
+   "policy_id": "CIGNA_IP0660",
+   "policy_version": "2026",
+   "diagnosis_codes": [
+    "K50.90"
+   ],
+   "procedure_code": "J1745",
+   "patient_age": 33,
+   "clinical_note": "Moderate to severe Crohn disease, prescribed by a gastroenterologist. Dosing 5 mg per kg at weeks 0, 2, and 6. TB screening documented before initiation. Failed corticosteroids. Patient has an active serious infection requiring antibiotics.",
+   "gold_readiness": "NOT_READY",
+   "gold_criterion_outcomes": {
+    "BIO-01": "met",
+    "BIO-02": "met",
+    "BIO-03": "met",
+    "BIO-04": "met",
+    "BIO-05": "met",
+    "BIO-06": "met",
+    "BIO-EX-01": "fired",
+    "BIO-EX-02": "not_fired",
+    "BIO-EX-03": "not_fired"
+   },
+   "categories": [
+    "exclusion"
+   ],
+   "source_type": "structured_test_fixture",
+   "source_id": "",
+   "source_url": "",
+   "source_license": "",
+   "annotation_rationale": "Active serious infection exclusion fires.",
+   "is_synthetic": true,
+   "gold_rationale": "Exclusion fired: BIO-EX-01. An exclusion cannot be overridden.",
+   "retrieval_keywords": [
+    "Crohn"
+   ]
+  },
+  {
+   "case_id": "EVAL-BIO-04",
+   "procedure": "biologic_infusion",
+   "policy_id": "CIGNA_IP0660",
+   "policy_version": "2026",
+   "diagnosis_codes": [
+    "K50.90"
+   ],
+   "procedure_code": "J1745",
+   "patient_age": 33,
+   "clinical_note": "Moderate to severe Crohn disease, prescribed by a gastroenterologist. Dosing 5 mg per kg at weeks 0, 2, and 6. Failed corticosteroids. Untreated latent tuberculosis documented.",
+   "gold_readiness": "NOT_READY",
+   "gold_criterion_outcomes": {
+    "BIO-01": "met",
+    "BIO-02": "met",
+    "BIO-03": "met",
+    "BIO-04": "met",
+    "BIO-05": "missing",
+    "BIO-06": "met",
+    "BIO-EX-01": "not_fired",
+    "BIO-EX-02": "fired",
+    "BIO-EX-03": "not_fired"
+   },
+   "categories": [
+    "exclusion"
+   ],
+   "source_type": "structured_test_fixture",
+   "source_id": "",
+   "source_url": "",
+   "source_license": "",
+   "annotation_rationale": "Untreated latent TB exclusion fires.",
+   "is_synthetic": true,
+   "gold_rationale": "Exclusion fired: BIO-EX-02. An exclusion cannot be overridden.",
+   "retrieval_keywords": [
+    "Crohn"
+   ]
+  },
+  {
+   "case_id": "EVAL-BIO-05",
+   "procedure": "biologic_infusion",
+   "policy_id": "CIGNA_IP0660",
+   "policy_version": "2026",
+   "diagnosis_codes": [
+    "K50.90"
+   ],
+   "procedure_code": "J1745",
+   "patient_age": 33,
+   "clinical_note": "Moderate to severe Crohn disease, prescribed by a primary care physician, with possible gastroenterology input that is not documented as a consultation. Dosing 5 mg per kg at weeks 0, 2, and 6. TB screening documented before initiation. Failed corticosteroids.",
+   "gold_readiness": "NEEDS_MANUAL_REVIEW",
+   "gold_criterion_outcomes": {
+    "BIO-01": "met",
+    "BIO-02": "uncertain",
+    "BIO-03": "met",
+    "BIO-04": "met",
+    "BIO-05": "met",
+    "BIO-06": "met",
+    "BIO-EX-01": "not_fired",
+    "BIO-EX-02": "not_fired",
+    "BIO-EX-03": "not_fired"
+   },
+   "categories": [
+    "ambiguous"
+   ],
+   "source_type": "structured_test_fixture",
+   "source_id": "",
+   "source_url": "",
+   "source_license": "",
+   "annotation_rationale": "Possible specialist input is uncertain, not met.",
+   "is_synthetic": true,
+   "gold_rationale": "Pathway BIO-A is uncertain; a human must resolve the uncertain criteria.",
+   "retrieval_keywords": [
+    "Crohn"
+   ]
+  },
+  {
+   "case_id": "EVAL-BIO-06",
+   "procedure": "biologic_infusion",
+   "policy_id": "CIGNA_IP0660",
+   "policy_version": "2026",
+   "diagnosis_codes": [
+    "K50.90"
+   ],
+   "procedure_code": "J1745",
+   "patient_age": 33,
+   "clinical_note": "Moderate to severe Crohn disease, prescribed by a gastroenterologist. TB screening documented before initiation, test negative. Later in the same note: untreated latent tuberculosis documented. Failed corticosteroids.",
+   "gold_readiness": "NOT_READY",
+   "gold_criterion_outcomes": {
+    "BIO-01": "met",
+    "BIO-02": "met",
+    "BIO-03": "met",
+    "BIO-04": "missing",
+    "BIO-05": "contradictory",
+    "BIO-06": "met",
+    "BIO-EX-01": "not_fired",
+    "BIO-EX-02": "fired",
+    "BIO-EX-03": "not_fired"
+   },
+   "categories": [
+    "contradiction",
+    "exclusion"
+   ],
+   "source_type": "structured_test_fixture",
+   "source_id": "",
+   "source_url": "",
+   "source_license": "",
+   "annotation_rationale": "Exclusion fires and TB evidence contradicts itself. Exclusion rule gives NOT_READY.",
+   "is_synthetic": true,
+   "gold_rationale": "Exclusion fired: BIO-EX-02. An exclusion cannot be overridden.",
+   "retrieval_keywords": [
+    "Crohn"
+   ]
+  },
+  {
+   "case_id": "EVAL-BIO-07",
+   "procedure": "biologic_infusion",
+   "policy_id": "CIGNA_IP0660",
+   "policy_version": "2026",
+   "diagnosis_codes": [
+    "K50.90"
+   ],
+   "procedure_code": "Q5103",
+   "patient_age": 33,
+   "clinical_note": "Moderate to severe Crohn disease, prescribed by a gastroenterologist. Dosing 5 mg per kg at weeks 0, 2, and 6. TB screening documented before initiation. Failed corticosteroids.",
+   "gold_readiness": "NEEDS_MANUAL_REVIEW",
+   "gold_criterion_outcomes": {
+    "BIO-01": "met",
+    "BIO-02": "met",
+    "BIO-03": "met",
+    "BIO-04": "met",
+    "BIO-05": "met",
+    "BIO-06": "met",
+    "BIO-EX-01": "not_fired",
+    "BIO-EX-02": "not_fired",
+    "BIO-EX-03": "not_fired"
+   },
+   "categories": [
+    "incorrect_code"
+   ],
+   "source_type": "structured_test_fixture",
+   "source_id": "",
+   "source_url": "",
+   "source_license": "",
+   "annotation_rationale": "Procedure code Q5103 is not the J1745 code in this simplified subset, so code validation is not valid.",
+   "is_synthetic": true,
+   "gold_rationale": "Code validation is unsupported; a human must resolve the codes.",
+   "retrieval_keywords": [
+    "Crohn"
+   ]
+  },
+  {
+   "case_id": "EVAL-BIO-08",
+   "procedure": "biologic_infusion",
+   "policy_id": "CIGNA_IP0660",
+   "policy_version": "2026",
+   "diagnosis_codes": [
+    "K50.90"
+   ],
+   "procedure_code": "J1745",
+   "patient_age": 5,
+   "clinical_note": "Moderate to severe Crohn disease, prescribed by a gastroenterologist. Dosing 5 mg per kg at weeks 0, 2, and 6. TB screening documented before initiation. Failed corticosteroids.",
+   "gold_readiness": "NOT_READY",
+   "gold_criterion_outcomes": {
+    "BIO-01": "not_met",
+    "BIO-02": "met",
+    "BIO-03": "met",
+    "BIO-04": "met",
+    "BIO-05": "met",
+    "BIO-06": "met",
+    "BIO-EX-01": "not_fired",
+    "BIO-EX-02": "not_fired",
+    "BIO-EX-03": "not_fired"
+   },
+   "categories": [
+    "incorrect_code",
+    "age_rule"
+   ],
+   "source_type": "structured_test_fixture",
+   "source_id": "",
+   "source_url": "",
+   "source_license": "",
+   "annotation_rationale": "Age 5 is below the age at least 6 structured field check.",
+   "is_synthetic": true,
+   "gold_rationale": "No pathway fully met. Non-met criteria: BIO-01.",
+   "retrieval_keywords": [
+    "Crohn"
+   ]
+  },
+  {
+   "case_id": "EVAL-BIO-09",
+   "procedure": "biologic_infusion",
+   "policy_id": "CIGNA_IP0660",
+   "policy_version": "2024",
+   "diagnosis_codes": [
+    "K50.90"
+   ],
+   "procedure_code": "J1745",
+   "patient_age": 33,
+   "clinical_note": "Moderate to severe Crohn disease, prescribed by a gastroenterologist. Dosing 5 mg per kg at weeks 0, 2, and 6. TB screening documented before initiation. Failed corticosteroids.",
+   "gold_readiness": "NEEDS_MANUAL_REVIEW",
+   "gold_criterion_outcomes": {
+    "BIO-01": "met",
+    "BIO-02": "met",
+    "BIO-03": "met",
+    "BIO-04": "met",
+    "BIO-05": "met",
+    "BIO-06": "met",
+    "BIO-EX-01": "not_fired",
+    "BIO-EX-02": "not_fired",
+    "BIO-EX-03": "not_fired"
+   },
+   "categories": [
+    "outdated_policy"
+   ],
+   "source_type": "structured_test_fixture",
+   "source_id": "",
+   "source_url": "",
+   "source_license": "",
+   "annotation_rationale": "Criteria met but policy version is superseded.",
+   "is_synthetic": true,
+   "gold_rationale": "Policy version is not current; a human must check the current policy.",
+   "retrieval_keywords": [
+    "Crohn"
+   ]
+  }
+ ],
+ "count": 30
+}
