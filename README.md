@@ -74,8 +74,6 @@ PriorAuth Agent got more final readiness decisions right on this test set, but t
 
 Citation verification did not show a meaningful accuracy gain on this small test set (171/200 criteria with it versus 173/200 without it). Checking that a quote exists is not enough to confirm the AI interpreted it correctly.
 
-The next step is testing on new cases written and labeled independently.
-
 Detailed results and raw predictions: [Evaluation report](docs/EVAL_RESULTS_2026-10-27.md) · [Failure analysis](docs/FAILURE_ANALYSIS_2026-10-27.md) · [Raw evidence](evidence/cloud_eval_2026-10-27/raw/).
 
 ## What I learned
@@ -85,7 +83,7 @@ The evaluation highlighted two mistakes:
 - **Knee imaging:** The AI assumed an imaging grade that was not documented in the clinical note.
 - **Infliximab screening:** The AI confused untreated latent tuberculosis (TB) with evidence that TB screening had been completed.
 
-The AI found relevant excerpts but interpreted them incorrectly. Both cases still ended up marked not ready because of other requirements or exclusions—not because the system detected those reasoning mistakes. **Finding a quote does not mean the quote proves the claim.**
+The AI found relevant excerpts but interpreted them incorrectly. Both cases still ended up marked not ready because of other requirements or exclusions.
 
 ## Limitations and next steps
 
@@ -98,8 +96,21 @@ Next steps: test independently written and labeled cases, add a semantic evidenc
 
 ## Run the project
 
+Requires Python 3.12. From the project root, in a bash-style terminal:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+PYTHONPATH=src pytest tests/ -q
+```
+
+The reported clean-environment test result is **49 passed, 1 skipped**. A live review requires GCP credentials and the explicitly configured model; without them, the API returns an error rather than a simulated answer.
+
+```bash
+PYTHONPATH=src uvicorn priorauth.api:app --port 8000
+```
+
 For cloud configuration and deployment requirements, see [Configuration](docs/CONFIGURATION.md) and [Deployment](docs/DEPLOYMENT.md). To recompute reported metrics from the included evaluation files, use `scripts/recompute_metrics.py` (see [raw verification notes](docs/RAW_VERIFICATION_AND_RECOMPUTATION_2026-10-27.md)).
 
 ---
-
-*This project produces documentation-readiness assessments for research and demonstration only. A qualified human must review the full current policy and clinical record before any real submission.*
